@@ -1,0 +1,62 @@
+.header__dashboard__icon{
+  .dropdown{
+    position: relative;
+    span{
+      font-size: 10px;
+      height: 15px;
+      width: 15px;
+      line-height: 15px;
+      background-color: red;
+      color: white;
+      border-radius: 50%;
+      position: absolute;
+      top: -5px;
+      right: -5px;
+      text-align: center;
+    }
+  }
+  .dropdown-menu{
+    transition: .3s;
+    transform: translate(-90px, 35px) !important;
+    width: 200px;
+    background: #262940;
+    margin: 0;
+    padding: 0;
+    &::before{
+      content: '';
+      color: #262940;
+      font-family: 'Font Awesome 5 Pro';
+      position: absolute;
+      top:-17px;
+      left: 50%;
+      transform: translate(-50%, 0px);
+      font-weight: 600;
+      font-size: 25px;
+    }
+    li{
+      &:first-child{
+        text-align: center;
+        border-bottom: 0.5px solid #161829;
+        padding: 10px;
+        font-size: 14px;
+      }
+      a{
+        font-size: 13px;
+        padding: 8px 10px;
+        line-height: 15px;
+        display: flex;
+        gap: 10px;
+        justify-content: center;
+        align-items: center;
+        &:hover{
+          background-color: #1b1d30;
+        }
+      }
+      img{
+        height: 30px;
+        width: 30px;
+        border-radius: 50%;
+      }
+    }
+  }
+}

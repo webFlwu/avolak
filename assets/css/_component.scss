@@ -1,0 +1,173 @@
+/* Quantity Square */
+.quentity__square{
+    .number{
+        display: flex;
+        .minus{
+            width: 34.333px;
+            height: 40.194px;
+            display: inline-block;
+            border: 2.512px solid  #C4C4C4;
+            text-align: center;
+            color: #C4C4C4;
+            position: relative;
+            cursor: pointer;
+            &::after{
+                content: '';
+                width: 15px;
+                height: 4px;
+                background:url('../img/icon/minus.svg');
+                background-repeat: no-repeat;
+                background-size: contain;
+                border-radius: 5px;
+                position: absolute;
+                left: 50%;
+                top: 50%;
+                transform: translate(-50%, -50%);
+            }
+            &:hover{
+                background-color: $white;
+            }
+        }
+        .plus{
+            width: 34.333px;
+            height: 40.194px;
+            display: inline-block;
+            border: 2.512px solid  $primary;
+            text-align: center;
+            color: #C4C4C4;
+            position: relative;
+            cursor: pointer;
+            &::after{
+                content: '';
+                width: 14px;
+                height:15px;
+                background:url('../img/icon/plus.svg');
+                background-repeat: no-repeat;
+                background-size: contain;
+                border-radius: 5px;
+                position: absolute;
+                left: 50%;
+                top: 50%;
+                transform: translate(-50%, -50%);
+            }
+            &:hover{
+                background-color: $white;
+            }
+        }
+        input{
+            color:  #282828;
+            font-family: 'Roboto-Regular';
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: normal;
+            width: 34.333px;
+            height: 40.194px;
+            display: inline-block;
+            text-align: center;
+            background: transparent;
+            border: none;
+            &::placeholder{
+                color:  #282828;
+            }
+            &::-moz-placeholder{
+                color:  #282828;
+            }
+            &::-webkit-input-placeholder{
+                color:  #282828;
+            }
+            &:focus{
+                box-shadow: none;
+                outline: none;
+            }
+        }
+    }
+}
+.quentity__square__two{
+    .number{
+        display: flex;
+        .minus{
+            width: 34.333px;
+            height: 40.194px;
+            display: inline-block;
+            border: 2.512px solid  #C4C4C4;
+            text-align: center;
+            color: $primary;
+            position: relative;
+            cursor: pointer;
+            border-radius: 5px 0px 0px 5px;
+            &::after{
+                content: '';
+                width: 15px;
+                height: 4px;
+                background:url('../img/icon/minus2.svg');
+                background-repeat: no-repeat;
+                background-size: contain;
+                border-radius: 5px;
+                position: absolute;
+                left: 50%;
+                top: 50%;
+                transform: translate(-50%, -50%);
+            }
+            &:hover{
+                background-color: $white;
+            }
+        }
+        .plus{
+            width: 34.333px;
+            height: 40.194px;
+            display: inline-block;
+            border: 2.512px solid  #C4C4C4;
+            text-align: center;
+            color: #C4C4C4;
+            position: relative;
+            cursor: pointer;
+            border-radius: 0px 5px 5px 0px;
+            &::after{
+                content: '';
+                width: 14px;
+                height:15px;
+                background:url('../img/icon/plus.svg');
+                background-repeat: no-repeat;
+                background-size: contain;
+                border-radius: 5px;
+                position: absolute;
+                left: 50%;
+                top: 50%;
+                transform: translate(-50%, -50%);
+            }
+            &:hover{
+                background-color: $white;
+            }
+        }
+        input{
+            color:  #282828;
+            font-family: 'Roboto-Regular';
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: normal;
+            width: 34.333px;
+            height: 40.194px;
+            display: inline-block;
+            text-align: center;
+            background: transparent;
+            border: none;
+            border-top: 2.512px solid  #C4C4C4;
+            border-bottom: 2.512px solid  #C4C4C4;
+            &::placeholder{
+                color:  #282828;
+            }
+            &::-moz-placeholder{
+                color:  #282828;
+            }
+            &::-webkit-input-placeholder{
+                color:  #282828;
+            }
+            &:focus{
+                box-shadow: none;
+                outline: none;
+            }
+        }
+    }
+}

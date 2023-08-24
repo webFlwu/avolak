@@ -1,0 +1,63 @@
+.otp__box{
+    h3{
+        color: #1A1C2B;
+        font-family: Poppins-Medium;
+        font-size: 28px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+        margin-bottom: 8px;
+    }
+    max-width: 440px;
+    padding: 60px 0px;
+    display: table;
+    margin: auto;
+    .otp__input{
+        display: flex;
+        gap: 16px;
+        margin-bottom: 60px;
+        .form-control{
+            text-align: center;
+            padding: 10px 5px;
+            margin-bottom: 0px;
+        }
+    }
+    a{
+        font-size: 16px;
+        font-weight: 600;
+    }
+    p{
+        color: #3A3E5F;
+        margin-bottom: 0px;
+    }
+}
+.account__created__message{
+    display: inline-flex;
+    padding: 8px 16px;
+    align-items: flex-start;
+    gap: 16px;
+    border-radius: 30px;
+    background: #3A3E5F;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: .3s;
+    p{
+        color: #FFF;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+        margin-bottom: 0;
+    }
+    i{
+        color: #00AD00;
+        font-weight: 500;
+    }
+}
+.hide__top{
+    position: absolute;
+    top: -100px;
+    transition: .3s;
+}

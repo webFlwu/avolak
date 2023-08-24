@@ -1,0 +1,290 @@
+@media only screen and (min-width: 200px) and (max-width: 320px) {
+  .price__calculator .price__calculator__right__content form .number {
+    margin-right: 10px;
+  }
+  .price__calculator .price__calculator__right__content form .number .minus {
+    font-size: 25px;
+    width: 25px;
+  }
+  .price__calculator .price__calculator__right__content form .number .plus {
+    font-size: 25px;
+    width: 25px;
+  }
+  .price__calculator__shape__left {
+    display: none;
+  }
+  .price__calculator__shape__right {
+    display: none;
+  }
+  .carton__dimention .d-flex {
+    display: block !important;
+    width: 100% !important;
+  }
+  .carton__dimention .radio {
+    float: left;
+    margin-bottom: 30px;
+  }
+}
+
+@media only screen and (min-width: 200px) and (max-width: 767px) {
+  .hero__area {
+    padding: 80px 0px 30px 0px;
+  }
+  .hero__content {
+    text-align: center;
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+  .hero__title {
+    font-size: 30px;
+    line-height: 40px;
+    margin-bottom: 20px;
+  }
+  .hero__description {
+    margin-bottom: 20px;
+    font-size: 16px;
+  }
+  br {
+    display: none;
+  }
+  p {
+    font-size: 16px;
+    line-height: 22px;
+  }
+  .title-style-1 {
+    margin-bottom: 30px;
+  }
+  .title-style-1 h3 {
+    font-size: 25px;
+    line-height: 25px;
+  }
+  .title-style-1 p {
+    font-size: 18px;
+  }
+  .title-style-1 br {
+    display: none;
+  }
+  .title-style-2 {
+    margin-bottom: 30px;
+  }
+  .title-style-2 h3 {
+    font-size: 25px;
+    line-height: 25px;
+  }
+  .title-style-2 p {
+    font-size: 18px;
+  }
+  .title-style-3 {
+    margin-bottom: 10px;
+  }
+  .title-style-3 h3 {
+    font-size: 20px;
+  }
+  .top__brands {
+    padding: 30px 0px;
+  }
+  .price__calculator {
+    padding: 30px 0px;
+  }
+  .price__calculator .price__calculator__left__content h3 {
+    font-size: 30px;
+    line-height: 40px;
+    margin-bottom: 30px;
+  }
+  .price__calculator .price__calculator__left__content p {
+    font-size: 16px;
+    margin-bottom: 30px;
+  }
+  .price__calculator .price__calculator__right__content {
+    margin-left: 0;
+    margin-top: 50px;
+  }
+  .price__calculator .price__calculator__right__content form {
+    padding: 30px 15px 30px 15px;
+  }
+  .price__calculator .price__calculator__right__content .number {
+    width: 100% !important;
+  }
+  .price__calculator .estimated__price h3 {
+    font-size: 25px !important;
+  }
+  .price__calculator table td {
+    font-size: 15px !important;
+  }
+  .price__calculator__shape__left {
+    display: none;
+  }
+  .price__calculator__shape__right {
+    display: none;
+  }
+  .how__to__order {
+    padding: 30px 0px;
+  }
+  .how__to__order .shape-image-one {
+    display: none;
+  }
+  .how__to__order .shape-image-two {
+    display: none;
+  }
+  .how__to__order .how__to__order__step {
+    margin-top: 30px !important;
+  }
+  .how__to__order .how__to__order__step::after {
+    display: none !important;
+  }
+  .how__to__order .how__to__order__step::before {
+    display: none !important;
+  }
+  .how__to__order .how__to__order__step h4 {
+    font-size: 25px;
+  }
+  .testimonial {
+    padding: 30px 0px;
+  }
+  .testimonial .testimonial__thumb img {
+    width: 80px !important;
+  }
+  .testimonial .testimonial__info p {
+    font-size: 16px;
+  }
+  .faq {
+    padding: 30px 0px;
+  }
+  .faq .accordion .accordion-body {
+    padding: 10px 25px 20px 25px;
+  }
+  .faq .accordion .accordion-body p {
+    font-size: 15px;
+  }
+  .faq .accordion .accordion-item {
+    margin-bottom: 15px !important;
+  }
+  .faq .accordion .accordion-item .accordion-button {
+    padding: 15px 25px 15px 25px !important;
+    font-size: 16px;
+  }
+  footer .footer__area {
+    padding-top: 30px;
+  }
+  footer .footer__logo {
+    margin-bottom: 30px;
+  }
+  footer .footer__widget ul {
+    margin-bottom: 20px;
+  }
+  footer .footer__widget ul li {
+    margin-bottom: 0px;
+  }
+  footer .footer__widget h3 {
+    font-size: 25px;
+    margin-bottom: 10px;
+  }
+  footer .footer__bottom__content {
+    margin-top: 30px;
+  }
+  footer .footer__payment__logo {
+    float: inherit !important;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  footer .footer__social__icon {
+    display: inherit !important;
+    float: inherit !important;
+    text-align: center;
+  }
+  .form__box {
+    margin-top: 50px;
+  }
+  .signup__right__content .form__box {
+    padding: 0;
+    margin-top: 0px;
+  }
+  .innerpage {
+    padding-bottom: 50px;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+  .hero__area {
+    padding-bottom: 0px;
+  }
+  .price__calculator .price__calculator__right__content {
+    margin-left: 0;
+    margin-top: 50px;
+  }
+  .price__calculator__shape__left {
+    display: none;
+  }
+  .price__calculator__shape__right {
+    display: none;
+  }
+  .how__to__order .shape-image-one {
+    display: none;
+  }
+  .how__to__order .shape-image-two {
+    display: none;
+  }
+  .how__to__order .how__to__order__step {
+    margin-top: 30px !important;
+  }
+  .how__to__order .how__to__order__step::after {
+    display: none  !important;
+  }
+  .how__to__order .how__to__order__step::before {
+    display: none !important;
+  }
+  footer .footer__area {
+    padding-top: 30px;
+  }
+  footer .footer__logo {
+    margin-bottom: 30px;
+  }
+  footer .footer__widget ul {
+    margin-bottom: 20px;
+  }
+  footer .footer__widget ul li {
+    margin-bottom: 0px;
+  }
+  footer .footer__widget h3 {
+    font-size: 25px;
+    margin-bottom: 10px;
+  }
+  footer .footer__bottom__content {
+    margin-top: 30px;
+  }
+  footer .footer__payment__logo {
+    float: inherit !important;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  footer .footer__social__icon {
+    display: inherit !important;
+    float: inherit !important;
+    text-align: center;
+  }
+}
+
+@media only screen and (min-width: 1024px) and (max-width: 1160px) {
+  .price__calculator .price__calculator__right__content {
+    margin-left: 0px;
+  }
+  .price__calculator .price__calculator__right__content form .number {
+    width: 100%;
+  }
+}
+
+@media only screen and (min-width: 1400px) and (max-width: 2400px) {
+  .faq .accordion .accordion-item::before {
+    content: '';
+    background-image: url(../img/bg/accordian-bg.svg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 99.5%;
+    height: 98.5%;
+    position: absolute;
+    left: 2px;
+    top: 2px;
+    border-radius: 16px;
+  }
+}
+/*# sourceMappingURL=responsive.css.map */

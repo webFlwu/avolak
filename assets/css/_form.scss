@@ -1,0 +1,59 @@
+.form__box{
+    border-radius: 30px;
+    background:  #EFF0F5;
+    box-shadow: -10px 10px 20px 0px rgba(77, 84, 127, 0.05);
+    padding: 60px 30px;
+    label{
+        color: #3A3E5F;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        margin-bottom: 8px;
+    }
+    .form-control{
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        border-radius: 8px;
+        background: #DFE1EC;
+        padding: 10px 15px 10px 44px;
+        margin-bottom: 16px;
+        &:focus{
+            box-shadow: inherit;
+            border-color: $primary;
+        }
+        &::placeholder{
+            color: #4D537F;
+        }
+    }
+    i{
+        position: absolute;
+        top: 50%;
+        transform: translate(15px, -50%);
+        font-weight: 500;
+        color: #8086B2;
+    }
+    .btn-primary{
+        color: #EFF0F5;
+        font-family: Roboto-Medium;
+        font-size: 20px;
+        font-style: normal;
+        line-height: normal;
+    }
+    a{
+        font-size: 14px;
+        font-style: normal;
+        line-height: normal;
+        color: #060;
+    }
+    .fa-user-edit{
+        font-weight: 300;
+    }
+    .fa-user-edit{
+        font-weight: 500;
+    }
+    .fa-envelope{
+        font-weight: 500;
+    }
+}

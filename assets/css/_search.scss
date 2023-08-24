@@ -1,0 +1,39 @@
+.expandSearch,
+.expandSearch input,
+.expandSearch a{
+	float: right;
+	-webkit-transition: all 0.4s ease-in-out;
+	-moz-transition: all 0.4s ease-in-out;
+	transition: all 0.4s ease-in-out;
+}
+.expandSearch input{
+	height: 22px;
+	overflow: hidden;
+	width: 0px;
+	opacity: 0;
+    background: transparent;
+    border: none;
+    color: #E1E2EC;
+    &:focus{
+        box-shadow: none;
+        outline: none;
+    }
+    &::placeholder{
+        color: #c4c4c4;
+    }
+    &:-moz-placeholder{
+        color: #c4c4c4;
+    }
+}
+
+.showSearch input{
+	margin-left: 40px;
+	width: 300px;
+	opacity: 1;
+}
+
+.showSearch{
+    background: #3a3e5f;
+    padding: 13px 30px;
+    border-radius: 30px;
+}

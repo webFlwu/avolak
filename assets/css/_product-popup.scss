@@ -1,0 +1,274 @@
+#product__popup{
+    .modal-dialog{
+        max-width: 1100px;
+    }
+    .modal-content{
+        background: transparent;
+        border: none;
+    }
+    .btn-close {
+        background-image: url(../img/icon/btn-close.svg);
+        position: absolute;
+        right: 35px;
+        top: 35px;
+        color: #afb0b8;
+        z-index: 99;
+        opacity: 1;
+        background-size: contain;
+        height: 12px;
+        width: 12px;
+    }
+    .form__box{
+        padding: 40px 90px;
+        height: 510px;
+        i{
+            position: relative;
+            top: inherit;
+            left: inherit;
+            transform: inherit;
+        }
+        h3{
+            color:  #4D537F;
+            font-family: Poppins-Medium;
+            font-size: 28px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: normal;
+            margin-bottom: 0px;
+        }
+    }
+    .product__ratings{
+        position: relative;
+        margin-top: 8px;
+        margin-bottom: 20px;
+        i{
+            color: #F2A60D;
+            font-weight: 600;
+        }
+        .fal.fa-star{
+            font-weight: 100;
+        }
+        span{
+            color: #717171;
+            font-family: Roboto-Regular;
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+            padding-left: 8px;
+        }
+    }
+    .see__product{
+        a{
+            color:  #4D537F;
+            font-family: Roboto-Regular;
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+            &:hover{
+                color: $primary;
+            }
+        }
+        i{
+            color: #282828;
+            font-size: 12px;
+            padding-left: 2px;
+        }
+    }
+    .product__color{
+        $colors: (
+        black: #1A1C2B,
+        green: #056105,
+        blue: #6D9EF8,
+        red: #F76E6E,
+        orange: #F2711C,
+        yellow: #FBBD08,
+        olive: #B5CC18,
+        teal: #00B5AD,
+        violet: #6435C9,
+        purple: #A333C8,
+        pink: #E03997
+        );
+        input[type="radio"] {
+            display: none;
+            &:checked + label {
+              span { 
+                &::after{
+                    content: '';
+                    background: transparent;
+                    border: 2px solid white;
+                    height: 21px;
+                    width: 21px;
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    border-radius: 50%;
+                }
+             }
+            } // !&:checked + label
+          }
+        label {
+            display: inline-block;
+            width: 25px;
+            height: 25px;
+            border-radius: 50%;
+            margin-right: 8px;
+            cursor: pointer;
+            margin-bottom: 0px;
+            &:hover {
+              span { 
+                transform: scale(1.25); 
+              }
+            }
+            span {
+              display: block;
+              width: 100%;
+              height: 100%;
+              transition: transform .2s ease-in-out;
+              border-radius: 50%;
+              position: relative;
+              @each $name, $value in $colors {
+                &.#{$name} {
+                  background: $value;
+                }
+              }
+            }
+          }
+    }
+
+    .product__size{
+        $colors: (
+        gray: #DFE1EC,
+        );
+        input[type="radio"] {
+            display: none;
+            &:checked + label {
+              span { 
+                background: #4D537F;
+                color: white;
+             }
+            } // !&:checked + label
+          }
+        label {
+            color: var(--neutral-2, #717171);
+            font-family: Roboto-Regular;
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: normal;
+            display: inline-block;
+            width: 25px;
+            height: 25px;
+            line-height: 25px;
+            border-radius: 50%;
+            margin-right: 8px;
+            cursor: pointer;
+            text-align: center;
+            margin-bottom: 0px;
+            &:hover {
+              span { 
+                transform: scale(1.25); 
+              }
+            }
+            span {
+              display: block;
+              width: 100%;
+              height: 100%;
+              transition: transform .2s ease-in-out;
+              border-radius: 50%;
+              position: relative;
+              @each $name, $value in $colors {
+                &.#{$name} {
+                  background: $value;
+                }
+              }
+            }
+          }
+    }
+
+    .product__style{
+        h6{
+            margin-bottom: 20px;
+        }
+        $colors: (
+        gray: #DFE1EC,
+        );
+        input[type="radio"] {
+            display: none;
+            &:checked + label {
+                background: transparent;
+                border: 1px solid  $primary;
+                span{
+                    background-color: transparent;
+                    color: #282828;
+                }
+            } // !&:checked + label
+          }
+        label {
+            color:  #717171;
+            border: 1px solid  #C4C4C4;
+            background:  #DFE1EC;
+            font-family: Roboto-Regular;
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: normal;
+            display: inline-block;
+            margin-right: 8px;
+            cursor: pointer;
+            text-align: center;
+            margin-bottom: 0px;
+            padding: 8px 16px;
+            span {
+              display: block;
+              width: 100%;
+              height: 100%;
+              transition: transform .2s ease-in-out;
+              position: relative;
+              @each $name, $value in $colors {
+                &.#{$name} {
+                  background: $value;
+                }
+              }
+            }
+          }
+    }
+
+    h6{
+        color:  #262940;
+        font-family: Roboto-Regular;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+        margin-bottom: 0px;
+    }
+    .product__content__bottom{
+        display: flex;
+        align-items: center;
+        gap: 30px;
+    }
+    .product__price{
+        color:  #282828;
+        font-family: Poppins-Regular;
+        font-size: 28px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+        span{
+            color: $primary;
+        }
+    }
+    .btn-primary{
+        color:  #F5F5F5;
+        font-family: Roboto-Regular;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+        padding: 11px 75.5px;
+    }
+}
+

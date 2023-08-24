@@ -1,0 +1,18 @@
+.success__box{
+    h3{
+        color: #1A1C2B;
+        font-family: Poppins-Medium;
+        font-size: 28px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+    }
+    max-width: 440px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    .btn-primary{
+        padding: 12px 14px;
+    }
+}

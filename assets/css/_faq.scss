@@ -1,0 +1,59 @@
+.faq{
+    .accordion{
+        .accordion-body{
+            padding: 0px 45px 30px 45px;
+            border: none;
+            position: relative;
+            z-index: 99;
+        }
+        .accordion-item{
+            background: radial-gradient(circle at 100% 100%, #272937 0, #272937 14px, transparent 14px) 0% 0%/16px 16px no-repeat, radial-gradient(circle at 0 100%, #272937 0, #272937 14px, transparent 14px) 100% 0%/16px 16px no-repeat, radial-gradient(circle at 100% 0, #272937 0, #272937 14px, transparent 14px) 0% 100%/16px 16px no-repeat, radial-gradient(circle at 0 0, #272937 0, #272937 14px, transparent 14px) 100% 100%/16px 16px no-repeat, linear-gradient(#272937, #272937) 50% 50%/calc(100% - 4px) calc(100% - 32px) no-repeat, linear-gradient(#272937, #272937) 50% 50%/calc(100% - 32px) calc(100% - 4px) no-repeat, linear-gradient(159deg, transparent 80%, #00AD00 100%);
+            border-radius: 16px;
+            margin-bottom: 60px;
+            position: relative;
+            &::before{
+                content: '';
+                background-image: url(../img/bg/accordian-bg.svg);
+                background-size: cover;
+                background-repeat: no-repeat;
+                width: 99.3%;
+                height: 97%;
+                position: absolute;
+                left: 2px;
+                top: 2px;
+                border-radius: 16px;
+            }
+            .accordion-collapse{
+                border: none;
+                padding: 0;
+                margin: 0;
+            }
+            .accordion-button{
+                color: #EFF0F5;
+                background-color: transparent;
+                font-size: 20px;
+                font-style: normal;
+                padding: 30px 45px 30px 45px;
+                border: none;
+                position: relative;
+                &:focus{
+                    border: none;
+                    outline: none;
+                    box-shadow: none;
+                }
+                &::after{
+                    background-image: url('../img/icon/accordian-down.svg');
+                    background-position: center;
+                }
+            }
+            p{
+                color: #EFF0F5;
+                text-align: justify;
+                font-size: 16px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 28px; 
+            }
+        }
+    }
+}

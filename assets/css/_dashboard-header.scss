@@ -1,0 +1,15 @@
+.header__dashboard__icon{
+    gap: 30px;
+    a{
+        line-height: 20px;
+    }
+    i{
+        color: #E1E2EC;
+        font-size: 25px;
+        font-weight: 500;
+        cursor: pointer;
+        &:hover{
+            color: $primary;
+        }
+    }
+}

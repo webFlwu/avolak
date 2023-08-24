@@ -1,0 +1,68 @@
+
+.owl-prev{
+    @include slider-btn;
+    left: 0;
+}
+.owl-next{
+    @include slider-btn;
+    right: 0;
+}
+.owl-next, .owl-prev {
+    position: absolute;
+    top: 30%;
+    z-index: 10;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: $primary;
+    transition: $transition;
+    i{
+        font-weight: 400;
+    }
+    &:hover{
+        background-color: $primary;
+        color: $white;
+        transition: $transition;
+    }
+}
+.expert__trainer__slider .owl-next, .expert__trainer__slider .owl-prev{
+    top: 40%;
+}
+.owl-dots {
+    position: absolute;
+    bottom: -30px;
+    left: 50%;
+    -webkit-transform: translate(-50%, 0);
+    transform: translate(-50%, 0);
+}
+.owl-dots .owl-dot {
+    background: #ffffff;
+    border-radius: 10px;
+    width: 12px;
+    height: 12px;
+    float: left;
+    margin-right: 10px;
+    margin-left: 10px;
+}
+.owl-dots .owl-dot.active {
+    background: $primary;
+}
+
+@media only screen and (min-width: 1400px) and (max-width: 2400px) {
+
+    .owl-next{
+        right: -29px;
+    }
+    .owl-prev{
+        left: -29px;
+    }
+
+}
+@media only screen and (min-width: 200px) and (max-width: 767px) {
+    .owl-next, .owl-prev{
+        height: 40px;
+        width: 40px;
+        line-height: 40px;
+    }
+}

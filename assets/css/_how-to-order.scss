@@ -1,0 +1,110 @@
+.how__to__order{
+    background: url('../img/bg/how-to-order-bg.png');
+    background-size: cover;
+    background-position: top;
+    background-repeat: no-repeat;
+    .how__to__order__step{
+        position: relative;
+        h4{
+            color:  #1A1C2B;
+            font-size: 28px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: normal;
+            margin-bottom: 24px;
+        }
+        p{
+            color:#717171;
+            text-align: justify;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+        }
+        img{
+            min-width: 120px;
+        }
+    }
+    .col-lg-4{
+        &:nth-child(2){
+            .how__to__order__step{
+                margin-top: 175px;
+                &::before{
+                    content: '';
+                    background-image: url(../img/how-to-order/line.svg);
+                    background-size: cover;
+                    background-repeat: no-repeat;
+                    width: 12px;
+                    height: 80px;
+                    position: absolute;
+                    left: 0;
+                    top: -85px;
+                }
+            }
+        }
+    }
+    .col-lg-4{
+        &:nth-child(3){
+            .how__to__order__step{
+                margin-top: 375px;
+                &::before{
+                    content: '';
+                    background-image: url(../img/how-to-order/line.svg);
+                    background-size: cover;
+                    background-repeat: no-repeat;
+                    width: 12px;
+                    height: 80px;
+                    position: absolute;
+                    left: 0;
+                    top: -85px;
+                }
+            }
+        }
+    }
+    .col-lg-4{
+        &:nth-child(4){
+            .how__to__order__step{
+                margin-top: 280px;
+                &::after{
+                    content: '';
+                    background-image: url(../img/how-to-order/line.svg);
+                    background-size: cover;
+                    background-repeat: no-repeat;
+                    width: 12px;
+                    height: 80px;
+                    position: absolute;
+                    right:0px;
+                    top: -50px;
+                }
+            }
+        }
+    }
+    .col-lg-4{
+        &:nth-child(5){
+            .how__to__order__step{
+                margin-top: 60px;
+                &::after{
+                    content: '';
+                    background-image: url(../img/how-to-order/line.svg);
+                    background-size: cover;
+                    background-repeat: no-repeat;
+                    width: 12px;
+                    height: 80px;
+                    position: absolute;
+                    right: -40px;
+                    top: -50px;
+                }
+            }
+        }
+    }
+    .shape-image-one{
+        position: absolute;
+        right: 100px;
+        top: 0;
+    }
+    .shape-image-two{
+        position: absolute;
+        left: 100px;
+        top: 37%;
+    }
+}
