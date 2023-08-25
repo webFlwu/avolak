@@ -1,49 +1,55 @@
-@import "mixin"; 
+@import 'mixin';
 
-@import "variable"; 
+@import 'variable';
 
-@import "header"; 
+@import 'header';
 
-@import "menu"; 
+@import 'menu';
 
-@import "hero"; 
+@import 'hero';
 
-@import "brand"; 
+@import 'brand';
 
-@import "carousel"; 
+@import 'carousel';
 
-@import "price-calculator"; 
+@import 'price-calculator';
 
-@import "how-to-order"; 
+@import 'how-to-order';
 
-@import "testimonial"; 
+@import 'testimonial';
 
-@import "faq"; 
+@import 'faq';
 
-@import "form"; 
+@import 'form';
 
-@import "sign-in"; 
+@import 'sign-in';
 
-@import "sign-up"; 
+@import 'sign-up';
 
-@import "otp"; 
+@import 'otp';
 
-@import "forget-password"; 
+@import 'forget-password';
 
-@import "search"; 
+@import 'search';
 
-@import "dashboard"; 
+@import 'dashboard';
 
-@import "dashboard-header"; 
+@import 'dashboard-header';
 
-@import "dashboard-notification";  
+@import 'dashboard-notification';
 
-@import "request-item";  
+@import 'request-item';
 
-@import "component";   
+@import 'component';
 
-@import "success-box";   
+@import 'success-box';
 
-@import "product-popup";    
+@import 'product-popup';
 
-@import "footer"; 
+@import 'footer';
+
+@import 'cart';
+
+@import 'tab-section';
+
+@import 'table';

@@ -1,15 +1,53 @@
-.header__dashboard__icon{
+.header__dashboard__icon {
+  gap: 30px;
+  a {
+    line-height: 20px;
+  }
+  i {
+    color: #e1e2ec;
+    font-size: 25px;
+    font-weight: 500;
+    cursor: pointer;
+    &:hover {
+      color: $primary;
+    }
+  }
+}
+
+.dashboard-header-section {
+  background: #f5f5f5;
+  box-shadow: 0px 2px 10px 0px rgba(26, 28, 43, 0.05);
+  position: sticky;
+  top: 0;
+  z-index: 99;
+}
+.dashboard-header {
+  height: 108px;
+  padding-block: 30px;
+  gap: 45px;
+
+  ul {
+    display: flex;
+    align-items: center;
+  }
+  .header-left {
+    color: #262940;
+    font-family: 'Roboto-Regular';
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    gap: 45px;
+    flex: 1;
+  }
+  .header-right {
+    color: #3a3e5f;
     gap: 30px;
-    a{
-        line-height: 20px;
+    font-size: 25px;
+    font-weight: 500;
+
+    button {
+      background-color: transparent;
     }
-    i{
-        color: #E1E2EC;
-        font-size: 25px;
-        font-weight: 500;
-        cursor: pointer;
-        &:hover{
-            color: $primary;
-        }
-    }
+  }
 }
