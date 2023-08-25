@@ -1,3 +1,29 @@
+@media only screen and (min-width: 768px) {
+  .block {
+    padding-inline: 64px;
+  }
+  .main-content {
+    left: 280px;
+    width: calc(100% - 280px);
+  }
+  .sidebar.close ~ .main-content {
+    left: 90px;
+    width: calc(100% - 90px);
+  }
+  .sidebar.close ~ .main-content .block {
+    padding-inline: 100px;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .dashboard-header .header-right {
+    gap: 20px;
+  }
+}
+@media only screen and (max-width: 575px) {
+  .table-summary {
+    margin-right: 0;
+  }
+}
 @media only screen and (min-width: 200px) and (max-width: 320px) {
   .price__calculator .price__calculator__right__content form .number {
     margin-right: 10px;

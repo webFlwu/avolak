@@ -11,6 +11,7 @@
     line-height: normal;
     font-family: 'Roboto-Medium';
     font-weight: 500;
+    white-space: nowrap;
   }
 
   .price-text {
@@ -39,11 +40,16 @@
 
   button {
     color: #009900;
+    &:first-child {
+      border-inline-end: none;
+    }
+    &:last-child {
+      border-inline-start: none;
+    }
   }
 
   input {
     color: #282828;
-    border-inline: none;
 
     &:focus {
       outline: none;
@@ -53,39 +59,39 @@
 
 .table-summary-wrapper {
   text-align: right;
-  .table-summary {
-    display: inline-flex;
-    padding: 16px;
-    justify-content: center;
-    align-items: center;
-    gap: 16px;
-    border-radius: 16px;
-    background: #f5f5f5;
-    box-shadow: -2px 6px 16px 0px rgba(0, 0, 0, 0.08);
-  }
-  .total-price {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    padding-inline: 24px;
+}
+.table-summary {
+  margin-right: 30px;
+  padding: 16px;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  border-radius: 16px;
+  background: #f5f5f5;
+  box-shadow: -2px 6px 16px 0px rgba(0, 0, 0, 0.08);
+}
+.total-price {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding-inline: 24px;
 
-    & span:first-child {
-      color: #6b6b6b;
-      font-family: Poppins-Medium;
-      font-size: 28px;
-      font-style: normal;
-      font-weight: 500;
-      line-height: normal;
-    }
-    & span:last-child {
-      color: #00ad00;
-      text-align: center;
-      font-size: 20px;
-      font-style: normal;
-      font-weight: 600;
-      line-height: normal;
-    }
+  & span:first-child {
+    color: #6b6b6b;
+    font-family: Poppins-Medium;
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+  }
+  & span:last-child {
+    color: #00ad00;
+    text-align: center;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
   }
 }
 

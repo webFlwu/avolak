@@ -1,13 +1,20 @@
 .tab-section-wrapper {
   margin-top: 36px;
   position: relative;
-  display: flex;
   justify-content: space-between;
+  align-items: center;
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding-bottom: 20px;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
 
   &::before {
     content: '';
     position: absolute;
-    top: calc(100% + 11px);
+    top: calc(100% - 13px);
     height: 0.8px;
     width: 100%;
     background-color: #c4c4c4;
@@ -27,6 +34,7 @@
     line-height: normal;
     position: relative;
     cursor: pointer;
+    white-space: nowrap;
 
     &.active::after {
       content: '';

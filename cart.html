@@ -153,8 +153,8 @@
     <div class="main-content">
       <div class="dashboard-header-section">
         <div class="block">
-          <div class="dashboard-header d-flex justify-content-between">
-            <ul class="header-left">
+          <div class="dashboard-header gap-sm-5 d-flex justify-content-between align-items-center">
+            <ul class="header-left d-none d-md-flex">
               <li><a href="#">Home</a></li>
               <li><a href="#">How To Order</a></li>
               <li><a href="#">Messages</a></li>
@@ -164,15 +164,85 @@
                 <button><i class="far fa-search"></i></button>
               </li>
               <li>
-                <button><i class="far fa-bell"></i></button>
+                <div class="dropdown">
+                  <button class="no-style-btn" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <i class="far fa-bell"></i>
+                  </button>
+
+                  <ul class="dropdown-menu dropdown-menu-start dropdown-menu-md-end header-notification">
+                    <li>
+                      <a class="dropdown-item" href="#">
+                        <div class="logo">
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="35"
+                            height="36"
+                            viewBox="0 0 35 36"
+                            fill="none"
+                          >
+                            <g clip-path="url(#clip0_2004_3652)">
+                              <path
+                                d="M29.2863 28.5496V30.1754C29.2893 30.2966 29.3385 30.4118 29.4234 30.4964C29.5083 30.581 29.6223 30.6283 29.7409 30.6283H29.2863C24.8181 35.004 18.0522 36.9457 11.0522 34.3444C8.74446 33.4791 6.65763 32.0925 4.94738 30.2881C3.23713 28.4836 1.9476 26.3078 1.17496 23.923C-2.71595 12.0082 5.6136 0.903915 16.6022 0.390625V5.82082C8.94087 6.33876 3.24315 14.3075 6.39315 22.6804C7.36133 25.2608 10.2409 28.2012 12.7568 29.1837C20.95 32.4004 28.7454 26.5754 29.2522 18.7506H34.584V28.0944H29.7204C29.6039 28.0962 29.4928 28.1451 29.4114 28.2304C29.3301 28.3157 29.2851 28.4305 29.2863 28.5496Z"
+                                fill="#00AD00"
+                              />
+                              <path d="M34.5907 30.6211H29.2861V35.5101H34.5907V30.6211Z" fill="#1A1C2B" />
+                              <path
+                                d="M34.5906 0.367188V17.9398H29.2861V5.78809H17.3975V0.367188H34.5906Z"
+                                fill="#1A1C2B"
+                              />
+                            </g>
+                            <defs>
+                              <clipPath id="clip0_2004_3652">
+                                <rect width="35" height="36" fill="white" />
+                              </clipPath>
+                            </defs>
+                          </svg>
+                        </div>
+                        200 points credited to your balance order reference #AV3125
+                      </a>
+                    </li>
+                  </ul>
+                </div>
               </li>
               <li>
                 <button><i class="far fa-shopping-bag"></i></button>
               </li>
               <li>
-                <button><img src="./assets/img/icon/user.svg" alt="user" /></button>
+                <div class="dropdown">
+                  <button class="no-style-btn" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <img src="./assets/img/icon/user.svg" alt="user" />
+                  </button>
+
+                  <ul class="dropdown-menu dropdown-menu-start dropdown-menu-md-end">
+                    <li>
+                      <a class="dropdown-item" href="#">
+                        <img src="./assets/img/icon/edit.svg" alt="" />
+                        Request Item
+                      </a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="#">
+                        <img src="./assets/img/icon/setting.svg" alt="" />
+                        Settings
+                      </a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="#">
+                        <img src="./assets/img/icon/sign-out.svg" alt="" />
+                        Log Out
+                      </a>
+                    </li>
+                  </ul>
+                </div>
               </li>
             </ul>
+            <div class="d-md-none">
+              <div class="sidebar-toggle-btn sidebar-toggle-btn-dark" id="sidebar-toggle">
+                <span class="line"></span>
+                <span class="line"></span>
+                <span class="line"></span>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -181,7 +251,7 @@
         <div class="block">
           <h2 class="main-heading">Cart</h2>
 
-          <div class="tab-section-wrapper">
+          <div class="tab-section-wrapper d-flex gap-5">
             <div class="tab-section">
               <div class="tab-item active">Active</div>
               <div class="tab-item">Pending</div>
@@ -191,195 +261,250 @@
             <button class="mr-20"><i class="far fa-search"></i></button>
           </div>
 
-          <table class="custom-table">
-            <thead>
-              <tr>
-                <th width="100px">
-                  <div class="d-flex gap-3">
-                    <label class="custom-checkbox">
-                      <input type="checkbox" class="form-check-input" />
-                      <span></span>
-                    </label>
-                    <span>ID</span>
-                  </div>
-                </th>
-                <th>Item</th>
-                <th>Quantity</th>
-                <th>Note</th>
-                <th>Price</th>
-                <th>Status</th>
-                <th>
-                  <div class="dropdown">
-                    <button class="more-btn no-style-btn" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                      <i class="fa fa-ellipsis-v"></i>
-                    </button>
+          <div class="table-responsive">
+            <table class="custom-table">
+              <thead>
+                <tr>
+                  <th width="100px">
+                    <div class="d-flex gap-3">
+                      <label class="custom-checkbox">
+                        <input type="checkbox" class="form-check-input" />
+                        <span></span>
+                      </label>
+                      <span>ID</span>
+                    </div>
+                  </th>
+                  <th>Item</th>
+                  <th>Quantity</th>
+                  <th>Note</th>
+                  <th>Price</th>
+                  <th>Status</th>
+                  <th>
+                    <div class="dropdown">
+                      <button
+                        class="more-btn no-style-btn p-2"
+                        type="button"
+                        data-bs-toggle="dropdown"
+                        aria-expanded="false"
+                      >
+                        <i class="fa fa-ellipsis-v"></i>
+                      </button>
 
-                    <ul class="dropdown-menu">
-                      <li>
-                        <a class="dropdown-item" href="#"><i class="far fa-credit-card"></i>Pay Selected</a>
-                      </li>
-                      <li>
-                        <a class="dropdown-item" href="#"><i class="far fa-trash-alt"></i>Delete Selected</a>
-                      </li>
-                    </ul>
-                  </div>
-                </th>
-              </tr>
-            </thead>
+                      <ul class="dropdown-menu">
+                        <li>
+                          <a class="dropdown-item" href="#">
+                            <img src="./assets/img/icon/pay_now.svg" alt="" />
+                            Pay Selected
+                          </a>
+                        </li>
+                        <li>
+                          <a class="dropdown-item" href="#">
+                            <img src="./assets/img/icon/trush.svg" alt="" />
+                            Delete Selected
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+                  </th>
+                </tr>
+              </thead>
 
-            <tbody>
-              <tr class="tr-spacing"></tr>
-              <tr class="tr-spacing"></tr>
-              <tr>
-                <td>
-                  <div class="d-flex gap-3">
-                    <input type="checkbox" class="form-check-input" /> <span>#AV3012</span>
-                  </div>
-                </td>
-                <td class="item-column">
-                  <div class="d-flex">
-                    <img class="product-img" src="./assets/img/product/p1.png" alt="p1" />
-                    PreSonus Revelator USB Condenser Microphone for podcasting, live streami....
-                  </div>
-                </td>
-                <td>
-                  <div class="product-quantity">
-                    <button><i class="fa fa-minus"></i></button>
-                    <input type="text" value="1" />
-                    <button><i class="fa fa-plus"></i></button>
-                  </div>
-                </td>
-                <td>View Note</td>
-                <td>
-                  <div class="price-wrapper pointer" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                    <span class="price">৳ 7,200</span>
-                    <span class="price-text">Break Down</span>
-                  </div>
-                </td>
-                <td><button class="btn btn-primary">Pay Now</button></td>
-                <td>
-                  <div class="dropdown">
-                    <button class="more-btn no-style-btn" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                      <i class="fa fa-ellipsis-v"></i>
-                    </button>
+              <tbody>
+                <tr class="tr-spacing"></tr>
+                <tr class="tr-spacing"></tr>
+                <tr>
+                  <td>
+                    <div class="d-flex gap-3">
+                      <input type="checkbox" class="form-check-input" /> <span>#AV3012</span>
+                    </div>
+                  </td>
+                  <td class="item-column">
+                    <div class="d-flex">
+                      <img class="product-img" src="./assets/img/product/p1.png" alt="p1" />
+                      PreSonus Revelator USB Condenser Microphone for podcasting, live streami....
+                    </div>
+                  </td>
+                  <td>
+                    <div class="product-quantity">
+                      <button><i class="fa fa-minus"></i></button>
+                      <input type="text" value="1" />
+                      <button><i class="fa fa-plus"></i></button>
+                    </div>
+                  </td>
+                  <td>View Note</td>
+                  <td>
+                    <div class="price-wrapper pointer" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                      <span class="price">৳ 7,200</span>
+                      <span class="price-text">Break Down</span>
+                    </div>
+                  </td>
+                  <td><button class="btn btn-primary">Pay Now</button></td>
+                  <td>
+                    <div class="dropdown">
+                      <button
+                        class="more-btn no-style-btn p-2"
+                        type="button"
+                        data-bs-toggle="dropdown"
+                        aria-expanded="false"
+                      >
+                        <i class="fa fa-ellipsis-v"></i>
+                      </button>
 
-                    <ul class="dropdown-menu">
-                      <li>
-                        <a class="dropdown-item" href="#"><i class="far fa-credit-card"></i>Pay Now</a>
-                      </li>
-                      <li>
-                        <a class="dropdown-item" href="#"><i class="far fa-book-alt"></i>View Note</a>
-                      </li>
-                      <li>
-                        <a class="dropdown-item" href="#"><i class="far fa-trash-alt"></i>Delete</a>
-                      </li>
-                    </ul>
-                  </div>
-                </td>
-              </tr>
+                      <ul class="dropdown-menu">
+                        <li>
+                          <a class="dropdown-item" href="#">
+                            <img src="./assets/img/icon/pay_now.svg" alt="" />
+                            Pay Now
+                          </a>
+                        </li>
+                        <li>
+                          <a class="dropdown-item" href="#">
+                            <img src="./assets/img/icon/note.svg" alt="" />
+                            View Note
+                          </a>
+                        </li>
+                        <li>
+                          <a class="dropdown-item" href="#">
+                            <img src="./assets/img/icon/trush.svg" alt="" />
+                            Delete
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+                  </td>
+                </tr>
 
-              <tr class="tr-spacing"></tr>
-              <tr>
-                <td>
-                  <div class="d-flex gap-3">
-                    <input type="checkbox" class="form-check-input" /> <span>#AV3012</span>
-                  </div>
-                </td>
-                <td class="item-column">
-                  <div class="d-flex">
-                    <img class="product-img" src="./assets/img/product/p2.png" alt="p1" />
-                    Amazon Brand - Solimo Adult Multivitamin, 150 Gummies, 75-Day Sup...
-                  </div>
-                </td>
-                <td>
-                  <div class="product-quantity">
-                    <button><i class="fa fa-minus"></i></button>
-                    <input type="text" value="1" />
-                    <button><i class="fa fa-plus"></i></button>
-                  </div>
-                </td>
-                <td>View Note</td>
-                <td>
-                  <div class="price-wrapper pointer" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                    <span class="price">৳ 1,850</span>
-                    <span class="price-text">Break Down</span>
-                  </div>
-                </td>
-                <td><button class="btn btn-primary">Pay Now</button></td>
-                <td>
-                  <div class="dropdown">
-                    <button class="more-btn no-style-btn" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                      <i class="fa fa-ellipsis-v"></i>
-                    </button>
+                <tr class="tr-spacing"></tr>
+                <tr>
+                  <td>
+                    <div class="d-flex gap-3">
+                      <input type="checkbox" class="form-check-input" /> <span>#AV3012</span>
+                    </div>
+                  </td>
+                  <td class="item-column">
+                    <div class="d-flex">
+                      <img class="product-img" src="./assets/img/product/p2.png" alt="p1" />
+                      Amazon Brand - Solimo Adult Multivitamin, 150 Gummies, 75-Day Sup...
+                    </div>
+                  </td>
+                  <td>
+                    <div class="product-quantity">
+                      <button><i class="fa fa-minus"></i></button>
+                      <input type="text" value="1" />
+                      <button><i class="fa fa-plus"></i></button>
+                    </div>
+                  </td>
+                  <td>View Note</td>
+                  <td>
+                    <div class="price-wrapper pointer" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                      <span class="price">৳ 1,850</span>
+                      <span class="price-text">Break Down</span>
+                    </div>
+                  </td>
+                  <td><button class="btn btn-primary">Pay Now</button></td>
+                  <td>
+                    <div class="dropdown">
+                      <button
+                        class="more-btn no-style-btn p-2"
+                        type="button"
+                        data-bs-toggle="dropdown"
+                        aria-expanded="false"
+                      >
+                        <i class="fa fa-ellipsis-v"></i>
+                      </button>
 
-                    <ul class="dropdown-menu">
-                      <li>
-                        <a class="dropdown-item" href="#"><i class="far fa-credit-card"></i>Pay Now</a>
-                      </li>
-                      <li>
-                        <a class="dropdown-item" href="#"><i class="far fa-book-alt"></i>View Note</a>
-                      </li>
-                      <li>
-                        <a class="dropdown-item" href="#"><i class="far fa-trash-alt"></i>Delete</a>
-                      </li>
-                    </ul>
-                  </div>
-                </td>
-              </tr>
+                      <ul class="dropdown-menu">
+                        <li>
+                          <a class="dropdown-item" href="#">
+                            <img src="./assets/img/icon/pay_now.svg" alt="" />
+                            Pay Now
+                          </a>
+                        </li>
+                        <li>
+                          <a class="dropdown-item" href="#">
+                            <img src="./assets/img/icon/note.svg" alt="" />
+                            View Note
+                          </a>
+                        </li>
+                        <li>
+                          <a class="dropdown-item" href="#">
+                            <img src="./assets/img/icon/trush.svg" alt="" />
+                            Delete
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+                  </td>
+                </tr>
 
-              <tr class="tr-spacing"></tr>
-              <tr>
-                <td>
-                  <div class="d-flex gap-3">
-                    <input type="checkbox" class="form-check-input" /> <span>#AV3012</span>
-                  </div>
-                </td>
-                <td class="item-column">
-                  <div class="d-flex">
-                    <img class="product-img" src="./assets/img/product/p3.png" alt="p1" />
-                    The Art of Shaving Unscented Pre-Shave Oil – Protects Against Clinica....
-                  </div>
-                </td>
-                <td>
-                  <div class="product-quantity">
-                    <button><i class="fa fa-minus"></i></button>
-                    <input type="text" value="1" />
-                    <button><i class="fa fa-plus"></i></button>
-                  </div>
-                </td>
-                <td>View Note</td>
-                <td>
-                  <div class="price-wrapper pointer" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                    <span class="price">৳ 2,350</span>
-                    <span class="price-text">Break Down</span>
-                  </div>
-                </td>
-                <td><button class="btn btn-primary">Pay Now</button></td>
-                <td>
-                  <div class="dropdown">
-                    <button class="more-btn no-style-btn" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                      <i class="fa fa-ellipsis-v"></i>
-                    </button>
+                <tr class="tr-spacing"></tr>
+                <tr>
+                  <td>
+                    <div class="d-flex gap-3">
+                      <input type="checkbox" class="form-check-input" /> <span>#AV3012</span>
+                    </div>
+                  </td>
+                  <td class="item-column">
+                    <div class="d-flex">
+                      <img class="product-img" src="./assets/img/product/p3.png" alt="p1" />
+                      The Art of Shaving Unscented Pre-Shave Oil – Protects Against Clinica....
+                    </div>
+                  </td>
+                  <td>
+                    <div class="product-quantity">
+                      <button><i class="fa fa-minus"></i></button>
+                      <input type="text" value="1" />
+                      <button><i class="fa fa-plus"></i></button>
+                    </div>
+                  </td>
+                  <td>View Note</td>
+                  <td>
+                    <div class="price-wrapper pointer" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                      <span class="price">৳ 2,350</span>
+                      <span class="price-text">Break Down</span>
+                    </div>
+                  </td>
+                  <td><button class="btn btn-primary">Pay Now</button></td>
+                  <td>
+                    <div class="dropdown">
+                      <button
+                        class="more-btn no-style-btn p-2"
+                        type="button"
+                        data-bs-toggle="dropdown"
+                        aria-expanded="false"
+                      >
+                        <i class="fa fa-ellipsis-v"></i>
+                      </button>
 
-                    <ul class="dropdown-menu">
-                      <li>
-                        <a class="dropdown-item" href="#"><i class="far fa-credit-card"></i>Pay Now</a>
-                      </li>
-                      <li>
-                        <a class="dropdown-item" href="#"><i class="far fa-book-alt"></i>View Note</a>
-                      </li>
-                      <li>
-                        <a class="dropdown-item" href="#"><i class="far fa-trash-alt"></i>Delete</a>
-                      </li>
-                    </ul>
-                  </div>
-                </td>
-              </tr>
-            </tbody>
-          </table>
+                      <ul class="dropdown-menu">
+                        <li>
+                          <a class="dropdown-item" href="#">
+                            <img src="./assets/img/icon/pay_now.svg" alt="" />
+                            Pay Now
+                          </a>
+                        </li>
+                        <li>
+                          <a class="dropdown-item" href="#">
+                            <img src="./assets/img/icon/note.svg" alt="" />
+                            View Note
+                          </a>
+                        </li>
+                        <li>
+                          <a class="dropdown-item" href="#">
+                            <img src="./assets/img/icon/trush.svg" alt="" />
+                            Delete
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
 
           <div class="mt-20 table-summary-wrapper">
-            <div class="table-summary">
+            <div class="table-summary flex-column flex-sm-row d-flex d-sm-inline-flex">
               <div class="total-price pointer" data-bs-toggle="modal" data-bs-target="#exampleModal">
                 <span>Total</span>
                 <span>৳ 9,050</span>
@@ -439,40 +564,13 @@
     <script src="assets/js/popper.min.js"></script>
     <script src="assets/js/main.js"></script>
     <script src="assets/js/zoom.js"></script>
+
     <script>
-      let slideIndex = 1
-      showDivs(slideIndex)
-
-      function plusDivs(n) {
-        showDivs((slideIndex += n))
-      }
-
-      function currentDiv(n) {
-        showDivs((slideIndex = n))
-      }
-
-      function showDivs(n) {
-        var i
-        var x = document.getElementsByClassName('mySlides')
-        var items = document.getElementsByClassName('img-thumb')
-
-        if (n > x.length) {
-          slideIndex = 1
+      $(document).ready(function () {
+        if ($(window).width() < 768) {
+          $('.sidebar').addClass('close')
         }
-        if (n < 1) {
-          slideIndex = x.length
-        }
-
-        for (i = 0; i < x.length; i++) {
-          x[i].style.display = 'none'
-        }
-
-        for (i = 0; i < items.length; i++) {
-          items[i].className = items[i].className.replace(' solid', '')
-        }
-        x[slideIndex - 1].style.display = 'block'
-        items[slideIndex - 1].className += ' solid'
-      }
+      })
     </script>
   </body>
 </html>

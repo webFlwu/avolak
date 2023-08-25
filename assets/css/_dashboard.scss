@@ -480,26 +480,19 @@
 }
 
 // new dashboard
+
 .block {
-  padding-inline: 64px;
+  padding-inline: 15px;
   transition: padding-inline 0.5s ease;
 }
 .main-content {
   position: relative;
-  left: 280px;
-  width: calc(100% - 280px);
+  left: 90px;
+  width: calc(100% - 90px);
   transition: all 0.5s ease;
   height: 100vh;
   overflow-y: auto;
   background: #eff0f5;
-}
-
-.sidebar.close ~ .main-content {
-  left: 90px;
-  width: calc(100% - 90px);
-  .block {
-    padding-inline: 100px;
-  }
 }
 
 .content-body {
@@ -543,9 +536,26 @@
     font-style: normal;
     font-weight: 400;
     line-height: 200%;
-    height: 48px;
+    padding-block: 8px;
+    min-width: 188px;
     &:hover {
       background-color: #dfdfec;
+    }
+  }
+
+  &.header-notification {
+    width: 350px;
+    max-width: 350px;
+    .dropdown-item {
+      gap: 16px;
+      white-space: normal;
+      font-family: 'Roboto-Regular';
+      line-height: 28px;
+
+      .logo {
+        height: 35px;
+        width: 35px;
+      }
     }
   }
 
