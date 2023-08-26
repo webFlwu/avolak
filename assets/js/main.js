@@ -14,303 +14,276 @@
 
 ****************************************************/
 
-(function ($) {
-"use strict";
+;(function ($) {
+  'use strict'
 
-	var windowOn = $(window);
-	////////////////////////////////////////////////////
-    // 01. PreLoader Js
-	windowOn.on('load',function() {
-		$("#loading").fadeOut(500);
-	});
+  var windowOn = $(window)
+  ////////////////////////////////////////////////////
+  // 01. PreLoader Js
+  windowOn.on('load', function () {
+    $('#loading').fadeOut(500)
+  })
 
-	////////////////////////////////////////////////////
-    // 02. Mobile Menu Js
-	$('#mobile-menu').meanmenu({
-		meanMenuContainer: '.mobile-menu',
-		meanScreenWidth: "1199",
-		meanExpand: ['<i class="fal fa-plus"></i>'],
-	});
+  ////////////////////////////////////////////////////
+  // 02. Mobile Menu Js
+  $('#mobile-menu').meanmenu({
+    meanMenuContainer: '.mobile-menu',
+    meanScreenWidth: '1199',
+    meanExpand: ['<i class="fal fa-plus"></i>'],
+  })
 
-	////////////////////////////////////////////////////
-    // 03. Sidebar Js
-	$("#sidebar-toggle").on("click", function () {
-		$(".sidebar__area").addClass("sidebar-opened");
-		$(".body-overlay").addClass("opened");
-	});
-	$(".sidebar__close-btn").on("click", function () {
-		$(".sidebar__area").removeClass("sidebar-opened");
-		$(".body-overlay").removeClass("opened");
-	});
+  ////////////////////////////////////////////////////
+  // 03. Sidebar Js
+  $('#sidebar-toggle').on('click', function () {
+    $('.sidebar__area').addClass('sidebar-opened')
+    $('.body-overlay').addClass('opened')
+  })
+  $('.sidebar__close-btn').on('click', function () {
+    $('.sidebar__area').removeClass('sidebar-opened')
+    $('.body-overlay').removeClass('opened')
+  })
 
-	////////////////////////////////////////////////////
-    // 04. Sticky Header Js
-	windowOn.on('scroll', function () {
-		var scroll = $(window).scrollTop();
-		if (scroll < 800) {
-			$("#header-sticky").removeClass("sticky");
-		} else {
-			$("#header-sticky").addClass("sticky");
-		}
-	});
+  ////////////////////////////////////////////////////
+  // 04. Sticky Header Js
+  windowOn.on('scroll', function () {
+    var scroll = $(window).scrollTop()
+    if (scroll < 800) {
+      $('#header-sticky').removeClass('sticky')
+    } else {
+      $('#header-sticky').addClass('sticky')
+    }
+  })
 
-	////////////////////////////////////////////////////
-    // 05. Brand Slider Js
+  ////////////////////////////////////////////////////
+  // 05. Brand Slider Js
 
-	$('.brand__slider').owlCarousel({
-		center: false,
-		items:1,
-		loop: true,
-		stagePadding: 0,
-		margin: 0,
-		autoplay: true,
-		pauseOnHover: false,
-		dots: false,
-		nav: false,
-		responsive:{
-			300:{
-			
-			  items: 1
-			},
-			700:{
-			
-				items: 2
-			},
-			1000:{
-			
-			  items: 4
-			},
-			1200:{
-			
-			  items: 6
-			}
-		}
-	});
+  $('.brand__slider').owlCarousel({
+    center: false,
+    items: 1,
+    loop: true,
+    stagePadding: 0,
+    margin: 0,
+    autoplay: true,
+    pauseOnHover: false,
+    dots: false,
+    nav: false,
+    responsive: {
+      300: {
+        items: 1,
+      },
+      700: {
+        items: 2,
+      },
+      1000: {
+        items: 4,
+      },
+      1200: {
+        items: 6,
+      },
+    },
+  })
 
+  ////////////////////////////////////////////////////
+  // 06. Testimonial Slider Js
 
-	////////////////////////////////////////////////////
-    // 06. Testimonial Slider Js
+  $('.testimonial__slider').owlCarousel({
+    center: false,
+    items: 1,
+    loop: true,
+    stagePadding: 0,
+    margin: 30,
+    autoplay: true,
+    pauseOnHover: false,
+    dots: false,
+    nav: false,
+    responsive: {
+      300: {
+        items: 1,
+      },
+      700: {
+        items: 2,
+      },
+      1000: {
+        items: 2,
+      },
+      1200: {
+        items: 3,
+      },
+    },
+  })
 
-	$('.testimonial__slider').owlCarousel({
-		center: false,
-		items:1,
-		loop: true,
-		stagePadding: 0,
-		margin: 30,
-		autoplay: true,
-		pauseOnHover: false,
-		dots: false,
-		nav: false,
-		responsive:{
-			300:{
-			
-			  items: 1
-			},
-			700:{
-			
-				items: 2
-			},
-			1000:{
-			
-			  items: 2
-			},
-			1200:{
-			
-			  items: 3
-			}
-		}
-	});
+  ////////////////////////////////////////////////////
+  // 07. Multi Select
 
-    ////////////////////////////////////////////////////
-    // 07. Multi Select
+  $('.multi-select-head').click(function (e) {
+    var currentWrap = $(this).parents('.multi-select-wrap')
+    var currentBox = currentWrap.find('.multi-select-box-holder')
 
-    $('.multi-select-head').click(function (e) {
-      
-        var currentWrap = $(this).parents('.multi-select-wrap');
-        var currentBox = currentWrap.find('.multi-select-box-holder');
+    var currentArrow = currentWrap.find('.arrow-up')
 
-        var currentArrow = currentWrap.find('.arrow-up');
+    currentBox.toggleClass('box-show')
+    currentArrow.toggleClass('arrow-down')
+    e.stopPropagation()
+  })
 
-        currentBox.toggleClass("box-show");
-        currentArrow.toggleClass("arrow-down");
-        e.stopPropagation();
-    });
-    
+  $(window).click(function (e) {
+    $('.multi-select-box-holder').removeClass('box-show')
+    $('.arrow-up').removeClass('arrow-down')
+    e.stopPropagation()
+  })
 
-    $(window).click(function(e) {
-        $('.multi-select-box-holder').removeClass("box-show");
-        $('.arrow-up').removeClass("arrow-down");
-        e.stopPropagation();
-    });
+  $('.multi-select-wrap').click(function (e) {
+    e.stopPropagation()
+  })
 
+  $('.item-checkbox-input').on('click', function () {
+    var currentInput = $(this)
+    var currentText = currentInput.parent('.checkbox-item').find('.checkbox-text').html()
+    var curentTitle = currentInput.parents('.multi-select-wrap').find('.multi-select-title')
 
-    $('.multi-select-wrap').click(function (e) {
-        e.stopPropagation();
-    });
+    var currentWrap = currentInput.parents('.multi-select-wrap')
 
+    currentWrap.find('.item-checkbox-input').prop('checked', false)
+    $(this).prop('checked', true)
 
-    $(".item-checkbox-input").on( "click", function() {
- 
-        var currentInput = $(this);
-        var currentText = currentInput.parent('.checkbox-item').find('.checkbox-text').html();
-        var curentTitle = currentInput.parents('.multi-select-wrap').find('.multi-select-title');
+    curentTitle.html(currentText)
 
-        var currentWrap = currentInput.parents('.multi-select-wrap');
-      
-        currentWrap.find(".item-checkbox-input").prop('checked', false);
-        $(this).prop('checked', true);
+    currentWrap.find('.multi-select-box-holder').removeClass('box-show')
+    currentWrap.find('.arrow-up').removeClass('arrow-down')
+  })
 
-        curentTitle.html(currentText);
+  ////////////////////////////////////////////////////
+  // 08. Input Number
 
-        currentWrap.find('.multi-select-box-holder').removeClass("box-show");
-        currentWrap.find('.arrow-up').removeClass("arrow-down");
-    });
+  $(document).ready(function () {
+    $('.minus').click(function () {
+      var $input = $(this).parent().find('input')
+      var count = parseInt($input.val()) - 1
+      count = count < 1 ? 1 : count
+      $input.val(count)
+      $input.change()
+      return false
+    })
+    $('.plus').click(function () {
+      var $input = $(this).parent().find('input')
+      $input.val(parseInt($input.val()) + 1)
+      $input.change()
+      return false
+    })
+  })
 
-	////////////////////////////////////////////////////
-    // 08. Input Number
+  ////////////////////////////////////////////////////
+  // 09. Price Box Popup
 
-	$(document).ready(function() {
-		$('.minus').click(function () {
-			var $input = $(this).parent().find('input');
-			var count = parseInt($input.val()) - 1;
-			count = count < 1 ? 1 : count;
-			$input.val(count);
-			$input.change();
-			return false;
-		});
-		$('.plus').click(function () {
-			var $input = $(this).parent().find('input');
-			$input.val(parseInt($input.val()) + 1);
-			$input.change();
-			return false;
-		});
-	});
+  $(document).ready(function () {
+    $('.showbtn').click(function () {
+      $('#estimated__price__box').css({
+        top: '0',
+        transition: '.5s',
+      })
+    })
+    $('.hidebtn').click(function () {
+      $('#estimated__price__box').css({
+        top: '-100%',
+        transition: '.5s',
+      })
+    })
 
-	////////////////////////////////////////////////////
-    // 09. Price Box Popup
+    $('.close-box').click(function () {
+      $('#estimated__price__box').css({
+        top: '-100%',
+        transition: '.5s',
+      })
+    })
+  })
 
-	$(document).ready(function(){
-		$('.showbtn').click(function(){
-			$('#estimated__price__box').css({
-				'top': '0',
-				'transition': '.5s'
-			});
-		  });
-		$('.hidebtn').click(function(){
-			$('#estimated__price__box').css({
-				'top': '-100%',
-				'transition': '.5s'
-			});
-		  });
+  ////////////////////////////////////////////////////
+  // 10. Password Toggle
+  $('.toggle-password').click(function () {
+    $(this).toggleClass('fa-eye fa-eye-slash')
+    var input = $($(this).attr('toggle'))
+    if (input.attr('type') == 'password') {
+      input.attr('type', 'text')
+    } else {
+      input.attr('type', 'password')
+    }
+  })
 
-		$('.close-box').click(function(){
-			$('#estimated__price__box').css({
-				'top': '-100%',
-				'transition': '.5s'
-			});
-		  });
-		
-	});
+  ////////////////////////////////////////////////////
+  // 11. Account Created Animation
 
-	////////////////////////////////////////////////////
-    // 10. Password Toggle
-	$(".toggle-password").click(function() {
+  $(document).ready(function () {
+    setTimeout(function () {
+      $('#account__created').addClass('hide__top')
+    }, 2500)
+  })
 
-		$(this).toggleClass("fa-eye fa-eye-slash");
-		var input = $($(this).attr("toggle"));
-		if (input.attr("type") == "password") {
-		  input.attr("type", "text");
-		} else {
-		  input.attr("type", "password");
-		}
+  ////////////////////////////////////////////////////
+  // 12. Search Expand
 
-	});
+  var expandSearch = {
+    init: function () {
+      var _this = this,
+        _searchContainers = document.querySelectorAll('.expandSearch')
 
-	////////////////////////////////////////////////////
-    // 11. Account Created Animation
+      for (var _index in _searchContainers) {
+        if (typeof _searchContainers[_index] === 'object') {
+          _this.searchFunctions(_searchContainers[_index])
+        }
+      }
+    },
 
-	$(document).ready(function() {
-		setTimeout(function() {
-		  $("#account__created").addClass("hide__top");
-		}, 2500);
-	});
+    searchFunctions: function (_thisSearch) {
+      var _nodes = _thisSearch.childNodes
 
-	
-	////////////////////////////////////////////////////
-    // 12. Search Expand
+      //a click
+      _nodes[3].addEventListener('click', function (e) {
+        if (_thisSearch.attributes.class.value.indexOf('showSearch') > -1) {
+          _thisSearch.attributes.class.value = 'expandSearch'
+        } else {
+          _thisSearch.attributes.class.value = 'expandSearch showSearch'
+        }
 
-	var expandSearch = {
-		init: function(){
+        if (!e.preventDefault()) {
+          e.returnValue = false
+        }
+      })
+    },
+  }
+  //execute
+  expandSearch.init()
 
-			var _this = this,
-			_searchContainers = document.querySelectorAll('.expandSearch');
+  ////////////////////////////////////////////////////
+  // 13. Wishlist
 
-			for( var _index in _searchContainers ){
-				if( typeof _searchContainers[ _index ] === 'object' ){
-					_this.searchFunctions( _searchContainers[ _index ] );
-				}
-			}
+  $('.wishlistbutton').click(function () {
+    $(this).toggleClass('animate')
+    $(this).toggleClass('active')
+  })
 
-		},
+  ////////////////////////////////////////////////////
+  // 14. Dashboard Sidebar
 
-		searchFunctions: function( _thisSearch ){
-				
-			var _nodes = _thisSearch.childNodes;
+  let arrow = document.querySelectorAll('.arrow')
+  for (var i = 0; i < arrow.length; i++) {
+    arrow[i].addEventListener('click', (e) => {
+      let arrowParent = e.target.parentElement.parentElement //selecting main parent of arrow
+      arrowParent.classList.toggle('showMenu')
+    })
+  }
 
-			//a click
-			_nodes[3].addEventListener('click',function(e){
+  let sidebar = document.querySelector('.sidebar')
+  let sidebarBtn = document.querySelector('.sidebar__btn')
+  console.log(sidebarBtn)
+  sidebarBtn?.addEventListener('click', () => {
+    sidebar.classList.toggle('close')
+  })
 
-				if( _thisSearch.attributes.class.value.indexOf("showSearch") > -1 ){
-					_thisSearch.attributes.class.value = 'expandSearch';
-				}
-				else{
-					_thisSearch.attributes.class.value = 'expandSearch showSearch';
-				}
+  $('.icon_bar').click(function () {
+    $('.sidebar').removeClass('close')
+  })
 
-				if( !e.preventDefault() ){ e.returnValue = false; }
-			});
-
-		}
-
-	};
-	//execute
-	expandSearch.init();
-
-	////////////////////////////////////////////////////
-    // 13. Wishlist
-
-	$(".wishlistbutton").click(function() {
-	$(this).toggleClass("animate");
-	$(this).toggleClass("active");
-	});
-
-
-	////////////////////////////////////////////////////
-    // 14. Dashboard Sidebar
-
-	let arrow = document.querySelectorAll(".arrow");
-			for (var i = 0; i < arrow.length; i++) {
-			arrow[i].addEventListener("click", (e)=>{
-			let arrowParent = e.target.parentElement.parentElement;//selecting main parent of arrow
-			arrowParent.classList.toggle("showMenu");
-		});
-	}
-
-	let sidebar = document.querySelector(".sidebar");
-		let sidebarBtn = document.querySelector(".sidebar__btn");
-		console.log(sidebarBtn);
-		sidebarBtn?.addEventListener("click", ()=>{
-		sidebar.classList.toggle("close");
-	});
-
-	$(".icon_bar").click(function(){
-		$(".sidebar").removeClass("close");
-	});
-
-
-
-	
-
-
-})(jQuery);
-
+  $('.searchExpand .trigger').click(function () {
+    $(this).parent().toggleClass('active')
+  })
+})(jQuery)

@@ -2367,7 +2367,7 @@ p {
   opacity: 0;
   background: transparent;
   border: none;
-  color: #E1E2EC;
+  color: #e1e2ec;
 }
 .expandSearch input:focus {
   box-shadow: none;
@@ -2393,6 +2393,72 @@ p {
   background: #3a3e5f;
   padding: 13px 30px;
   border-radius: 30px;
+}
+
+.searchExpand,
+.searchExpand input {
+  transition: all 0.4s ease-in-out;
+  transform-origin: right;
+}
+
+.searchExpand {
+  display: inline-flex;
+  align-items: center;
+  border-radius: 27px;
+  background: transparent;
+  height: 48px;
+}
+.searchExpand input {
+  border: none;
+  box-shadow: none;
+  background-color: transparent;
+  color: #4d537f;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: normal;
+  width: 0;
+  opacity: 0;
+}
+.searchExpand input::-moz-placeholder {
+  color: #4d537f;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: normal;
+}
+.searchExpand input::placeholder {
+  color: #4d537f;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: normal;
+}
+.searchExpand input:focus {
+  outline: none;
+}
+.searchExpand.active {
+  background-color: #dfe1ec;
+  padding-inline: 23px;
+}
+.searchExpand.active input {
+  width: 360px;
+  opacity: 1;
+  margin-left: 30px;
+}
+.searchExpand.small {
+  height: 25px;
+}
+.searchExpand.small.active {
+  padding-inline: 16px;
+}
+.searchExpand.small.active input {
+  width: 300px;
+  margin-left: 20px;
+  font-size: 12px;
+}
+.searchExpand.small.active input::-moz-placeholder {
+  font-size: 12px;
+}
+.searchExpand.small.active input::placeholder {
+  font-size: 12px;
 }
 
 .dashboard {
@@ -3059,6 +3125,9 @@ p {
 .dashboard-header .header-right button img {
   width: 32px;
   min-width: 32px;
+}
+.dashboard-header .profile-dropdown {
+  min-width: 233px;
 }
 
 .header__dashboard__icon .dropdown {
@@ -3914,7 +3983,7 @@ footer .footer__social__icon {
 .tab-section-wrapper::before {
   content: "";
   position: absolute;
-  top: calc(100% - 13px);
+  top: calc(100% - 14px);
   height: 0.8px;
   width: 100%;
   background-color: #c4c4c4;
