@@ -331,9 +331,11 @@
                       <button><i class="fa fa-plus"></i></button>
                     </div>
                   </td>
-                  <td>View Note</td>
                   <td>
-                    <div class="price-wrapper pointer" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                    <span class="pointer" data-bs-toggle="modal" data-bs-target="#noteModal">View Note</span>
+                  </td>
+                  <td>
+                    <div class="price-wrapper pointer" data-bs-toggle="modal" data-bs-target="#priceBreakdownModal">
                       <span class="price">৳ 7,200</span>
                       <span class="price-text">Break Down</span>
                     </div>
@@ -360,7 +362,7 @@
                         <li>
                           <a class="dropdown-item" href="#">
                             <img src="./assets/img/icon/note.svg" alt="" />
-                            View Note
+                            <span class="pointer" data-bs-toggle="modal" data-bs-target="#noteModal">View Note</span>
                           </a>
                         </li>
                         <li>
@@ -394,9 +396,9 @@
                       <button><i class="fa fa-plus"></i></button>
                     </div>
                   </td>
-                  <td>View Note</td>
+                  <td><span class="pointer" data-bs-toggle="modal" data-bs-target="#noteModal">View Note</span></td>
                   <td>
-                    <div class="price-wrapper pointer" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                    <div class="price-wrapper pointer" data-bs-toggle="modal" data-bs-target="#priceBreakdownModal">
                       <span class="price">৳ 1,850</span>
                       <span class="price-text">Break Down</span>
                     </div>
@@ -423,7 +425,7 @@
                         <li>
                           <a class="dropdown-item" href="#">
                             <img src="./assets/img/icon/note.svg" alt="" />
-                            View Note
+                            <span class="pointer" data-bs-toggle="modal" data-bs-target="#noteModal">View Note</span>
                           </a>
                         </li>
                         <li>
@@ -457,9 +459,9 @@
                       <button><i class="fa fa-plus"></i></button>
                     </div>
                   </td>
-                  <td>View Note</td>
+                  <td><span class="pointer" data-bs-toggle="modal" data-bs-target="#noteModal">View Note</span></td>
                   <td>
-                    <div class="price-wrapper pointer" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                    <div class="price-wrapper pointer" data-bs-toggle="modal" data-bs-target="#priceBreakdownModal">
                       <span class="price">৳ 2,350</span>
                       <span class="price-text">Break Down</span>
                     </div>
@@ -486,7 +488,7 @@
                         <li>
                           <a class="dropdown-item" href="#">
                             <img src="./assets/img/icon/note.svg" alt="" />
-                            View Note
+                            <span class="pointer" data-bs-toggle="modal" data-bs-target="#noteModal">View Note</span>
                           </a>
                         </li>
                         <li>
@@ -505,7 +507,7 @@
 
           <div class="mt-20 table-summary-wrapper">
             <div class="table-summary flex-column flex-sm-row d-flex d-sm-inline-flex">
-              <div class="total-price pointer" data-bs-toggle="modal" data-bs-target="#exampleModal">
+              <div class="total-price pointer" data-bs-toggle="modal" data-bs-target="#priceBreakdownModal">
                 <span>Total</span>
                 <span>৳ 9,050</span>
               </div>
@@ -516,12 +518,18 @@
       </div>
     </div>
 
-    <!-- modal -->
-    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <!-- price breakdown modal -->
+    <div
+      class="modal fade"
+      id="priceBreakdownModal"
+      tabindex="-1"
+      aria-labelledby="priceBreakdownModalLabel"
+      aria-hidden="true"
+    >
       <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content custom-modal">
           <div class="modal-header">
-            <h1 class="modal-title fs-5" id="exampleModalLabel">Price Breakdown</h1>
+            <h1 class="modal-title" id="priceBreakdownModalLabel">Price Breakdown</h1>
             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
           </div>
           <div class="modal-body">
@@ -543,7 +551,36 @@
                 <span>6,430 Taka</span>
               </div>
             </div>
-            <button type="button" class="btn btn-primary" data-bs-dismiss="modal" aria-label="Close">Close</button>
+            <button type="button" class="btn btn-primary btn-overflow" data-bs-dismiss="modal" aria-label="Close">
+              Close
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- note modal -->
+    <div class="modal fade" id="noteModal" tabindex="-1" aria-labelledby="noteModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content custom-modal note-modal">
+          <div class="modal-header">
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body d-flex flex-column">
+            <h4 class="modal-title text-center" id="noteModalLabel">Note</h4>
+            <div>
+              <label for="note" class="form-label mb-3">Add a note</label>
+              <textarea class="form-control" id="note" placeholder="Please Deliver the product with box."></textarea>
+            </div>
+            <div class="d-flex justify-content-between align-items-center">
+              <label>Quantity</label>
+              <div class="product-quantity">
+                <input type="text" value="1" />
+              </div>
+            </div>
+            <button type="button" class="btn btn-primary w-100" data-bs-dismiss="modal" aria-label="Close">
+              Close
+            </button>
           </div>
         </div>
       </div>

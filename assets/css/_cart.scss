@@ -109,8 +109,7 @@
   }
 
   .modal-title {
-    color: var(--neutral-4, #282828);
-
+    color: #282828;
     font-family: Poppins-Medium;
     font-size: 32px !important;
     font-style: normal;
@@ -122,6 +121,7 @@
     position: absolute;
     top: 30px;
     right: 30px;
+    z-index: 1060;
   }
 
   .modal-body {
@@ -148,7 +148,7 @@
       }
     }
   }
-  .btn-primary {
+  .btn-overflow {
     padding: 14px 79px !important;
     justify-content: center;
     align-items: center;
@@ -157,5 +157,50 @@
     white-space: nowrap;
     bottom: -25px;
     left: 30px;
+  }
+}
+
+.custom-modal.note-modal {
+  .modal-body {
+    gap: 30px;
+    padding-bottom: 60px;
+    padding-top: 18px;
+  }
+
+  h4.modal-title {
+    color: #1a1c2b;
+    font-size: 28px !important;
+  }
+
+  label {
+    color: #3a3e5f;
+    font-size: 16px;
+    font-weight: 600;
+  }
+
+  .btn-close {
+    top: 35px;
+    right: 35px;
+  }
+
+  .btn-primary {
+    padding: 13px;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: normal;
+  }
+
+  textarea {
+    border-radius: 8px;
+    background: #dfe1ec;
+    padding: 15px;
+    color: #6b6b6b;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: normal;
+    height: 100px;
+    &:focus {
+      outline: none;
+    }
   }
 }
