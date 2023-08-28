@@ -174,7 +174,6 @@ button:hover {
 
 button:focus {
   outline: 0;
-  border: 0;
 }
 
 .uppercase {
@@ -366,7 +365,7 @@ p {
   color: #fff;
   background-color: $primary !important;
   border-color: $primary !important;
-  box-shadow: 0 0 0 0.25rem #00ad00;
+  box-shadow: 0 0 0 0.25rem rgba($primary, 0.5);
 }
 .innerpage {
   padding: 100px 0px;

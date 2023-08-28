@@ -507,6 +507,9 @@
   font-weight: 500;
   line-height: normal;
   margin-bottom: 0;
+  &.border-bottom {
+    border-color: #c4c4c4 !important;
+  }
 }
 
 .no-style-btn {
@@ -568,4 +571,12 @@
 
 .pointer {
   cursor: pointer;
+}
+
+.gap-15 {
+  gap: 15px;
+}
+
+.gap-30 {
+  gap: 30px;
 }
