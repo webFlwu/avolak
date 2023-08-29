@@ -2443,13 +2443,14 @@ p {
   margin-left: 30px;
 }
 .searchExpand.small {
-  height: 25px;
+  height: 36px;
+  margin-bottom: 6px;
 }
 .searchExpand.small.active {
   padding-inline: 16px;
 }
 .searchExpand.small.active input {
-  width: 300px;
+  width: 280px;
   margin-left: 20px;
   font-size: 12px;
 }
@@ -3078,6 +3079,10 @@ p {
 
 .gap-30 {
   gap: 30px;
+}
+
+.max-w-full {
+  max-width: 100%;
 }
 
 .header__dashboard__icon {
@@ -3979,29 +3984,23 @@ footer .footer__social__icon {
 }
 
 .tab-section-wrapper {
-  margin-top: 36px;
+  margin-top: 30px;
+  padding-top: 6px;
   position: relative;
+  display: flex;
+  gap: 6px;
   justify-content: space-between;
-  align-items: center;
-  overflow-x: auto;
-  overflow-y: hidden;
-  padding-bottom: 20px;
-}
-.tab-section-wrapper::-webkit-scrollbar {
-  display: none;
-}
-.tab-section-wrapper::before {
-  content: "";
-  position: absolute;
-  top: calc(100% - 14px);
-  height: 0.8px;
-  width: 100%;
-  background-color: #c4c4c4;
+  align-items: flex-end;
+  border-bottom: 0.8px solid #c4c4c4;
+  height: -moz-max-content;
+  height: max-content;
+  flex-wrap: wrap;
 }
 
 .tab-section {
   display: flex;
-  gap: 60px;
+  flex-wrap: wrap;
+  gap: 6px 60px;
 }
 .tab-section .tab-item {
   color: #1a1c2b;
@@ -4013,11 +4012,14 @@ footer .footer__social__icon {
   position: relative;
   cursor: pointer;
   white-space: nowrap;
+  height: 40px;
+  display: flex;
+  align-items: center;
 }
 .tab-section .tab-item.active::after {
   content: "";
   position: absolute;
-  top: calc(100% + 8px);
+  top: calc(100% - 2.5px);
   left: 0;
   width: 100%;
   height: 5px;
@@ -4026,7 +4028,7 @@ footer .footer__social__icon {
 }
 
 .custom-table {
-  margin-top: 20px;
+  margin-top: 28px;
   min-width: 100%;
   color: #6b6b6b;
   font-size: 16px;
