@@ -1543,14 +1543,14 @@ p {
   position: relative;
 }
 .price__calculator .price__calculator__left__content h3 {
-  color: #E1E2EC;
+  color: #e1e2ec;
   font-size: 40px;
   font-style: normal;
   font-weight: 500;
   margin-bottom: 60px;
 }
 .price__calculator .price__calculator__left__content p {
-  color: #E1E2EC;
+  color: #e1e2ec;
   font-size: 20px;
   font-style: normal;
   font-weight: 400;
@@ -1584,7 +1584,7 @@ p {
   background-color: transparent;
 }
 .price__calculator .price__calculator__right__content #estimated__price__box .close-box i {
-  color: #1A1C2B;
+  color: #1a1c2b;
   font-size: 40px;
   font-weight: 500;
   opacity: 0.5;
@@ -1592,7 +1592,7 @@ p {
 .price__calculator .price__calculator__right__content #estimated__price__box .estimated__price {
   width: 90%;
   border-radius: 37px;
-  background: #BFC2D9;
+  background: #bfc2d9;
   box-shadow: 0px 16px 32px 0px rgba(0, 0, 0, 0.2);
   padding: 30px 30px 50px 30px;
   position: absolute;
@@ -1601,7 +1601,7 @@ p {
   left: 50%;
 }
 .price__calculator .price__calculator__right__content #estimated__price__box .estimated__price h3 {
-  color: #1A1C2B;
+  color: #1a1c2b;
   font-size: 32px;
   font-style: normal;
   font-weight: 500;
@@ -1609,7 +1609,7 @@ p {
   margin-bottom: 24px;
 }
 .price__calculator .price__calculator__right__content #estimated__price__box .estimated__price table td {
-  color: #1A1C2B;
+  color: #1a1c2b;
   font-size: 20px;
   font-style: normal;
   font-weight: 400;
@@ -1632,10 +1632,10 @@ p {
 .price__calculator .price__calculator__right__content form {
   padding: 60px 30px;
   border-radius: 40px;
-  background: radial-gradient(circle at 100% 100%, #262940 0, #262940 38px, transparent 38px) 0% 0%/40px 40px no-repeat, radial-gradient(circle at 0 100%, #262940 0, #262940 38px, transparent 38px) 100% 0%/40px 40px no-repeat, radial-gradient(circle at 100% 0, #262940 0, #262940 38px, transparent 38px) 0% 100%/40px 40px no-repeat, radial-gradient(circle at 0 0, #262940 0, #262940 38px, transparent 38px) 100% 100%/40px 40px no-repeat, linear-gradient(#262940, #262940) 50% 50%/calc(100% - 4px) calc(100% - 80px) no-repeat, linear-gradient(#262940, #262940) 50% 50%/calc(100% - 80px) calc(100% - 4px) no-repeat, linear-gradient(340deg, transparent 0%, #00AD00 100%);
+  background: radial-gradient(circle at 100% 100%, #262940 0, #262940 38px, transparent 38px) 0% 0%/40px 40px no-repeat, radial-gradient(circle at 0 100%, #262940 0, #262940 38px, transparent 38px) 100% 0%/40px 40px no-repeat, radial-gradient(circle at 100% 0, #262940 0, #262940 38px, transparent 38px) 0% 100%/40px 40px no-repeat, radial-gradient(circle at 0 0, #262940 0, #262940 38px, transparent 38px) 100% 100%/40px 40px no-repeat, linear-gradient(#262940, #262940) 50% 50%/calc(100% - 4px) calc(100% - 80px) no-repeat, linear-gradient(#262940, #262940) 50% 50%/calc(100% - 80px) calc(100% - 4px) no-repeat, linear-gradient(340deg, transparent 0%, #00ad00 100%);
 }
 .price__calculator .price__calculator__right__content form label {
-  color: #E1E2EC;
+  color: #e1e2ec;
   font-size: 16px;
   font-style: normal;
   font-weight: 400;
@@ -1652,6 +1652,9 @@ p {
   color: #a0a4c5;
   box-shadow: -2px 6px 16px 0px rgba(0, 0, 0, 0.08);
   border: none;
+  font-family: Poppins-Medium;
+  font-weight: 400;
+  line-height: 200%;
 }
 .price__calculator .price__calculator__right__content form hr {
   height: 2px;
@@ -1664,18 +1667,21 @@ p {
   margin-top: 13px;
 }
 .price__calculator .price__calculator__right__content form ::-moz-placeholder {
-  color: #A0A4C5;
+  color: #a0a4c5;
 }
 .price__calculator .price__calculator__right__content form ::placeholder {
-  color: #A0A4C5;
+  color: #a0a4c5;
 }
 .price__calculator .price__calculator__right__content form .number {
   border: 3px solid #3a3e5f;
   border-radius: 35px;
-  width: 50%;
-  margin-right: 20px;
+  display: flex;
+  align-items: center;
+  height: 48px;
+  flex: 0;
 }
-.price__calculator .price__calculator__right__content form .number .minus, .price__calculator .price__calculator__right__content form .number .plus {
+.price__calculator .price__calculator__right__content form .number .minus,
+.price__calculator .price__calculator__right__content form .number .plus {
   width: 40px;
   background: transparent;
   border: none;
@@ -1687,7 +1693,8 @@ p {
   cursor: pointer;
   font-weight: bold;
 }
-.price__calculator .price__calculator__right__content form .number .minus:hover, .price__calculator .price__calculator__right__content form .number .plus:hover {
+.price__calculator .price__calculator__right__content form .number .minus:hover,
+.price__calculator .price__calculator__right__content form .number .plus:hover {
   color: #ffffff;
 }
 .price__calculator .price__calculator__right__content form .number .minus {
@@ -1708,7 +1715,7 @@ p {
   padding: 0;
 }
 .price__calculator .price__calculator__right__content form .number input {
-  height: 39px;
+  height: 100%;
   width: 44px;
   text-align: center;
   font-size: 18px;
@@ -1730,6 +1737,7 @@ p {
   font-style: normal;
   font-weight: 500;
   line-height: normal;
+  flex: 1;
 }
 .price__calculator .multi-select-wrap {
   width: 100%;
@@ -1750,8 +1758,8 @@ p {
   background: rgba(195, 198, 198, 0.8);
 }
 .price__calculator .multi-select-wrap .multi-select-head {
-  background-color: #F5F5F5;
-  border: 1px solid #A3A3A3;
+  background-color: #f5f5f5;
+  border: 1px solid #a3a3a3;
   height: 48px;
   padding: 0 16px;
   position: relative;
@@ -1760,12 +1768,13 @@ p {
 }
 .price__calculator .multi-select-wrap .multi-select-head span {
   font-size: 14px;
-  color: #A0A4C5;
+  color: #a0a4c5;
 }
 .price__calculator .multi-select-wrap .multi-select-head .arrow-up {
-  float: right;
+  position: absolute;
+  right: 16px;
   margin-top: 10px;
-  transition: 0.2s;
+  transition: transform 0.2s ease;
   width: 16px;
 }
 .price__calculator .multi-select-wrap .multi-select-head .arrow-up.arrow-down {
@@ -1783,8 +1792,8 @@ p {
 }
 .price__calculator .multi-select-wrap .multi-select-box-holder .multi-select-search {
   height: 48px;
-  border-left: 1px solid #A3A3A3;
-  border-right: 1px solid #A3A3A3;
+  border-left: 1px solid #a3a3a3;
+  border-right: 1px solid #a3a3a3;
 }
 .price__calculator .multi-select-wrap .multi-select-box-holder .multi-select-search input {
   width: 100%;
@@ -1794,10 +1803,10 @@ p {
   padding: 0 16px;
 }
 .price__calculator .multi-select-wrap .multi-select-box-holder .multi-select-search input::-moz-placeholder {
-  color: #A3A3A3;
+  color: #a3a3a3;
 }
 .price__calculator .multi-select-wrap .multi-select-box-holder .multi-select-search input::placeholder {
-  color: #A3A3A3;
+  color: #a3a3a3;
 }
 .price__calculator .multi-select-wrap .multi-select-box-holder .multi-select-box {
   width: 100%;
@@ -1836,7 +1845,7 @@ p {
 .price__calculator .multi-select-wrap .multi-select-box-holder .multi-select-box .checkbox-item label .checkbox-text {
   line-height: 48px;
   padding-left: 12px;
-  color: #A0A4C5;
+  color: #a0a4c5;
   font-size: 14px;
 }
 .price__calculator .multi-select-wrap .multi-select-box-holder .multi-select-box .checkbox-item label em {
@@ -1853,6 +1862,15 @@ p {
 }
 .price__calculator .multi-select-wrap .multi-select-box-holder .multi-select-box .active-checkbox {
   display: block;
+}
+
+.calculator-dashboard .price__calculator__right__content {
+  margin-left: 0;
+  width: 510px;
+  max-width: 100%;
+}
+.calculator-dashboard .btn-primary {
+  height: 50px;
 }
 
 .how__to__order {
