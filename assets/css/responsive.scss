@@ -25,6 +25,9 @@
 }
 
 @media only screen and (max-width: 575px) {
+  .tab-section {
+    gap: 6px 30px;
+  }
   .table-summary {
     margin-right: 0;
   }
