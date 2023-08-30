@@ -124,13 +124,13 @@
           </a>
         </li>
         <li>
-          <a href="/earning.html">
+          <a href="/earning.html" class="active-menu">
             <img src="./assets/img/icon/gift.svg" alt="" />
             <span class="link_name">Earning</span>
           </a>
         </li>
         <li>
-          <a href="/calculator.html" class="active-menu">
+          <a href="/calculator.html">
             <img src="./assets/img/icon/calculator.svg" alt="" />
             <span class="link_name">Calculator</span>
           </a>
@@ -252,95 +252,59 @@
         </div>
       </div>
 
-      <div class="content-body">
+      <div class="content-body earning">
         <div class="block">
-          <h2 class="main-heading mb-3">Calculator</h2>
+          <h2 class="main-heading mb-12">Earning</h2>
+          <h4 class="secondary-heading mb-12">Balance: 200</h4>
 
-          <div class="price__calculator calculator-dashboard">
-            <div class="price__calculator__right__content position-relative">
-              <form action="" method="post">
-                <div class="row">
-                  <div class="col-lg-12">
-                    <label>Select Category</label>
-                    <div class="multi-select-wrap">
-                      <div class="multi-select-head form-control">
-                        <span class="multi-select-title" data-multi-title="Select country"
-                          >Select your Product Price</span
-                        >
-                        <img class="arrow-up" src="./assets/img/icon/arrow-down.svg" />
-                      </div>
-                      <div class="multi-select-box-holder">
-                        <div class="multi-select-box">
-                          <div class="checkbox-item active-checkbox">
-                            <input name="" type="checkbox" id="item1" class="item-checkbox-input" />
-                            <label for="item1"><span class="checkbox-text">Watch</span></label>
-                            <span></span>
-                          </div>
-
-                          <div class="checkbox-item active-checkbox">
-                            <input type="checkbox" id="item2" class="item-checkbox-input" />
-                            <label for="item2"><span class="checkbox-text">Pants</span></label>
-                            <span></span>
-                          </div>
-
-                          <div class="checkbox-item active-checkbox">
-                            <input type="checkbox" id="item3" class="item-checkbox-input" />
-                            <label for="item3"><span class="checkbox-text">Bag</span></label>
-                            <span></span>
-                          </div>
-
-                          <div class="checkbox-item active-checkbox">
-                            <input type="checkbox" id="item4" class="item-checkbox-input" />
-                            <label for="item4"><span class="checkbox-text">Shoes</span></label>
-                            <span></span>
-                          </div>
-
-                          <div class="checkbox-item active-checkbox">
-                            <input type="checkbox" id="item5" class="item-checkbox-input" />
-                            <label for="item5"><span class="checkbox-text">Others</span></label>
-                            <span></span>
-                          </div>
-                        </div>
-                      </div>
+          <div class="earning-wrapper">
+            <div class="earning-box-outer">
+              <h3>Share the link with your friends</h3>
+              <div class="earning-box">
+                <div class="copy-link-section">
+                  <div class="copy-link">
+                    <label for="earning-link">Copy the link</label>
+                    <div class="input-group">
+                      <input
+                        value="https://avolak.com/r/sakib1a2"
+                        id="earning-link"
+                        type="text"
+                        class="form-control"
+                        readonly
+                      />
+                      <span class="input-group-text"> <img src="./assets/img/icon/copy.svg" alt="" />Copy</span>
                     </div>
                   </div>
-                  <div class="col-lg-12">
-                    <label>Product Link</label>
-                    <input
-                      name="url"
-                      id="url"
-                      type="url"
-                      class="form-control"
-                      placeholder="Paste your product link here"
-                    />
-                  </div>
-                  <div class="col-lg-6">
-                    <label>Price</label>
-                    <input name="price" id="price" type="text" class="form-control" placeholder="USD ($)" />
-                  </div>
-                  <div class="col-lg-6">
-                    <label>Seller's Shipping</label>
-                    <input
-                      name="shipping"
-                      id="shipping"
-                      type="text"
-                      class="form-control"
-                      placeholder="Shipping in USA ($)"
-                    />
-                  </div>
-                  <div class="col-lg-12">
-                    <label class="mt-2">Unit</label>
-                    <div class="d-flex flex-wrap gap-4">
-                      <div class="number">
-                        <span class="minus">-</span>
-                        <input name="number" id="number" type="text" value="1" />
-                        <span class="plus">+</span>
-                      </div>
-                      <button type="button" class="btn btn-primary">Calculate</button>
-                    </div>
+                  <div class="social-links d-flex gap-3 align-items-center">
+                    <img src="./assets/img/social/messenger-logo.svg" alt="" />
+                    <img src="./assets/img/social/whatsApp-logo.svg" alt="" />
+                    <img src="./assets/img/social/facebook-logo.svg" alt="" />
                   </div>
                 </div>
-              </form>
+
+                <div class="separator-or">
+                  <span>or</span>
+                </div>
+
+                <div>
+                  <div class="message-box gap-15 mb-2">
+                    <div class="input-group without-attachment">
+                      <input type="text" class="form-control" placeholder="Enter friend’s email address" />
+                    </div>
+                    <button class="btn btn-primary">
+                      Send Invitation
+                      <span><img src="./assets/img/icon/send-flat.svg" alt="" /></span>
+                    </button>
+                  </div>
+                  <p class="email-note">Separate multiple emails with commas.</p>
+                </div>
+              </div>
+            </div>
+            <div class="earning-note">
+              Share the link with your friends and <span>earn 1% commission</span> on the product price for each
+              purchase your friend completes, with no extra cost added to your friend. Additionally,
+              <span> your friends will receive a 10% discount </span> on Avolak's service charge for their initial
+              purchase. For more see our terms and conditions.
             </div>
           </div>
         </div>
