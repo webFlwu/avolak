@@ -4181,6 +4181,7 @@ footer .footer__social__icon {
   background: #f5f5f5;
   box-shadow: -2px 6px 16px 0px rgba(0, 0, 0, 0.08);
   height: 625px;
+  min-width: 380px;
   overflow-y: auto;
   position: relative;
 }
