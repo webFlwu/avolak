@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta http-equiv="x-ua-compatible" content="ie=edge" />
-    <title>Avolak | Messages</title>
+    <title>Avolak | Earning</title>
     <meta name="description" content="" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <!-- Place favicon.ico in the root directory -->
@@ -118,13 +118,13 @@
           </a>
         </li>
         <li>
-          <a href="/messages.html" class="active-menu">
+          <a href="/messages.html">
             <img src="./assets/img/icon/message.svg" alt="" />
             <span class="link_name">Messages</span>
           </a>
         </li>
         <li>
-          <a href="/earning.html">
+          <a href="/earning.html" class="active-menu">
             <img src="./assets/img/icon/gift.svg" alt="" />
             <span class="link_name">Earning</span>
           </a>
@@ -252,126 +252,59 @@
         </div>
       </div>
 
-      <div class="content-body">
+      <div class="content-body earning">
         <div class="block">
-          <h2 class="main-heading border-bottom mb-40">Message</h2>
+          <h2 class="main-heading">Earning</h2>
+          <h4 class="secondary-heading mb-30">Balance: 200</h4>
 
-          <div class="chat-wrapper d-flex flex-wrap gap-4">
-            <div class="chat-list">
-              <div class="chat-list-item active">
-                <div class="chat-persons">
-                  <div class="chat-person">
-                    <img src="./assets/img/icon/user.svg" alt="" />
-                    Sakib
+          <div class="earning-wrapper">
+            <div class="earning-box-outer">
+              <h3>Share the link with your friends</h3>
+              <div class="earning-box">
+                <div class="copy-link-section">
+                  <div class="copy-link">
+                    <label for="earning-link">Copy the link</label>
+                    <div class="input-group">
+                      <input
+                        value="https://avolak.com/r/sakib1a2"
+                        id="earning-link"
+                        type="text"
+                        class="form-control"
+                        readonly
+                      />
+                      <span class="input-group-text"> <img src="./assets/img/icon/copy.svg" alt="" />Copy</span>
+                    </div>
                   </div>
-                  <div class="chat-person">
-                    <img src="./assets/img/icon/user2.svg" alt="" />
-                    Avolak Support
+                  <div class="social-links d-flex gap-3 align-items-center">
+                    <img src="./assets/img/social/messenger-logo.svg" alt="" />
+                    <img src="./assets/img/social/whatsApp-logo.svg" alt="" />
+                    <img src="./assets/img/social/facebook-logo.svg" alt="" />
                   </div>
                 </div>
-                <span class="last-chat-time">Today</span>
-              </div>
 
-              <div class="chat-list-item">
-                <div class="chat-persons">
-                  <div class="chat-person">
-                    <img src="./assets/img/icon/user.svg" alt="" />
-                    Sakib
-                  </div>
-                  <div class="chat-person">
-                    <img src="./assets/img/icon/user2.svg" alt="" />
-                    Avolak Support
-                  </div>
+                <div class="separator-or">
+                  <span>or</span>
                 </div>
-                <span class="last-chat-time">June 30</span>
-              </div>
 
-              <div class="chat-list-item">
-                <div class="start-new-message">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="40" height="41" viewBox="0 0 40 41" fill="none">
-                    <path
-                      d="M20 2.99023C15.376 3.04602 10.9572 4.90768 7.68731 8.17755C4.41744 11.4474 2.55579 15.8663 2.5 20.4902C2.55579 25.1142 4.41744 29.533 7.68731 32.8029C10.9572 36.0728 15.376 37.9344 20 37.9902C24.624 37.9344 29.0428 36.0728 32.3127 32.8029C35.5826 29.533 37.4442 25.1142 37.5 20.4902C37.4442 15.8663 35.5826 11.4474 32.3127 8.17755C29.0428 4.90768 24.624 3.04602 20 2.99023ZM30 21.7402H21.25V30.4902H18.75V21.7402H10V19.2402H18.75V10.4902H21.25V19.2402H30V21.7402Z"
-                      fill="#00AD00"
-                    />
-                  </svg>
-                  <div class="text">Start A New Message</div>
+                <div>
+                  <div class="message-box gap-15 mb-2">
+                    <div class="input-group without-attachment">
+                      <input type="text" class="form-control" placeholder="Enter friend’s email address" />
+                    </div>
+                    <button class="btn btn-primary">
+                      Send Invitation
+                      <span><img src="./assets/img/icon/send-flat.svg" alt="" /></span>
+                    </button>
+                  </div>
+                  <p class="email-note">Separate multiple emails with commas.</p>
                 </div>
               </div>
             </div>
-
-            <div class="chat-box">
-              <div class="chat-header">
-                <div class="d-flex align-items-center gap-30">
-                  <div class="chat-person">
-                    <img src="./assets/img/icon/user.svg" alt="" />
-                    Sakib Rahman
-                  </div>
-                  <div class="active-status">Active</div>
-                </div>
-              </div>
-
-              <div class="chat-body">
-                <div class="date-time">1st July 2023</div>
-                <div class="sender-message">
-                  <div>
-                    <div class="chat-message">Hello ! Is there anyone to chat ?</div>
-                    <div class="message-time">6:15 PM</div>
-                  </div>
-                  <div class="user-image">
-                    <img src="./assets/img/icon/user.svg" alt="" />
-                  </div>
-                </div>
-                <div class="receiver-message">
-                  <div>
-                    <div class="chat-message">Hello Sakib! How can I help you ?</div>
-                    <div class="message-time">6:16 PM</div>
-                  </div>
-                  <div class="user-image">
-                    <img src="./assets/img/icon/user2.svg" alt="" />
-                  </div>
-                </div>
-                <div class="sender-message">
-                  <div>
-                    <div class="chat-message">I am having an issue with my order.</div>
-                    <div class="message-time">6:17 PM</div>
-                  </div>
-                  <div class="user-image">
-                    <img src="./assets/img/icon/user.svg" alt="" />
-                  </div>
-                </div>
-                <div class="date-time">Today</div>
-                <div class="receiver-message">
-                  <div>
-                    <div class="chat-message">Please send us the order No.</div>
-                    <div class="message-time">9:15 AM</div>
-                  </div>
-                  <div class="user-image">
-                    <img src="./assets/img/icon/user2.svg" alt="" />
-                  </div>
-                </div>
-                <div class="sender-message">
-                  <div>
-                    <div class="chat-message">#AV3125</div>
-                    <div class="message-time">9:20 AM</div>
-                  </div>
-                  <div class="user-image">
-                    <img src="./assets/img/icon/user.svg" alt="" />
-                  </div>
-                </div>
-              </div>
-
-              <div class="chat-footer">
-                <div class="message-box gap-15">
-                  <div class="input-group input-with-attachment">
-                    <input type="text" class="form-control" placeholder="Write Your Message Here" />
-                    <span class="input-group-text"><img src="./assets/img/icon/attachment.svg" alt="" /></span>
-                  </div>
-                  <button class="btn btn-primary">
-                    Send
-                    <span><img src="./assets/img/icon/send-flat.svg" alt="" /></span>
-                  </button>
-                </div>
-              </div>
+            <div class="earning-note">
+              Share the link with your friends and <span>earn 1% commission</span> on the product price for each
+              purchase your friend completes, with no extra cost added to your friend. Additionally,
+              <span> your friends will receive a 10% discount </span> on Avolak's service charge for their initial
+              purchase. For more see our terms and conditions.
             </div>
           </div>
         </div>

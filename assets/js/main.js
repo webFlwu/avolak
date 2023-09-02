@@ -256,8 +256,7 @@
   ////////////////////////////////////////////////////
   // 13. Wishlist
 
-  $('.wishlistbutton').click(function () {
-    $(this).toggleClass('animate')
+  $('.wishlist-btn').click(function () {
     $(this).toggleClass('active')
   })
 

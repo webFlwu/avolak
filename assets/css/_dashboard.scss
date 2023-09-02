@@ -100,7 +100,7 @@
       line-height: normal;
       margin-bottom: 16px;
     }
-    .wishlistbutton {
+    .wishlist-btn {
       height: 30px;
       width: 30px;
       border-radius: 50%;
@@ -512,6 +512,14 @@
   }
 }
 
+.secondary-heading {
+  color: #6b6b6b;
+  font-family: 'Poppins-Medium';
+  font-size: 28px;
+  font-weight: 500;
+  line-height: normal;
+}
+
 .no-style-btn {
   background-color: transparent;
 }
@@ -583,4 +591,12 @@
 
 .max-w-full {
   max-width: 100%;
+}
+
+.mb-30 {
+  margin-bottom: 30px;
+}
+
+.mb-40 {
+  margin-bottom: 40px;
 }

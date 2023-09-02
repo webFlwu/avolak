@@ -142,15 +142,9 @@
       width: 24px;
     }
   }
-}
-
-.input-with-attachment {
-  padding: 3px 5px 3px 15px;
-  border-radius: 56px;
-  background-color: #eff0f5;
 
   .form-control {
-    background-color: transparent;
+    background-color: #eff0f5;
     border: none;
     color: #6b6b6b;
     font-size: 14px;
@@ -161,18 +155,28 @@
       box-shadow: none;
     }
   }
+  .input-group {
+    padding: 3px 5px 3px 15px;
+    border-radius: 56px;
+    background-color: #eff0f5;
+    height: 46px;
 
-  .input-group-text {
-    height: 40px;
-    width: 40px;
-    border-radius: 50% !important;
-    background-color: #cffccf;
-    border: none;
-    cursor: pointer;
-    padding: 9.091px;
-    img {
-      height: 22px;
-      width: 22px;
+    &.without-attachment {
+      padding-right: 15px;
+    }
+
+    .input-group-text {
+      height: 40px;
+      width: 40px;
+      border-radius: 50% !important;
+      background-color: #cffccf;
+      border: none;
+      cursor: pointer;
+      padding: 9.091px;
+      img {
+        height: 22px;
+        width: 22px;
+      }
     }
   }
 }
