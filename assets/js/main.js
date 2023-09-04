@@ -285,4 +285,22 @@
   $('.searchExpand .trigger').click(function () {
     $(this).parent().toggleClass('active')
   })
+
+  ////////////////////////////////////////////////////
+  // 14. Dynamic Height
+
+  function setHeight() {
+    const gap = $('.dynamic-height').offset().top + 37
+    const bodyHeight = $(window).height() - gap
+    $('.dynamic-height').height(bodyHeight)
+    $('.chat-wrapper').height(bodyHeight - 3)
+  }
+
+  $(document).ready(function () {
+    setHeight()
+  })
+
+  $(window).resize(function () {
+    setHeight()
+  })
 })(jQuery)

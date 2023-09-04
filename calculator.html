@@ -255,92 +255,96 @@
       <div class="content-body">
         <div class="block">
           <h2 class="main-heading mb-3">Calculator</h2>
+        </div>
 
-          <div class="price__calculator calculator-dashboard">
-            <div class="price__calculator__right__content position-relative">
-              <form action="" method="post">
-                <div class="row">
-                  <div class="col-lg-12">
-                    <label>Select Category</label>
-                    <div class="multi-select-wrap">
-                      <div class="multi-select-head form-control">
-                        <span class="multi-select-title" data-multi-title="Select country"
-                          >Select your Product Price</span
-                        >
-                        <img class="arrow-up" src="./assets/img/icon/arrow-down.svg" />
-                      </div>
-                      <div class="multi-select-box-holder">
-                        <div class="multi-select-box">
-                          <div class="checkbox-item active-checkbox">
-                            <input name="" type="checkbox" id="item1" class="item-checkbox-input" />
-                            <label for="item1"><span class="checkbox-text">Watch</span></label>
-                            <span></span>
-                          </div>
+        <div class="dynamic-height">
+          <div class="block">
+            <div class="price__calculator calculator-dashboard">
+              <div class="price__calculator__right__content position-relative">
+                <form action="" method="post">
+                  <div class="row">
+                    <div class="col-lg-12">
+                      <label>Select Category</label>
+                      <div class="multi-select-wrap">
+                        <div class="multi-select-head form-control">
+                          <span class="multi-select-title" data-multi-title="Select country"
+                            >Select your Product Price</span
+                          >
+                          <img class="arrow-up" src="./assets/img/icon/arrow-down.svg" />
+                        </div>
+                        <div class="multi-select-box-holder">
+                          <div class="multi-select-box">
+                            <div class="checkbox-item active-checkbox">
+                              <input name="" type="checkbox" id="item1" class="item-checkbox-input" />
+                              <label for="item1"><span class="checkbox-text">Watch</span></label>
+                              <span></span>
+                            </div>
 
-                          <div class="checkbox-item active-checkbox">
-                            <input type="checkbox" id="item2" class="item-checkbox-input" />
-                            <label for="item2"><span class="checkbox-text">Pants</span></label>
-                            <span></span>
-                          </div>
+                            <div class="checkbox-item active-checkbox">
+                              <input type="checkbox" id="item2" class="item-checkbox-input" />
+                              <label for="item2"><span class="checkbox-text">Pants</span></label>
+                              <span></span>
+                            </div>
 
-                          <div class="checkbox-item active-checkbox">
-                            <input type="checkbox" id="item3" class="item-checkbox-input" />
-                            <label for="item3"><span class="checkbox-text">Bag</span></label>
-                            <span></span>
-                          </div>
+                            <div class="checkbox-item active-checkbox">
+                              <input type="checkbox" id="item3" class="item-checkbox-input" />
+                              <label for="item3"><span class="checkbox-text">Bag</span></label>
+                              <span></span>
+                            </div>
 
-                          <div class="checkbox-item active-checkbox">
-                            <input type="checkbox" id="item4" class="item-checkbox-input" />
-                            <label for="item4"><span class="checkbox-text">Shoes</span></label>
-                            <span></span>
-                          </div>
+                            <div class="checkbox-item active-checkbox">
+                              <input type="checkbox" id="item4" class="item-checkbox-input" />
+                              <label for="item4"><span class="checkbox-text">Shoes</span></label>
+                              <span></span>
+                            </div>
 
-                          <div class="checkbox-item active-checkbox">
-                            <input type="checkbox" id="item5" class="item-checkbox-input" />
-                            <label for="item5"><span class="checkbox-text">Others</span></label>
-                            <span></span>
+                            <div class="checkbox-item active-checkbox">
+                              <input type="checkbox" id="item5" class="item-checkbox-input" />
+                              <label for="item5"><span class="checkbox-text">Others</span></label>
+                              <span></span>
+                            </div>
                           </div>
                         </div>
                       </div>
                     </div>
-                  </div>
-                  <div class="col-lg-12">
-                    <label>Product Link</label>
-                    <input
-                      name="url"
-                      id="url"
-                      type="url"
-                      class="form-control"
-                      placeholder="Paste your product link here"
-                    />
-                  </div>
-                  <div class="col-lg-6">
-                    <label>Price</label>
-                    <input name="price" id="price" type="text" class="form-control" placeholder="USD ($)" />
-                  </div>
-                  <div class="col-lg-6">
-                    <label>Seller's Shipping</label>
-                    <input
-                      name="shipping"
-                      id="shipping"
-                      type="text"
-                      class="form-control"
-                      placeholder="Shipping in USA ($)"
-                    />
-                  </div>
-                  <div class="col-lg-12">
-                    <label class="mt-2">Unit</label>
-                    <div class="d-flex flex-wrap gap-4">
-                      <div class="number">
-                        <span class="minus">-</span>
-                        <input name="number" id="number" type="text" value="1" />
-                        <span class="plus">+</span>
+                    <div class="col-lg-12">
+                      <label>Product Link</label>
+                      <input
+                        name="url"
+                        id="url"
+                        type="url"
+                        class="form-control"
+                        placeholder="Paste your product link here"
+                      />
+                    </div>
+                    <div class="col-lg-6">
+                      <label>Price</label>
+                      <input name="price" id="price" type="text" class="form-control" placeholder="USD ($)" />
+                    </div>
+                    <div class="col-lg-6">
+                      <label>Seller's Shipping</label>
+                      <input
+                        name="shipping"
+                        id="shipping"
+                        type="text"
+                        class="form-control"
+                        placeholder="Shipping in USA ($)"
+                      />
+                    </div>
+                    <div class="col-lg-12">
+                      <label class="mt-2">Unit</label>
+                      <div class="d-flex flex-wrap gap-4">
+                        <div class="number">
+                          <span class="minus">-</span>
+                          <input name="number" id="number" type="text" value="1" />
+                          <span class="plus">+</span>
+                        </div>
+                        <button type="button" class="btn btn-primary">Calculate</button>
                       </div>
-                      <button type="button" class="btn btn-primary">Calculate</button>
                     </div>
                   </div>
-                </div>
-              </form>
+                </form>
+              </div>
             </div>
           </div>
         </div>
