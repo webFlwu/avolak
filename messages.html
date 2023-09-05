@@ -256,6 +256,7 @@
         <div class="block">
           <h2 class="main-heading border-bottom mb-40">Message</h2>
         </div>
+
         <div class="dynamic-height">
           <div class="block">
             <div class="chat-wrapper d-flex flex-wrap gap-4">
@@ -309,6 +310,38 @@
                       Sakib Rahman
                     </div>
                     <div class="active-status">Active</div>
+                  </div>
+                </div>
+
+                <div class="chat-start-body d-none">
+                  <div class="mb-30">
+                    <label for="" class="mb-3">Subject <span>*</span></label>
+                    <div class="message-box gap-15">
+                      <div class="input-group without-attachment">
+                        <input
+                          type="text"
+                          class="form-control pe-0 ps-0"
+                          placeholder="Write The subject of your issue."
+                        />
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="mb-30">
+                    <label for="" class="mb-3">Message</label>
+                    <div class="message-box pblock-15 flex-column align-items-end gap-15">
+                      <textarea class="form-control p-3" rows="7" placeholder="Write Your Message Here"></textarea>
+                      <div class="d-flex gap-15">
+                        <label class="input-file-upload">
+                          <input type="file" class="d-none" />
+                          <img src="./assets/img/icon/attachment.svg" alt="" />
+                        </label>
+                        <button class="btn btn-primary">
+                          Send
+                          <span><img src="./assets/img/icon/send-flat.svg" alt="" /></span>
+                        </button>
+                      </div>
+                    </div>
                   </div>
                 </div>
 
@@ -366,7 +399,9 @@
                   <div class="message-box gap-15">
                     <div class="input-group input-with-attachment">
                       <input type="text" class="form-control" placeholder="Write Your Message Here" />
-                      <span class="input-group-text"><img src="./assets/img/icon/attachment.svg" alt="" /></span>
+                      <span class="input-group-text input-file-upload"
+                        ><img src="./assets/img/icon/attachment.svg" alt=""
+                      /></span>
                     </div>
                     <button class="btn btn-primary">
                       Send
@@ -402,6 +437,14 @@
         if ($(window).width() < 768) {
           $('.sidebar').addClass('close')
         }
+
+        $('.start-new-message').click(function () {
+          $('.chat-start-body').removeClass('d-none')
+          $('.chat-body').addClass('d-none')
+          $('.chat-footer').addClass('d-none')
+
+          $(this).closest('.chat-list-item').addClass('active').siblings().removeClass('active')
+        })
       })
     </script>
   </body>

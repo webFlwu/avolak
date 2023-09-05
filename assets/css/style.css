@@ -4310,7 +4310,8 @@ footer .footer__social__icon {
 .message-box .input-group.without-attachment {
   padding-right: 15px;
 }
-.message-box .input-group .input-group-text {
+
+.input-file-upload {
   height: 40px;
   width: 40px;
   border-radius: 50% !important;
@@ -4318,8 +4319,11 @@ footer .footer__social__icon {
   border: none;
   cursor: pointer;
   padding: 9.091px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-.message-box .input-group .input-group-text img {
+.input-file-upload img {
   height: 22px;
   width: 22px;
 }
@@ -4417,6 +4421,32 @@ footer .footer__social__icon {
 .receiver-message .message-time {
   text-align: left;
   margin-left: 12px;
+}
+
+.chat-start-body {
+  padding: 20px 30px 30px;
+  overflow-y: auto;
+  position: absolute;
+  top: 72px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+.chat-start-body label {
+  color: #6b6b6b;
+  font-family: Roboto-Medium;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: normal;
+}
+.chat-start-body label span {
+  color: #ff0000;
+}
+.chat-start-body textarea {
+  border-radius: 8px;
+}
+.chat-start-body .pblock-15 {
+  padding-block: 15px;
 }
 
 .earning .main-heading {

@@ -164,20 +164,23 @@
     &.without-attachment {
       padding-right: 15px;
     }
+  }
+}
 
-    .input-group-text {
-      height: 40px;
-      width: 40px;
-      border-radius: 50% !important;
-      background-color: #cffccf;
-      border: none;
-      cursor: pointer;
-      padding: 9.091px;
-      img {
-        height: 22px;
-        width: 22px;
-      }
-    }
+.input-file-upload {
+  height: 40px;
+  width: 40px;
+  border-radius: 50% !important;
+  background-color: #cffccf;
+  border: none;
+  cursor: pointer;
+  padding: 9.091px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  img {
+    height: 22px;
+    width: 22px;
   }
 }
 
@@ -275,5 +278,33 @@
   .message-time {
     text-align: left;
     margin-left: 12px;
+  }
+}
+
+.chat-start-body {
+  padding: 20px 30px 30px;
+  overflow-y: auto;
+  position: absolute;
+  top: 72px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+
+  label {
+    color: #6b6b6b;
+    font-family: Roboto-Medium;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: normal;
+    span {
+      color: #ff0000;
+    }
+  }
+  textarea {
+    border-radius: 8px;
+  }
+
+  .pblock-15 {
+    padding-block: 15px;
   }
 }
