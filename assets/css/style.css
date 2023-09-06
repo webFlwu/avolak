@@ -4874,4 +4874,37 @@ footer .footer__social__icon {
   display: flex;
   align-items: center;
   gap: 15px;
+}
+
+.alert {
+  display: inline-flex;
+  padding: 10px 12px;
+  align-items: center;
+  gap: 16px;
+  border-width: 2px;
+  border-style: solid;
+  line-height: normal;
+  border-radius: 0;
+  margin-bottom: 0;
+  height: 40px;
+}
+.alert.alert-info {
+  color: #052561;
+  border-color: #9ebefa;
+  background: #cedffd;
+}
+.alert.alert-info img {
+  height: 20px;
+  width: 20px;
+}
+.alert.alert-danger {
+  color: #610505;
+  border-color: #fa9e9e;
+  background: #fa9e9e;
+  gap: 8px;
+  padding-left: 16px;
+}
+.alert.alert-danger img {
+  height: 8px;
+  width: 8px;
 }/*# sourceMappingURL=style.css.map */

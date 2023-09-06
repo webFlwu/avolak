@@ -315,6 +315,13 @@
 
                 <div class="chat-start-body d-none">
                   <div class="mb-30">
+                    <div class="alert alert-info">
+                      <img src="./assets/img/icon/info-circle.svg" alt="info" />
+                      To start the conversation briefly explain your issue.
+                    </div>
+                  </div>
+
+                  <div class="mb-30">
                     <label for="" class="mb-3">Subject <span>*</span></label>
                     <div class="message-box gap-15">
                       <div class="input-group without-attachment">
@@ -438,12 +445,19 @@
           $('.sidebar').addClass('close')
         }
 
-        $('.start-new-message').click(function () {
-          $('.chat-start-body').removeClass('d-none')
-          $('.chat-body').addClass('d-none')
-          $('.chat-footer').addClass('d-none')
+        $('.chat-list-item').click(function () {
+          $(this).addClass('active').siblings().removeClass('active')
 
-          $(this).closest('.chat-list-item').addClass('active').siblings().removeClass('active')
+          const isStartingMessage = $(this).children('.start-new-message').length
+          const isChatBoxHidden = $('.chat-body').hasClass('d-none')
+
+          if (isStartingMessage) {
+            $('.chat-start-body').removeClass('d-none')
+            $('.chat-body, .chat-footer').addClass('d-none')
+          } else if (isChatBoxHidden) {
+            $('.chat-start-body').addClass('d-none')
+            $('.chat-body, .chat-footer').removeClass('d-none')
+          }
         })
       })
     </script>
