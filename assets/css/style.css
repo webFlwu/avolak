@@ -4046,6 +4046,11 @@ footer .footer__social__icon {
   outline: none;
 }
 
+:root {
+  --tab-left: 0;
+  --tab-item-width: 0;
+}
+
 .tab-section-wrapper {
   padding-top: 6px;
   position: relative;
@@ -4064,6 +4069,17 @@ footer .footer__social__icon {
   flex-wrap: wrap;
   gap: 6px 60px;
 }
+.tab-section::after {
+  content: "";
+  position: absolute;
+  top: calc(100% - 2.5px);
+  left: var(--tab-left);
+  width: var(--tab-item-width);
+  height: 5px;
+  flex-shrink: 0;
+  background-color: #00ad00;
+  transition: all 0.3s ease-in-out;
+}
 .tab-section .tab-item {
   color: #1a1c2b;
   font-family: "Roboto-Medium";
@@ -4077,16 +4093,6 @@ footer .footer__social__icon {
   height: 40px;
   display: flex;
   align-items: center;
-}
-.tab-section .tab-item.active::after {
-  content: "";
-  position: absolute;
-  top: calc(100% - 2.5px);
-  left: 0;
-  width: 100%;
-  height: 5px;
-  flex-shrink: 0;
-  background-color: #00ad00;
 }
 
 .custom-table {

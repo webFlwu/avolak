@@ -273,7 +273,6 @@
 
   let sidebar = document.querySelector('.sidebar')
   let sidebarBtn = document.querySelector('.sidebar__btn')
-  console.log(sidebarBtn)
   sidebarBtn?.addEventListener('click', () => {
     sidebar.classList.toggle('close')
   })
@@ -290,7 +289,7 @@
   // 14. Dynamic Height
 
   function setHeight() {
-    const gap = $('.dynamic-height').offset().top + 37
+    const gap = $('.dynamic-height').offset()?.top + 37
     const bodyHeight = $(window).height() - gap
     $('.dynamic-height').height(bodyHeight)
     $('.chat-wrapper').height(bodyHeight - 3)
