@@ -617,6 +617,21 @@
         if ($(window).width() < 768) {
           $('.sidebar').addClass('close')
         }
+
+        function setIndicatorPosition() {
+          const { left } = $(this).position()
+          const width = $(this).width()
+          document.documentElement.style.setProperty('--tab-left', left + 'px')
+          document.documentElement.style.setProperty('--tab-item-width', width + 'px')
+        }
+
+        $('.tab-section .tab-item').click(function () {
+          setIndicatorPosition.call(this)
+          $('.tab-section .tab-item.active').removeClass('active')
+          $(this).addClass('active')
+        })
+
+        setIndicatorPosition.call($('.tab-section .tab-item.active'))
       })
     </script>
   </body>
