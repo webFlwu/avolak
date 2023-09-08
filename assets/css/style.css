@@ -4971,4 +4971,103 @@ footer .footer__social__icon {
 }
 .custom-badge.badge-error::before {
   background: #610505;
+}
+
+.custom-modal.track-modal {
+  width: 380px;
+}
+.custom-modal.track-modal hr {
+  color: #c4c4c4;
+}
+.custom-modal.track-modal .modal-title {
+  color: #4d537f;
+  font-family: Poppins-Medium;
+  font-size: 28px;
+  font-weight: 500;
+  line-height: normal;
+  margin-bottom: 15px;
+}
+.custom-modal.track-modal .modal-body {
+  padding: 40px 30px;
+  gap: 30px;
+}
+.custom-modal.track-modal .btn-primary {
+  height: 50px;
+  font-size: 20px;
+  font-family: Roboto-Medium;
+  font-weight: 500;
+}
+
+.tracker-steps .tracker-step {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  margin-bottom: 65px;
+}
+.tracker-steps .tracker-step:last-child {
+  margin-bottom: 0;
+}
+.tracker-steps .date-time {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 4px;
+  text-align: center;
+  color: #6b6b6b;
+}
+.tracker-steps .date-time img {
+  height: 16px;
+  width: 16px;
+}
+.tracker-steps .date-time :first-child {
+  font-family: Roboto-Medium;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: normal;
+}
+.tracker-steps .date-time :last-child {
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+.tracker-steps .step-message {
+  flex: 1;
+  color: #3a3e5f;
+  text-align: center;
+  line-height: normal;
+}
+.tracker-steps .step-line {
+  width: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.tracker-steps .tracker-step:not(.active) .step-line::before {
+  content: "";
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background-color: #089108;
+}
+.tracker-steps .tracker-step:not(:first-child) .step-line::after {
+  content: "";
+  position: absolute;
+  width: 3px;
+  height: calc(100% + 49px);
+  background-color: #089108;
+  bottom: calc(50% + 8px);
+}
+.tracker-steps .tracker-step.active .step-line {
+  border: 3px solid #089108;
+  border-radius: 50%;
+  height: 34px;
+  width: 34px;
+}
+.tracker-steps .tracker-step.active .step-line::after {
+  height: calc(100% + 41px);
+  bottom: calc(50% + 17px);
 }/*# sourceMappingURL=style.css.map */
