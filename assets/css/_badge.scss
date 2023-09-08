@@ -1,0 +1,45 @@
+.custom-badge {
+  display: inline-flex;
+  padding: 8px 16px;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  border-radius: 35px;
+  font-size: 14px;
+  line-height: normal;
+  white-space: nowrap;
+
+  &::before {
+    content: '';
+    height: 8px;
+    width: 8px;
+    border-radius: 50%;
+  }
+
+  &.badge-success {
+    background: #cffccf;
+    color: #056105;
+
+    &::before {
+      background: #056105;
+    }
+  }
+
+  &.badge-warning {
+    background: #fcedcf;
+    color: #614205;
+
+    &::before {
+      background: #614205;
+    }
+  }
+
+  &.badge-error {
+    background: #fccfcf;
+    color: #610505;
+
+    &::before {
+      background: #610505;
+    }
+  }
+}

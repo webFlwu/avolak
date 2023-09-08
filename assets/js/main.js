@@ -289,10 +289,19 @@
   // 14. Dynamic Height
 
   function setHeight() {
-    const gap = $('.dynamic-height').offset()?.top + 37
-    const bodyHeight = $(window).height() - gap
-    $('.dynamic-height').height(bodyHeight)
-    $('.chat-wrapper').height(bodyHeight - 3)
+    $('.dynamic-height').each(function () {
+      const gap = $(this).offset()?.top + 37
+      const bodyHeight = $(window).height() - gap
+
+      let extraHeight = 0
+      const tableSummaryHeight = $('.table-summary-wrapper').height()
+      if (tableSummaryHeight) {
+        extraHeight = tableSummaryHeight + 20
+      }
+
+      $(this).height(bodyHeight - extraHeight)
+      $('.chat-wrapper').height(bodyHeight - 3)
+    })
   }
 
   $(document).ready(function () {
@@ -301,5 +310,78 @@
 
   $(window).resize(function () {
     setHeight()
+  })
+
+  ////////////////////////////////////////////////////
+  // Tab Section
+
+  function setIndicatorPosition() {
+    const { left } = $(this).position()
+    const width = $(this).width()
+    document.documentElement.style.setProperty('--tab-left', left + 'px')
+    document.documentElement.style.setProperty('--tab-item-width', width + 'px')
+  }
+
+  $('.tab-section .tab-item').click(function () {
+    setIndicatorPosition.call(this)
+    $('.tab-section .tab-item.active').removeClass('active')
+    $(this).addClass('active')
+
+    const tabContentId = $(this).attr('data-target')
+    $('.tab-pane.active').removeClass('show active')
+    $('#' + tabContentId).addClass('show active')
+
+    setHeight()
+  })
+
+  if ($('.tab-section .tab-item.active').length) {
+    setIndicatorPosition.call($('.tab-section .tab-item.active'))
+  }
+
+  /////////////////////////////////////////////////
+  // dashboard sidebar
+
+  if ($(window).width() < 768) {
+    $('.sidebar').addClass('close')
+  }
+
+  /////////////////////////////////////////////////
+  // chat page
+
+  $('.chat-list-item').click(function () {
+    $(this).addClass('active').siblings().removeClass('active')
+
+    const isStartingMessage = $(this).children('.start-new-message').length
+    const isChatBoxHidden = $('.chat-body').hasClass('d-none')
+
+    if (isStartingMessage) {
+      $('.chat-start-body').removeClass('d-none')
+      $('.chat-body, .chat-footer').addClass('d-none')
+    } else if (isChatBoxHidden) {
+      $('.chat-start-body').addClass('d-none')
+      $('.chat-body, .chat-footer').removeClass('d-none')
+    }
+  })
+
+  /////////////////////////////////////////////////
+  // show page
+
+  $('.shop-product-slider').owlCarousel({
+    loop: false,
+    margin: 24,
+    nav: false,
+    dots: false,
+    autoWidth: true,
+    responsive: {
+      0: {
+        items: 1,
+      },
+      600: {
+        items: 3,
+      },
+      1000: {
+        items: 5,
+      },
+    },
   })
 })(jQuery)

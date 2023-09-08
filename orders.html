@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta http-equiv="x-ua-compatible" content="ie=edge" />
-    <title>Avolak | Cart</title>
+    <title>Avolak | Orders</title>
     <meta name="description" content="" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <!-- Place favicon.ico in the root directory -->
@@ -94,13 +94,13 @@
           </a>
         </li>
         <li>
-          <a href="/cart.html" class="active-menu">
+          <a href="/cart.html">
             <img src="./assets/img/icon/cart.svg" alt="" />
             <span class="link_name">Cart</span>
           </a>
         </li>
         <li>
-          <a href="/orders.html">
+          <a href="/orders.html" class="active-menu">
             <img src="./assets/img/icon/order.svg" alt="" />
             <span class="link_name">Orders</span>
           </a>
@@ -254,14 +254,13 @@
 
       <div class="content-body">
         <div class="block">
-          <h2 class="main-heading mb-30">Cart</h2>
+          <h2 class="main-heading mb-30">Orders</h2>
 
           <div class="tab-section-wrapper">
             <div class="tab-section">
-              <div class="tab-item active" data-target="active-tab">Active</div>
-              <div class="tab-item" data-target="pending-tab">Pending</div>
-              <div class="tab-item" data-target="wishlist-tab">Wish List</div>
-              <div class="tab-item" data-target="rejected-tab">Rejected</div>
+              <div class="tab-item active" data-target="confirmed-tab">Confirmed</div>
+              <div class="tab-item" data-target="requests-tab">Requests</div>
+              <div class="tab-item" data-target="history-tab">History</div>
             </div>
             <form class="mr-20 max-w-full">
               <div class="searchExpand small max-w-full">
@@ -273,8 +272,82 @@
         </div>
 
         <div class="tab-content">
-          <div id="active-tab" class="tab-pane fade show active">
+          <div id="confirmed-tab" class="tab-pane fade show active">
             <div class="dynamic-height pb-0">
+              <div class="block">
+                <div class="table-responsive">
+                  <table class="custom-table">
+                    <thead>
+                      <tr>
+                        <th width="100px">Order ID</th>
+                        <th>Item</th>
+                        <th>Quantity</th>
+                        <th>Note</th>
+                        <th>Price</th>
+                        <th>Status</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr class="tr-spacing"></tr>
+                      <tr class="tr-spacing"></tr>
+                      <tr>
+                        <td>#AV3012</td>
+                        <td class="item-column">
+                          <div class="d-flex text-justify">
+                            <img class="product-img" src="./assets/img/product/p1.png" alt="p1" />
+                            PreSonus Revelator USB Condenser Microphone for podcasting, live streami....
+                          </div>
+                        </td>
+                        <td>1</td>
+                        <td>
+                          <span class="pointer" data-bs-toggle="modal" data-bs-target="#noteModal">View</span>
+                        </td>
+                        <td>
+                          <div
+                            class="price-wrapper pointer"
+                            data-bs-toggle="modal"
+                            data-bs-target="#priceBreakdownModal"
+                          >
+                            <span class="price">৳ 7,200</span>
+                            <span class="price-text">Break Down</span>
+                          </div>
+                        </td>
+                        <td><button class="btn btn-primary">Track</button></td>
+                      </tr>
+                      <tr class="tr-spacing"></tr>
+                      <tr>
+                        <td>#AV3012</td>
+                        <td class="item-column">
+                          <div class="d-flex text-justify">
+                            <img class="product-img" src="./assets/img/product/p2.png" alt="p2" />
+                            Amazon Brand - Solimo Adult Multivitamin, 150 Gummies, 75-Day Sup...
+                          </div>
+                        </td>
+                        <td>2</td>
+                        <td>
+                          <span class="pointer" data-bs-toggle="modal" data-bs-target="#noteModal">View</span>
+                        </td>
+                        <td>
+                          <div
+                            class="price-wrapper pointer"
+                            data-bs-toggle="modal"
+                            data-bs-target="#priceBreakdownModal"
+                          >
+                            <span class="price">৳ 3,700</span>
+                            <span class="price-text">Break Down</span>
+                          </div>
+                        </td>
+                        <td><button class="btn btn-primary">Track</button></td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div id="requests-tab" class="tab-pane fade">
+            <div class="dynamic-height">
               <div class="block">
                 <div class="table-responsive">
                   <table class="custom-table">
@@ -286,7 +359,7 @@
                               <input type="checkbox" class="form-check-input" />
                               <span></span>
                             </label>
-                            <span>ID</span>
+                            <span>Order ID</span>
                           </div>
                         </th>
                         <th>Item</th>
@@ -334,6 +407,64 @@
                         <td class="item-column">
                           <div class="d-flex text-justify">
                             <img class="product-img" src="./assets/img/product/p1.png" alt="p1" />
+                            PreSonus Revelator USB Condenser Microphone for podcasting, live streami....
+                          </div>
+                        </td>
+                        <td>
+                          <div class="product-quantity">
+                            <input type="text" value="1" readonly />
+                          </div>
+                        </td>
+                        <td>
+                          <span class="pointer" data-bs-toggle="modal" data-bs-target="#noteModal">View Note</span>
+                        </td>
+                        <td>Pending</td>
+                        <td><span class="custom-badge badge-warning">In Review</span></td>
+                        <td>
+                          <div class="dropdown">
+                            <button
+                              class="more-btn no-style-btn"
+                              type="button"
+                              data-bs-toggle="dropdown"
+                              aria-expanded="false"
+                            >
+                              <i class="fa fa-ellipsis-v"></i>
+                            </button>
+                            <ul class="dropdown-menu">
+                              <li>
+                                <a class="dropdown-item" href="#">
+                                  <img src="./assets/img/icon/pay_now.svg" alt="" />
+                                  Pay Now
+                                </a>
+                              </li>
+                              <li>
+                                <a class="dropdown-item" href="#">
+                                  <img src="./assets/img/icon/note.svg" alt="" />
+                                  <span class="pointer" data-bs-toggle="modal" data-bs-target="#noteModal"
+                                    >View Note</span
+                                  >
+                                </a>
+                              </li>
+                              <li>
+                                <a class="dropdown-item" href="#">
+                                  <img src="./assets/img/icon/trush.svg" alt="" />
+                                  Delete
+                                </a>
+                              </li>
+                            </ul>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr class="tr-spacing"></tr>
+                      <tr>
+                        <td>
+                          <div class="d-flex gap-3">
+                            <input type="checkbox" class="form-check-input" /> <span>#AV3012</span>
+                          </div>
+                        </td>
+                        <td class="item-column">
+                          <div class="d-flex text-justify">
+                            <img class="product-img" src="./assets/img/product/p2.png" alt="p2" />
                             PreSonus Revelator USB Condenser Microphone for podcasting, live streami....
                           </div>
                         </td>
@@ -393,526 +524,95 @@
                           </div>
                         </td>
                       </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div id="history-tab" class="tab-pane fade">
+            <div class="dynamic-height">
+              <div class="block">
+                <div class="table-responsive">
+                  <table class="custom-table">
+                    <thead>
+                      <tr>
+                        <th width="100px">OrderID</th>
+                        <th>Item</th>
+                        <th>Quantity</th>
+                        <th>Note</th>
+                        <th>Price</th>
+                        <th>Status</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr class="tr-spacing"></tr>
                       <tr class="tr-spacing"></tr>
                       <tr>
-                        <td>
-                          <div class="d-flex gap-3">
-                            <input type="checkbox" class="form-check-input" /> <span>#AV3012</span>
-                          </div>
-                        </td>
+                        <td>#AV3012</td>
                         <td class="item-column">
                           <div class="d-flex text-justify">
-                            <img class="product-img" src="./assets/img/product/p2.png" alt="p1" />
+                            <img class="product-img" src="./assets/img/product/p1.png" alt="p1" />
+                            PreSonus Revelator USB Condenser Microphone for podcasting, live streami....
+                          </div>
+                        </td>
+                        <td>1</td>
+                        <td>View</td>
+                        <td>
+                          <div
+                            class="price-wrapper pointer"
+                            data-bs-toggle="modal"
+                            data-bs-target="#priceBreakdownModal"
+                          >
+                            <span class="price">৳ 2,350</span>
+                          </div>
+                        </td>
+                        <td><span class="custom-badge badge-success">Delivered</span></td>
+                      </tr>
+                      <tr class="tr-spacing"></tr>
+                      <tr>
+                        <td>#AV3012</td>
+                        <td class="item-column">
+                          <div class="d-flex text-justify">
+                            <img class="product-img" src="./assets/img/product/p2.png" alt="p2" />
                             Amazon Brand - Solimo Adult Multivitamin, 150 Gummies, 75-Day Sup...
                           </div>
                         </td>
-                        <td>
-                          <div class="product-quantity">
-                            <button><i class="fa fa-minus"></i></button>
-                            <input type="text" value="1" />
-                            <button><i class="fa fa-plus"></i></button>
-                          </div>
-                        </td>
-                        <td>
-                          <span class="pointer" data-bs-toggle="modal" data-bs-target="#noteModal">View Note</span>
-                        </td>
+                        <td>2</td>
+                        <td>View</td>
                         <td>
                           <div
                             class="price-wrapper pointer"
                             data-bs-toggle="modal"
                             data-bs-target="#priceBreakdownModal"
                           >
-                            <span class="price">৳ 1,850</span>
-                            <span class="price-text">Break Down</span>
+                            <span class="price">৳ 3,700</span>
                           </div>
                         </td>
-                        <td><button class="btn btn-primary">Pay Now</button></td>
-                        <td>
-                          <div class="dropdown">
-                            <button
-                              class="more-btn no-style-btn"
-                              type="button"
-                              data-bs-toggle="dropdown"
-                              aria-expanded="false"
-                            >
-                              <i class="fa fa-ellipsis-v"></i>
-                            </button>
-                            <ul class="dropdown-menu">
-                              <li>
-                                <a class="dropdown-item" href="#">
-                                  <img src="./assets/img/icon/pay_now.svg" alt="" />
-                                  Pay Now
-                                </a>
-                              </li>
-                              <li>
-                                <a class="dropdown-item" href="#">
-                                  <img src="./assets/img/icon/note.svg" alt="" />
-                                  <span class="pointer" data-bs-toggle="modal" data-bs-target="#noteModal"
-                                    >View Note</span
-                                  >
-                                </a>
-                              </li>
-                              <li>
-                                <a class="dropdown-item" href="#">
-                                  <img src="./assets/img/icon/trush.svg" alt="" />
-                                  Delete
-                                </a>
-                              </li>
-                            </ul>
-                          </div>
-                        </td>
+                        <td><span class="custom-badge badge-error">Refunded</span></td>
                       </tr>
                       <tr class="tr-spacing"></tr>
                       <tr>
-                        <td>
-                          <div class="d-flex gap-3">
-                            <input type="checkbox" class="form-check-input" /> <span>#AV3012</span>
-                          </div>
-                        </td>
+                        <td>#AV3012</td>
                         <td class="item-column">
                           <div class="d-flex text-justify">
-                            <img class="product-img" src="./assets/img/product/p3.png" alt="p1" />
-                            The Art of Shaving Unscented Pre-Shave Oil – Protects Against Clinica....
+                            <img class="product-img" src="./assets/img/product/p3.png" alt="p3" />
+                            Chair, Table, Tile, Carpet, Mattress, Juice
                           </div>
                         </td>
-                        <td>
-                          <div class="product-quantity">
-                            <button><i class="fa fa-minus"></i></button>
-                            <input type="text" value="1" />
-                            <button><i class="fa fa-plus"></i></button>
-                          </div>
-                        </td>
-                        <td>
-                          <span class="pointer" data-bs-toggle="modal" data-bs-target="#noteModal">View Note</span>
-                        </td>
+                        <td>200 Kgs</td>
+                        <td>View</td>
                         <td>
                           <div
                             class="price-wrapper pointer"
                             data-bs-toggle="modal"
                             data-bs-target="#priceBreakdownModal"
                           >
-                            <span class="price">৳ 2,350</span>
-                            <span class="price-text">Break Down</span>
+                            <span class="price">৳ 4,535</span>
                           </div>
                         </td>
-                        <td><button class="btn btn-primary">Pay Now</button></td>
-                        <td>
-                          <div class="dropdown">
-                            <button
-                              class="more-btn no-style-btn"
-                              type="button"
-                              data-bs-toggle="dropdown"
-                              aria-expanded="false"
-                            >
-                              <i class="fa fa-ellipsis-v"></i>
-                            </button>
-                            <ul class="dropdown-menu">
-                              <li>
-                                <a class="dropdown-item" href="#">
-                                  <img src="./assets/img/icon/pay_now.svg" alt="" />
-                                  Pay Now
-                                </a>
-                              </li>
-                              <li>
-                                <a class="dropdown-item" href="#">
-                                  <img src="./assets/img/icon/note.svg" alt="" />
-                                  <span class="pointer" data-bs-toggle="modal" data-bs-target="#noteModal"
-                                    >View Note</span
-                                  >
-                                </a>
-                              </li>
-                              <li>
-                                <a class="dropdown-item" href="#">
-                                  <img src="./assets/img/icon/trush.svg" alt="" />
-                                  Delete
-                                </a>
-                              </li>
-                            </ul>
-                          </div>
-                        </td>
-                      </tr>
-                    </tbody>
-                  </table>
-                </div>
-              </div>
-            </div>
-            <div class="block">
-              <div class="table-summary-wrapper">
-                <div class="table-summary flex-column flex-sm-row d-flex d-sm-inline-flex">
-                  <div class="total-price pointer" data-bs-toggle="modal" data-bs-target="#priceBreakdownModal">
-                    <span>Total</span>
-                    <span>৳ 9,050</span>
-                  </div>
-                  <button class="btn btn-primary">Pay Selected</button>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div id="pending-tab" class="tab-pane fade">
-            <div class="dynamic-height">
-              <div class="block">
-                <div class="table-responsive">
-                  <table class="custom-table">
-                    <thead>
-                      <tr>
-                        <th width="100px">
-                          <div class="d-flex gap-3">
-                            <label class="custom-checkbox">
-                              <input type="checkbox" class="form-check-input" />
-                              <span></span>
-                            </label>
-                            <span>ID</span>
-                          </div>
-                        </th>
-                        <th>Item</th>
-                        <th>Quantity</th>
-                        <th>Note</th>
-                        <th>Price</th>
-                        <th>Status</th>
-                        <th>
-                          <div class="dropdown">
-                            <button
-                              class="more-btn no-style-btn"
-                              type="button"
-                              data-bs-toggle="dropdown"
-                              aria-expanded="false"
-                            >
-                              <i class="fa fa-ellipsis-v"></i>
-                            </button>
-                            <ul class="dropdown-menu">
-                              <li>
-                                <a class="dropdown-item" href="#">
-                                  <img src="./assets/img/icon/pay_now.svg" alt="" />
-                                  Pay Selected
-                                </a>
-                              </li>
-                              <li>
-                                <a class="dropdown-item" href="#">
-                                  <img src="./assets/img/icon/trush.svg" alt="" />
-                                  Delete Selected
-                                </a>
-                              </li>
-                            </ul>
-                          </div>
-                        </th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr class="tr-spacing"></tr>
-                      <tr class="no-style">
-                        <td class="no-style pt-15 pb-15" colspan="7">
-                          <div class="alert alert-info w-100">
-                            <img src="./assets/img/icon/info-circle.svg" alt="" />
-                            Once the item is approved, it will be added to your Active Cart for payment for a month. We
-                            will promptly confirm the item price.
-                          </div>
-                        </td>
-                      </tr>
-                      <tr class="tr-spacing"></tr>
-                      <tr>
-                        <td>
-                          <div class="d-flex gap-3">
-                            <input type="checkbox" class="form-check-input" /> <span>#AV3012</span>
-                          </div>
-                        </td>
-                        <td class="item-column">
-                          <div class="d-flex text-justify">
-                            <img class="product-img" src="./assets/img/product/p1.png" alt="p1" />
-                            PreSonus Revelator USB Condenser Microphone for podcasting, live streami....
-                          </div>
-                        </td>
-                        <td>
-                          <div class="product-quantity">
-                            <input type="text" value="1" readonly />
-                          </div>
-                        </td>
-                        <td>
-                          <span class="pointer" data-bs-toggle="modal" data-bs-target="#noteModal">View Note</span>
-                        </td>
-                        <td>Pending</td>
-                        <td><span class="custom-badge badge-warning">In Review</span></td>
-                        <td>
-                          <div class="dropdown">
-                            <button
-                              class="more-btn no-style-btn"
-                              type="button"
-                              data-bs-toggle="dropdown"
-                              aria-expanded="false"
-                            >
-                              <i class="fa fa-ellipsis-v"></i>
-                            </button>
-                            <ul class="dropdown-menu">
-                              <li>
-                                <a class="dropdown-item" href="#">
-                                  <img src="./assets/img/icon/pay_now.svg" alt="" />
-                                  Pay Now
-                                </a>
-                              </li>
-                              <li>
-                                <a class="dropdown-item" href="#">
-                                  <img src="./assets/img/icon/note.svg" alt="" />
-                                  <span class="pointer" data-bs-toggle="modal" data-bs-target="#noteModal"
-                                    >View Note</span
-                                  >
-                                </a>
-                              </li>
-                              <li>
-                                <a class="dropdown-item" href="#">
-                                  <img src="./assets/img/icon/trush.svg" alt="" />
-                                  Delete
-                                </a>
-                              </li>
-                            </ul>
-                          </div>
-                        </td>
-                      </tr>
-                    </tbody>
-                  </table>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div id="wishlist-tab" class="tab-pane fade">
-            <div class="dynamic-height">
-              <div class="block">
-                <div class="table-responsive">
-                  <table class="custom-table">
-                    <thead>
-                      <tr>
-                        <th width="100px">
-                          <div class="d-flex gap-3">
-                            <label class="custom-checkbox">
-                              <input type="checkbox" class="form-check-input" />
-                              <span></span>
-                            </label>
-                            <span>ID</span>
-                          </div>
-                        </th>
-                        <th>Item</th>
-                        <th>Quantity</th>
-                        <th>Note</th>
-                        <th>Price</th>
-                        <th>Status</th>
-                        <th>
-                          <div class="dropdown">
-                            <button
-                              class="more-btn no-style-btn"
-                              type="button"
-                              data-bs-toggle="dropdown"
-                              aria-expanded="false"
-                            >
-                              <i class="fa fa-ellipsis-v"></i>
-                            </button>
-                            <ul class="dropdown-menu">
-                              <li>
-                                <a class="dropdown-item" href="#">
-                                  <img src="./assets/img/icon/pay_now.svg" alt="" />
-                                  Pay Selected
-                                </a>
-                              </li>
-                              <li>
-                                <a class="dropdown-item" href="#">
-                                  <img src="./assets/img/icon/trush.svg" alt="" />
-                                  Delete Selected
-                                </a>
-                              </li>
-                            </ul>
-                          </div>
-                        </th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr class="tr-spacing"></tr>
-                      <tr class="tr-spacing"></tr>
-                      <tr>
-                        <td>
-                          <div class="d-flex gap-3">
-                            <input type="checkbox" class="form-check-input" /> <span>#AV3012</span>
-                          </div>
-                        </td>
-                        <td class="item-column">
-                          <div class="d-flex text-justify">
-                            <img class="product-img" src="./assets/img/product/p1.png" alt="p1" />
-                            PreSonus Revelator USB Condenser Microphone for podcasting, live streami....
-                          </div>
-                        </td>
-                        <td>
-                          <div class="product-quantity">
-                            <button><i class="fa fa-minus"></i></button>
-                            <input type="text" value="1" />
-                            <button><i class="fa fa-plus"></i></button>
-                          </div>
-                        </td>
-                        <td>N/a</td>
-                        <td>
-                          <div
-                            class="price-wrapper pointer"
-                            data-bs-toggle="modal"
-                            data-bs-target="#priceBreakdownModal"
-                          >
-                            <span class="price">৳ 2,350</span>
-                          </div>
-                        </td>
-                        <td><button class="btn btn-primary">Pay Now</button></td>
-                        <td>
-                          <div class="dropdown">
-                            <button
-                              class="more-btn no-style-btn"
-                              type="button"
-                              data-bs-toggle="dropdown"
-                              aria-expanded="false"
-                            >
-                              <i class="fa fa-ellipsis-v"></i>
-                            </button>
-                            <ul class="dropdown-menu">
-                              <li>
-                                <a class="dropdown-item" href="#">
-                                  <img src="./assets/img/icon/pay_now.svg" alt="" />
-                                  Pay Now
-                                </a>
-                              </li>
-                              <li>
-                                <a class="dropdown-item" href="#">
-                                  <img src="./assets/img/icon/note.svg" alt="" />
-                                  <span class="pointer" data-bs-toggle="modal" data-bs-target="#noteModal"
-                                    >View Note</span
-                                  >
-                                </a>
-                              </li>
-                              <li>
-                                <a class="dropdown-item" href="#">
-                                  <img src="./assets/img/icon/trush.svg" alt="" />
-                                  Delete
-                                </a>
-                              </li>
-                            </ul>
-                          </div>
-                        </td>
-                      </tr>
-                    </tbody>
-                  </table>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div id="rejected-tab" class="tab-pane fade">
-            <div class="dynamic-height">
-              <div class="block">
-                <div class="table-responsive">
-                  <table class="custom-table">
-                    <thead>
-                      <tr>
-                        <th width="100px">
-                          <div class="d-flex gap-3">
-                            <label class="custom-checkbox">
-                              <input type="checkbox" class="form-check-input" />
-                              <span></span>
-                            </label>
-                            <span>ID</span>
-                          </div>
-                        </th>
-                        <th>Item</th>
-                        <th>Quantity</th>
-                        <th>Reason</th>
-                        <th>Price</th>
-                        <th>Status</th>
-                        <th>
-                          <div class="dropdown">
-                            <button
-                              class="more-btn no-style-btn"
-                              type="button"
-                              data-bs-toggle="dropdown"
-                              aria-expanded="false"
-                            >
-                              <i class="fa fa-ellipsis-v"></i>
-                            </button>
-                            <ul class="dropdown-menu">
-                              <li>
-                                <a class="dropdown-item" href="#">
-                                  <img src="./assets/img/icon/pay_now.svg" alt="" />
-                                  Pay Selected
-                                </a>
-                              </li>
-                              <li>
-                                <a class="dropdown-item" href="#">
-                                  <img src="./assets/img/icon/trush.svg" alt="" />
-                                  Delete Selected
-                                </a>
-                              </li>
-                            </ul>
-                          </div>
-                        </th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr class="tr-spacing"></tr>
-                      <tr class="no-style">
-                        <td class="no-style pt-15 pb-15" colspan="7">
-                          <div class="alert alert-danger">
-                            Sorry for the inconvenience your Items have been rejected.
-                          </div>
-                        </td>
-                      </tr>
-                      <tr class="tr-spacing"></tr>
-                      <tr>
-                        <td>
-                          <div class="d-flex gap-3">
-                            <input type="checkbox" class="form-check-input" /> <span>#AV3012</span>
-                          </div>
-                        </td>
-                        <td class="item-column">
-                          <div class="d-flex text-justify">
-                            <img class="product-img" src="./assets/img/product/p1.png" alt="p1" />
-                            PreSonus Revelator USB Condenser Microphone for podcasting, live streami....
-                          </div>
-                        </td>
-                        <td>
-                          <div class="product-quantity">
-                            <input type="text" value="1" readonly />
-                          </div>
-                        </td>
-                        <td>
-                          <span class="pointer" data-bs-toggle="modal" data-bs-target="#noteModal">View Reason</span>
-                        </td>
-                        <td>N/a</td>
-                        <td><span class="custom-badge badge-error">Rejected</span></td>
-                        <td>
-                          <div class="dropdown">
-                            <button
-                              class="more-btn no-style-btn"
-                              type="button"
-                              data-bs-toggle="dropdown"
-                              aria-expanded="false"
-                            >
-                              <i class="fa fa-ellipsis-v"></i>
-                            </button>
-                            <ul class="dropdown-menu">
-                              <li>
-                                <a class="dropdown-item" href="#">
-                                  <img src="./assets/img/icon/pay_now.svg" alt="" />
-                                  Pay Now
-                                </a>
-                              </li>
-                              <li>
-                                <a class="dropdown-item" href="#">
-                                  <img src="./assets/img/icon/note.svg" alt="" />
-                                  <span class="pointer" data-bs-toggle="modal" data-bs-target="#noteModal"
-                                    >View Note</span
-                                  >
-                                </a>
-                              </li>
-                              <li>
-                                <a class="dropdown-item" href="#">
-                                  <img src="./assets/img/icon/trush.svg" alt="" />
-                                  Delete
-                                </a>
-                              </li>
-                            </ul>
-                          </div>
-                        </td>
+                        <td><span class="custom-badge badge-success">Delivered</span></td>
                       </tr>
                     </tbody>
                   </table>

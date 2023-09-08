@@ -261,7 +261,7 @@
           <div class="block pe-0">
             <div class="items-slider mb-30">
               <h4 class="mb-20">Popular Items</h4>
-              <div class="owl-carousel owl-theme">
+              <div class="owl-carousel owl-theme shop-product-slider">
                 <div class="product-card">
                   <div class="wishlist-btn">
                     <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 25 25" fill="none">
@@ -466,7 +466,7 @@
             </div>
             <div class="items-slider mb-30">
               <h4 class="mb-20">Watches</h4>
-              <div class="owl-carousel owl-theme">
+              <div class="owl-carousel owl-theme shop-product-slider">
                 <div class="product-card">
                   <div class="wishlist-btn">
                     <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 25 25" fill="none">
@@ -689,32 +689,5 @@
     <script src="assets/js/popper.min.js"></script>
     <script src="assets/js/main.js"></script>
     <script src="assets/js/zoom.js"></script>
-
-    <script>
-      $(document).ready(function () {
-        if ($(window).width() < 768) {
-          $('.sidebar').addClass('close')
-        }
-
-        $('.owl-carousel').owlCarousel({
-          loop: false,
-          margin: 24,
-          nav: false,
-          dots: false,
-          autoWidth: true,
-          responsive: {
-            0: {
-              items: 1,
-            },
-            600: {
-              items: 3,
-            },
-            1000: {
-              items: 5,
-            },
-          },
-        })
-      })
-    </script>
   </body>
 </html>
