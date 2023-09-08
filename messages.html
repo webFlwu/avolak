@@ -438,28 +438,5 @@
     <script src="assets/js/popper.min.js"></script>
     <script src="assets/js/main.js"></script>
     <script src="assets/js/zoom.js"></script>
-
-    <script>
-      $(document).ready(function () {
-        if ($(window).width() < 768) {
-          $('.sidebar').addClass('close')
-        }
-
-        $('.chat-list-item').click(function () {
-          $(this).addClass('active').siblings().removeClass('active')
-
-          const isStartingMessage = $(this).children('.start-new-message').length
-          const isChatBoxHidden = $('.chat-body').hasClass('d-none')
-
-          if (isStartingMessage) {
-            $('.chat-start-body').removeClass('d-none')
-            $('.chat-body, .chat-footer').addClass('d-none')
-          } else if (isChatBoxHidden) {
-            $('.chat-start-body').addClass('d-none')
-            $('.chat-body, .chat-footer').removeClass('d-none')
-          }
-        })
-      })
-    </script>
   </body>
 </html>
