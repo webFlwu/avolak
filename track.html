@@ -311,7 +311,11 @@
                             <span class="price-text">Break Down</span>
                           </div>
                         </td>
-                        <td><button class="btn btn-primary">Track</button></td>
+                        <td>
+                          <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#trackModal">
+                            Track
+                          </button>
+                        </td>
                       </tr>
                       <tr class="tr-spacing"></tr>
                       <tr>
@@ -336,7 +340,11 @@
                             <span class="price-text">Break Down</span>
                           </div>
                         </td>
-                        <td><button class="btn btn-primary">Track</button></td>
+                        <td>
+                          <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#trackModal">
+                            Track
+                          </button>
+                        </td>
                       </tr>
                     </tbody>
                   </table>
@@ -384,7 +392,11 @@
                             <span class="price">৳ 7,200</span>
                           </div>
                         </td>
-                        <td><button class="btn btn-primary">Track</button></td>
+                        <td>
+                          <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#trackModal">
+                            Track
+                          </button>
+                        </td>
                       </tr>
                     </tbody>
                   </table>
@@ -420,7 +432,7 @@
                           </div>
                         </td>
                         <td>1</td>
-                        <td>View</td>
+                        <td><span class="pointer" data-bs-toggle="modal" data-bs-target="#noteModal">View</span></td>
                         <td>
                           <div
                             class="price-wrapper pointer"
@@ -442,7 +454,7 @@
                           </div>
                         </td>
                         <td>2</td>
-                        <td>View</td>
+                        <td><span class="pointer" data-bs-toggle="modal" data-bs-target="#noteModal">View</span></td>
                         <td>
                           <div
                             class="price-wrapper pointer"
@@ -464,7 +476,7 @@
                           </div>
                         </td>
                         <td>200 Kgs</td>
-                        <td>View</td>
+                        <td><span class="pointer" data-bs-toggle="modal" data-bs-target="#noteModal">View</span></td>
                         <td>
                           <div
                             class="price-wrapper pointer"
@@ -546,6 +558,54 @@
                 <input type="text" value="1" />
               </div>
             </div>
+            <button type="button" class="btn btn-primary w-100" data-bs-dismiss="modal" aria-label="Close">
+              Close
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- track modal -->
+    <div class="modal fade" id="trackModal" tabindex="-1" aria-labelledby="trackModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content custom-modal track-modal">
+          <div class="modal-body d-flex flex-column">
+            <div>
+              <h4 class="modal-title text-center" id="trackModalLabel">Tracking Updates</h4>
+              <hr class="m-0" />
+            </div>
+
+            <div class="tracker-steps">
+              <div class="tracker-step">
+                <div class="date-time">
+                  <span>May 17</span>
+                  <span><img src="./assets/img/icon/clock-three.svg" alt="clock" />10:30 Am</span>
+                </div>
+                <div class="step-line"></div>
+                <div class="step-message">Order Received</div>
+              </div>
+              <div class="tracker-step">
+                <div class="date-time">
+                  <span>May 17</span>
+                  <span><img src="./assets/img/icon/clock-three.svg" alt="clock" />10:32 Am</span>
+                </div>
+                <div class="step-line"></div>
+                <div class="step-message">Payment verified</div>
+              </div>
+              <div class="tracker-step active">
+                <div class="date-time">
+                  <span>May 17</span>
+                  <span><img src="./assets/img/icon/clock-three.svg" alt="clock" />10:30 Am</span>
+                </div>
+                <div class="step-line">
+                  <img src="./assets/img/icon/truck.svg" alt="truck" />
+                </div>
+                <div class="step-message">Order placed to supplier</div>
+              </div>
+            </div>
+
+            <hr class="m-0" />
             <button type="button" class="btn btn-primary w-100" data-bs-dismiss="modal" aria-label="Close">
               Close
             </button>

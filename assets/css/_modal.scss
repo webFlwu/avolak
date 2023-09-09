@@ -1,0 +1,116 @@
+.custom-modal {
+  &.track-modal {
+    width: 380px;
+    hr {
+      color: #c4c4c4;
+    }
+    .modal-title {
+      color: #4d537f;
+      font-family: Poppins-Medium;
+      font-size: 28px;
+      font-weight: 500;
+      line-height: normal;
+      margin-bottom: 15px;
+    }
+    .modal-body {
+      padding: 40px 30px;
+      gap: 30px;
+    }
+    .btn-primary {
+      height: 50px;
+      font-size: 20px;
+      font-family: Roboto-Medium;
+      font-weight: 500;
+    }
+  }
+}
+
+.tracker-steps {
+  .tracker-step {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    margin-bottom: 65px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+  .date-time {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 4px;
+    text-align: center;
+    color: #6b6b6b;
+
+    img {
+      height: 16px;
+      width: 16px;
+    }
+
+    :first-child {
+      font-family: Roboto-Medium;
+      font-size: 16px;
+      font-weight: 500;
+      line-height: normal;
+    }
+
+    :last-child {
+      font-size: 14px;
+      display: flex;
+      align-items: center;
+      gap: 4px;
+    }
+  }
+  .step-message {
+    flex: 1;
+    color: #3a3e5f;
+    text-align: center;
+    line-height: normal;
+  }
+  .step-line {
+    width: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .tracker-step {
+    &:not(.active) {
+      .step-line::before {
+        content: '';
+        display: inline-block;
+        width: 16px;
+        height: 16px;
+        border-radius: 50%;
+        background-color: #089108;
+      }
+    }
+
+    &:not(:first-child) {
+      .step-line::after {
+        content: '';
+        position: absolute;
+        width: 3px;
+        height: calc(100% + 49px);
+        background-color: #089108;
+        bottom: calc(50% + 8px);
+      }
+    }
+    &.active {
+      .step-line {
+        border: 3px solid #089108;
+        border-radius: 50%;
+        height: 34px;
+        width: 34px;
+
+        &::after {
+          height: calc(100% + 41px);
+          bottom: calc(50% + 17px);
+        }
+      }
+    }
+  }
+}
