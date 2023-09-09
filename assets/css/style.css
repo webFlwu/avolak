@@ -3156,6 +3156,20 @@ p {
   text-align: justify;
 }
 
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #a0a4c5;
+  border-radius: 6px;
+}
+
 .header__dashboard__icon {
   gap: 30px;
 }
