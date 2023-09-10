@@ -601,6 +601,10 @@
   margin-bottom: 40px;
 }
 
+.mt-28 {
+  margin-top: 28px;
+}
+
 .dynamic-height {
   overflow-y: auto;
   padding-bottom: 37px;
@@ -626,4 +630,18 @@
 ::-webkit-scrollbar-thumb {
   background-color: #a0a4c5;
   border-radius: 6px;
+}
+
+.table-responsive::-webkit-scrollbar {
+  height: 8px;
+}
+
+.form-control {
+  &:focus {
+    box-shadow: none;
+  }
+}
+
+.rounded-full {
+  border-radius: 35px;
 }
