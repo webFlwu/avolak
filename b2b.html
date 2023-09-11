@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta http-equiv="x-ua-compatible" content="ie=edge" />
-    <title>Avolak | Track</title>
+    <title>Avolak | B2B</title>
     <meta name="description" content="" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <!-- Place favicon.ico in the root directory -->
@@ -106,7 +106,7 @@
           </a>
         </li>
         <li>
-          <a href="/track.html" class="active-menu">
+          <a href="/track.html">
             <img src="./assets/img/icon/track-order.svg" alt="" />
             <span class="link_name">Track</span>
           </a>
@@ -136,7 +136,7 @@
           </a>
         </li>
         <li>
-          <a href="/b2b.html">
+          <a href="/b2b.html" class="active-menu">
             <img src="./assets/img/icon/b2b.svg" alt="" />
             <span class="link_name">B2B</span>
           </a>
@@ -254,132 +254,234 @@
 
       <div class="content-body">
         <div class="block">
-          <h2 class="main-heading mb-30">Track</h2>
+          <h2 class="main-heading">B2B</h2>
 
           <div class="tab-section-wrapper">
             <div class="tab-section">
-              <div class="tab-item active" data-target="in-transit-tab">In Transit</div>
-              <div class="tab-item" data-target="delivered-tab">Delivered</div>
+              <div class="tab-item active" data-target="product-details-tab">Product Details</div>
+              <div class="tab-item" data-target="archive-tab">Archive</div>
             </div>
-            <form class="mr-20 max-w-full">
-              <div class="searchExpand small max-w-full">
-                <a class="pointer trigger"><i class="far fa-search"></i></a>
-                <input type="search" placeholder="Search" />
+
+            <div class="multi-select-wrap light-mode">
+              <div class="multi-select-head form-control">
+                <span class="multi-select-title" data-multi-title="Select country">Filter</span>
+                <img class="arrow-up" src="./assets/img/icon/arrow-down.svg" />
               </div>
-            </form>
+              <div class="multi-select-box-holder">
+                <div class="multi-select-box">
+                  <div class="checkbox-item active-checkbox">
+                    <input name="" type="checkbox" id="item1" class="item-checkbox-input" />
+                    <label for="item1"><span class="checkbox-text">Watch</span></label>
+                    <span></span>
+                  </div>
+
+                  <div class="checkbox-item active-checkbox">
+                    <input type="checkbox" id="item2" class="item-checkbox-input" />
+                    <label for="item2"><span class="checkbox-text">Pants</span></label>
+                    <span></span>
+                  </div>
+
+                  <div class="checkbox-item active-checkbox">
+                    <input type="checkbox" id="item3" class="item-checkbox-input" />
+                    <label for="item3"><span class="checkbox-text">Bag</span></label>
+                    <span></span>
+                  </div>
+
+                  <div class="checkbox-item active-checkbox">
+                    <input type="checkbox" id="item4" class="item-checkbox-input" />
+                    <label for="item4"><span class="checkbox-text">Shoes</span></label>
+                    <span></span>
+                  </div>
+
+                  <div class="checkbox-item active-checkbox">
+                    <input type="checkbox" id="item5" class="item-checkbox-input" />
+                    <label for="item5"><span class="checkbox-text">Others</span></label>
+                    <span></span>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
 
         <div class="tab-content">
-          <div id="in-transit-tab" class="tab-pane fade show active">
+          <div id="product-details-tab" class="tab-pane fade show active">
             <div class="dynamic-height">
               <div class="block">
-                <div class="table-responsive">
-                  <table class="custom-table">
-                    <thead>
-                      <tr>
-                        <th width="100px">Order ID</th>
-                        <th>Item</th>
-                        <th>Quantity</th>
-                        <th>Note</th>
-                        <th>Price</th>
-                        <th>Status</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr class="tr-spacing"></tr>
-                      <tr class="tr-spacing"></tr>
-                      <tr>
-                        <td>#AV3012</td>
-                        <td class="item-column">
-                          <div class="d-flex text-justify">
-                            <img class="product-img" src="./assets/img/product/p1.png" alt="p1" />
-                            PreSonus Revelator USB Condenser Microphone for podcasting, live streami....
-                          </div>
-                        </td>
-                        <td>1</td>
-                        <td>
-                          <span class="pointer" data-bs-toggle="modal" data-bs-target="#noteModal">View</span>
-                        </td>
-                        <td>
-                          <div
-                            class="price-wrapper pointer"
-                            data-bs-toggle="modal"
-                            data-bs-target="#priceBreakdownModal"
-                          >
-                            <span class="price">৳ 7,200</span>
-                            <span class="price-text">Break Down</span>
-                          </div>
-                        </td>
-                        <td>
-                          <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#trackModal">
-                            Track
-                          </button>
-                        </td>
-                      </tr>
-                      <tr class="tr-spacing"></tr>
-                      <tr>
-                        <td>#AV3012</td>
-                        <td class="item-column">
-                          <div class="d-flex text-justify">
-                            <img class="product-img" src="./assets/img/product/p2.png" alt="p2" />
-                            Amazon Brand - Solimo Adult Multivitamin, 150 Gummies, 75-Day Sup...
-                          </div>
-                        </td>
-                        <td>2</td>
-                        <td>
-                          <span class="pointer" data-bs-toggle="modal" data-bs-target="#noteModal">View</span>
-                        </td>
-                        <td>
-                          <div
-                            class="price-wrapper pointer"
-                            data-bs-toggle="modal"
-                            data-bs-target="#priceBreakdownModal"
-                          >
-                            <span class="price">৳ 3,700</span>
-                            <span class="price-text">Break Down</span>
-                          </div>
-                        </td>
-                        <td>
-                          <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#trackModal">
-                            Track
-                          </button>
-                        </td>
-                      </tr>
-                    </tbody>
-                  </table>
+                <div class="alert alert-info w-100 mt-28">
+                  <img src="./assets/img/icon/info-circle.svg" alt="" />
+                  For per KG and per piece carrying cost of your product, please Select one option from below.
+                </div>
+
+                <div class="package-lists">
+                  <div class="with-package">
+                    <div class="heading">
+                      <h4>I have a packing list</h4>
+                      <img src="./assets/img/icon/right-arrow.svg" alt="" />
+                    </div>
+                    <div class="description">
+                      <p>
+                        If You already have a packing list for your product, then click here to receive a quote for the
+                        transportation
+                      </p>
+                      <img src="./assets/img/shape/with-package.svg" alt="with-package" />
+                    </div>
+                  </div>
+                  <div class="without-package">
+                    <div class="heading">
+                      <h4>I do not have any packing list</h4>
+                      <img src="./assets/img/icon/right-arrow.svg" alt="" />
+                    </div>
+                    <div class="description">
+                      <p>
+                        If You do not have a packing list for your product, then click here to receive a quote for the
+                        transportation
+                      </p>
+                      <img src="./assets/img/shape/without-package.svg" alt="without-package" />
+                    </div>
+                  </div>
+                </div>
+
+                <div class="product-insert-section">
+                  <div class="package-list-inputs mt-28">
+                    <label class="mb-15">Input Packing List</label>
+                    <div class="package-list-input">
+                      <input type="text" class="form-control" readonly placeholder="Item Name" />
+                      <input type="text" class="form-control" readonly placeholder="Quantity" />
+                      <input type="text" class="form-control" readonly placeholder="KG" />
+                      <input type="text" class="form-control" readonly placeholder="Total Carton" />
+                      <input type="text" class="form-control" readonly placeholder="CBM" />
+                      <button class="btn rounded-full">
+                        <img src="./assets/img/icon/input-edit.svg" alt="" /> Edit Item
+                      </button>
+                    </div>
+                    <div class="package-list-input">
+                      <input type="text" class="form-control" placeholder="Item Name" />
+                      <input type="text" class="form-control" placeholder="Quantity" />
+                      <input type="text" class="form-control" placeholder="KG" />
+                      <input type="text" class="form-control" placeholder="Total Carton" />
+                      <input type="text" class="form-control" placeholder="CBM" />
+                      <button class="btn btn-primary"><i class="far fa-plus"></i> Add Item</button>
+                    </div>
+                  </div>
+
+                  <div class="package-file-upload mt-30">
+                    <label class="mb-30">Upload Packing List</label>
+                    <div>
+                      <label>
+                        <input type="file" class="d-none" />
+                        <div class="draggable-field">
+                          <img src="./assets/img/icon/upload.svg" alt="upload" />
+                          <p>Drag or upload Your File</p>
+                        </div>
+                      </label>
+                    </div>
+                  </div>
+
+                  <div class="mt-30">
+                    <label for="note-input" class="mb-3">Note</label>
+                    <div class="note-input-section">
+                      <input
+                        id="note-input"
+                        type="text"
+                        class="form-control"
+                        placeholder="Tell us more about your product. You can also upload product image here"
+                      />
+                      <label>
+                        <input type="file" class="d-none" />
+                        <div class="draggable-field">
+                          <img src="./assets/img/icon/upload.svg" alt="upload" />
+                          <p>Upload Product Image</p>
+                        </div>
+                      </label>
+                    </div>
+                  </div>
+
+                  <div class="page-navigation">
+                    <button class="btn back-btn">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none">
+                        <path
+                          d="M16.1665 25L7.1665 16L16.1665 7M8.4165 16H26.6665"
+                          stroke="#089108"
+                          stroke-width="3"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                      </svg>
+                      Back
+                    </button>
+                    <button class="btn btn-primary">Submit</button>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
 
-          <div id="delivered-tab" class="tab-pane fade">
+          <div id="archive-tab" class="tab-pane fade">
             <div class="dynamic-height">
               <div class="block">
                 <div class="table-responsive">
                   <table class="custom-table">
                     <thead>
                       <tr>
-                        <th width="100px">Order ID</th>
+                        <th width="100px">
+                          <div class="d-flex gap-3">
+                            <label class="custom-checkbox">
+                              <input type="checkbox" class="form-check-input" />
+                              <span></span>
+                            </label>
+                            <span>ID</span>
+                          </div>
+                        </th>
                         <th>Item</th>
-                        <th>Quantity</th>
+                        <th>Packing list</th>
                         <th>Note</th>
                         <th>Price</th>
                         <th>Status</th>
+                        <th>
+                          <div class="dropdown">
+                            <button
+                              class="more-btn no-style-btn"
+                              type="button"
+                              data-bs-toggle="dropdown"
+                              aria-expanded="false"
+                            >
+                              <i class="fa fa-ellipsis-v"></i>
+                            </button>
+                            <ul class="dropdown-menu">
+                              <li>
+                                <a class="dropdown-item" href="#">
+                                  <img src="./assets/img/icon/pay_now.svg" alt="" />
+                                  Pay Selected
+                                </a>
+                              </li>
+                              <li>
+                                <a class="dropdown-item" href="#">
+                                  <img src="./assets/img/icon/trush.svg" alt="" />
+                                  Delete Selected
+                                </a>
+                              </li>
+                            </ul>
+                          </div>
+                        </th>
                       </tr>
                     </thead>
                     <tbody>
                       <tr class="tr-spacing"></tr>
                       <tr class="tr-spacing"></tr>
                       <tr>
-                        <td>#AV3012</td>
+                        <td>
+                          <div class="d-flex gap-3">
+                            <input type="checkbox" class="form-check-input" /> <span>#AV3012</span>
+                          </div>
+                        </td>
                         <td class="item-column">
                           <div class="d-flex text-justify">
-                            <img class="product-img" src="./assets/img/product/p1.png" alt="p1" />
+                            <img class="product-img" src="./assets/img/product/p2.png" alt="p2" />
                             PreSonus Revelator USB Condenser Microphone for podcasting, live streami....
                           </div>
                         </td>
-                        <td>1</td>
+                        <td>View</td>
                         <td>
                           <span class="pointer" data-bs-toggle="modal" data-bs-target="#noteModal">View</span>
                         </td>
@@ -389,104 +491,49 @@
                             data-bs-toggle="modal"
                             data-bs-target="#priceBreakdownModal"
                           >
-                            <span class="price">৳ 7,200</span>
+                            <span class="price">৳ 15,200</span>
+                            <span class="price-text">Break Down</span>
                           </div>
                         </td>
                         <td>
-                          <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#trackModal">
-                            Track
+                          <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#instructionModal">
+                            Instruction
                           </button>
                         </td>
-                      </tr>
-                    </tbody>
-                  </table>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div id="history-tab" class="tab-pane fade">
-            <div class="dynamic-height">
-              <div class="block">
-                <div class="table-responsive">
-                  <table class="custom-table">
-                    <thead>
-                      <tr>
-                        <th width="100px">OrderID</th>
-                        <th>Item</th>
-                        <th>Quantity</th>
-                        <th>Note</th>
-                        <th>Price</th>
-                        <th>Status</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr class="tr-spacing"></tr>
-                      <tr class="tr-spacing"></tr>
-                      <tr>
-                        <td>#AV3012</td>
-                        <td class="item-column">
-                          <div class="d-flex text-justify">
-                            <img class="product-img" src="./assets/img/product/p1.png" alt="p1" />
-                            PreSonus Revelator USB Condenser Microphone for podcasting, live streami....
-                          </div>
-                        </td>
-                        <td>1</td>
-                        <td><span class="pointer" data-bs-toggle="modal" data-bs-target="#noteModal">View</span></td>
                         <td>
-                          <div
-                            class="price-wrapper pointer"
-                            data-bs-toggle="modal"
-                            data-bs-target="#priceBreakdownModal"
-                          >
-                            <span class="price">৳ 2,350</span>
+                          <div class="dropdown">
+                            <button
+                              class="more-btn no-style-btn"
+                              type="button"
+                              data-bs-toggle="dropdown"
+                              aria-expanded="false"
+                            >
+                              <i class="fa fa-ellipsis-v"></i>
+                            </button>
+                            <ul class="dropdown-menu">
+                              <li>
+                                <a class="dropdown-item" href="#">
+                                  <img src="./assets/img/icon/pay_now.svg" alt="" />
+                                  Pay Now
+                                </a>
+                              </li>
+                              <li>
+                                <a class="dropdown-item" href="#">
+                                  <img src="./assets/img/icon/note.svg" alt="" />
+                                  <span class="pointer" data-bs-toggle="modal" data-bs-target="#noteModal"
+                                    >View Note</span
+                                  >
+                                </a>
+                              </li>
+                              <li>
+                                <a class="dropdown-item" href="#">
+                                  <img src="./assets/img/icon/trush.svg" alt="" />
+                                  Delete
+                                </a>
+                              </li>
+                            </ul>
                           </div>
                         </td>
-                        <td><span class="custom-badge badge-success">Delivered</span></td>
-                      </tr>
-                      <tr class="tr-spacing"></tr>
-                      <tr>
-                        <td>#AV3012</td>
-                        <td class="item-column">
-                          <div class="d-flex text-justify">
-                            <img class="product-img" src="./assets/img/product/p2.png" alt="p2" />
-                            Amazon Brand - Solimo Adult Multivitamin, 150 Gummies, 75-Day Sup...
-                          </div>
-                        </td>
-                        <td>2</td>
-                        <td><span class="pointer" data-bs-toggle="modal" data-bs-target="#noteModal">View</span></td>
-                        <td>
-                          <div
-                            class="price-wrapper pointer"
-                            data-bs-toggle="modal"
-                            data-bs-target="#priceBreakdownModal"
-                          >
-                            <span class="price">৳ 3,700</span>
-                          </div>
-                        </td>
-                        <td><span class="custom-badge badge-error">Refunded</span></td>
-                      </tr>
-                      <tr class="tr-spacing"></tr>
-                      <tr>
-                        <td>#AV3012</td>
-                        <td class="item-column">
-                          <div class="d-flex text-justify">
-                            <img class="product-img" src="./assets/img/product/p3.png" alt="p3" />
-                            Chair, Table, Tile, Carpet, Mattress, Juice
-                          </div>
-                        </td>
-                        <td>200 Kgs</td>
-                        <td><span class="pointer" data-bs-toggle="modal" data-bs-target="#noteModal">View</span></td>
-                        <td>
-                          <div
-                            class="price-wrapper pointer"
-                            data-bs-toggle="modal"
-                            data-bs-target="#priceBreakdownModal"
-                          >
-                            <span class="price">৳ 4,535</span>
-                          </div>
-                        </td>
-                        <td><span class="custom-badge badge-success">Delivered</span></td>
                       </tr>
                     </tbody>
                   </table>
@@ -609,6 +656,54 @@
             <button type="button" class="btn btn-primary w-100" data-bs-dismiss="modal" aria-label="Close">
               Close
             </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- instruction modal -->
+    <div
+      class="modal fade"
+      id="instructionModal"
+      tabindex="-1"
+      aria-labelledby="instructionModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content custom-modal instruction-modal">
+          <div class="modal-body d-flex flex-column">
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            <h4 class="modal-title text-center mb-30" id="instructionModalLabel">Shipping Instruction</h4>
+            <div class="mb-45">
+              <label for="address" class="form-label mb-3">Send your product to our warehouse:</label>
+
+              <div class="input-group">
+                <textarea class="form-control" id="address">
+Mr Mark
+1411 village Blvd, Apt -8324, 
+West Palm beach 
+Florida - 33409, Phone- 1245879541</textarea
+                >
+                <span class="input-group-text">
+                  <button>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="20" viewBox="0 0 16 20" fill="none">
+                      <path
+                        d="M15.78 5.75L10.25 0.22C10.1095 0.0793075 9.91885 0.000175052 9.72 0H7.25C6.52065 0 5.82118 0.289731 5.30546 0.805456C4.78973 1.32118 4.5 2.02065 4.5 2.75V4H3.25C2.52065 4 1.82118 4.28973 1.30546 4.80546C0.789731 5.32118 0.5 6.02065 0.5 6.75V16.75C0.5 17.4793 0.789731 18.1788 1.30546 18.6945C1.82118 19.2103 2.52065 19.5 3.25 19.5H10.25C10.9793 19.5 11.6788 19.2103 12.1945 18.6945C12.7103 18.1788 13 17.4793 13 16.75V15.5H13.25C13.9793 15.5 14.6788 15.2103 15.1945 14.6945C15.7103 14.1788 16 13.4793 16 12.75V6.25C15.9921 6.0616 15.9136 5.88309 15.78 5.75ZM10.5 2.56L13.44 5.5H10.5V2.56ZM11.5 16.75C11.5 17.0815 11.3683 17.3995 11.1339 17.6339C10.8995 17.8683 10.5815 18 10.25 18H3.25C2.91848 18 2.60054 17.8683 2.36612 17.6339C2.1317 17.3995 2 17.0815 2 16.75V6.75C2 6.41848 2.1317 6.10054 2.36612 5.86612C2.60054 5.6317 2.91848 5.5 3.25 5.5H4.5V12.75C4.5 13.4793 4.78973 14.1788 5.30546 14.6945C5.82118 15.2103 6.52065 15.5 7.25 15.5H11.5V16.75ZM13.25 14H7.25C6.91848 14 6.60054 13.8683 6.36612 13.6339C6.1317 13.3995 6 13.0815 6 12.75V2.75C6 2.41848 6.1317 2.10054 6.36612 1.86612C6.60054 1.6317 6.91848 1.5 7.25 1.5H9V6.25C9.00259 6.44811 9.08244 6.63737 9.22253 6.77747C9.36263 6.91756 9.55189 6.99741 9.75 7H14.5V12.75C14.5 13.0815 14.3683 13.3995 14.1339 13.6339C13.8995 13.8683 13.5815 14 13.25 14Z"
+                        fill="#8086B2"
+                      />
+                    </svg>
+                    Copy
+                  </button>
+                </span>
+              </div>
+            </div>
+            <div>
+              <label class="mb-2">Enter your tracking code:</label>
+              <div class="d-flex gap-2 align-items-center">
+                <input class="form-control" type="text" placeholder="Example - USPS tracking Code" />
+                <button class="btn btn-primary">Submit</button>
+              </div>
+            </div>
           </div>
         </div>
       </div>

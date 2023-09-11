@@ -112,6 +112,16 @@
       }
     }
   }
+}
+
+.light-mode.multi-select-wrap .multi-select-box-holder .multi-select-box .checkbox-item input:checked + label {
+  background-color: #bfc2d9 !important;
+}
+.light-mode.multi-select-wrap .multi-select-box-holder .multi-select-box .checkbox-item label .checkbox-text {
+  color: #6b6b6b;
+}
+
+.light-mode {
   .multi-select-head {
     padding: 8px 16px;
     border-radius: 8px;
@@ -135,13 +145,6 @@
         background-color: #bfc2d9 !important;
       }
     }
-  }
-
-  .multi-select-wrap .multi-select-box-holder .multi-select-box .checkbox-item input:checked + label {
-    background-color: #bfc2d9 !important;
-  }
-  .multi-select-wrap .multi-select-box-holder .multi-select-box .checkbox-item label .checkbox-text {
-    color: #6b6b6b;
   }
 }
 
