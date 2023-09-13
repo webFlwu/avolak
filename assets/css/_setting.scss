@@ -82,11 +82,6 @@
     border: none;
     border-radius: 8px;
   }
-  .helping-text {
-    color: #6b6b6b;
-    font-size: 14px;
-    line-height: normal;
-  }
 
   .tab-btns {
     display: flex;
@@ -119,6 +114,46 @@
 }
 .light-mode.multi-select-wrap .multi-select-box-holder .multi-select-box .checkbox-item label .checkbox-text {
   color: #6b6b6b;
+}
+
+.helping-text {
+  color: #6b6b6b;
+  font-size: 14px;
+  line-height: normal;
+
+  .error {
+    color: #c20a0a;
+  }
+
+  .success {
+    color: #089108;
+    font-family: Roboto-Medium;
+    font-weight: 500;
+  }
+}
+
+.with-save-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  .input-group {
+    background: #dfe1ec;
+    border-radius: 8px;
+  }
+
+  .form-control {
+    border-radius: 8px !important;
+  }
+
+  .btn-primary {
+    padding: 11px 14px;
+    height: 38px;
+    font-family: Roboto-Medium;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: normal;
+  }
 }
 
 .light-mode {

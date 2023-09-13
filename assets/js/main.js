@@ -384,4 +384,22 @@
       },
     },
   })
+
+  /////////////////////////////////////////////////
+  // input with save btn
+
+  $('.with-save-btn button.input-group-text:last-child').click(function () {
+    $(this).toggleClass('d-none')
+    $(this).parents('.with-save-btn').find('.btn-primary').toggleClass('d-none')
+    $(this).parents('.with-save-btn').siblings('.helping-text').html('<span class="success pointer">Cancel</span>')
+  })
+
+  $('.with-save-btn .btn-primary').click(function () {
+    $(this).toggleClass('d-none')
+    $(this).parents('.with-save-btn').find('button.input-group-text:last-child').toggleClass('d-none')
+    $(this).parents('.with-save-btn').siblings('.helping-text').html('lorem ipsum dolor sit amet')
+  })
+
+  const popoverTriggerList = document.querySelectorAll('[data-bs-toggle="popover"]')
+  const popoverList = [...popoverTriggerList].map((popoverTriggerEl) => new bootstrap.Popover(popoverTriggerEl))
 })(jQuery)

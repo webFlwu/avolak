@@ -16,6 +16,22 @@
     border-radius: 50%;
   }
 
+  &::after {
+    content: '\f00d';
+    font-family: 'Font Awesome 5 Pro';
+    cursor: pointer;
+    font-size: 16px;
+  }
+
+  &.badge-info {
+    background: #cedffd;
+    color: #052561;
+
+    &::before {
+      background: #052561;
+    }
+  }
+
   &.badge-success {
     background: #cffccf;
     color: #056105;

@@ -285,3 +285,22 @@
     }
   }
 }
+
+.tooltip-inner {
+  background-color: white;
+  color: #141414;
+  filter: drop-shadow(-2px 6px 16px rgba(0, 0, 0, 0.08));
+}
+
+.bs-tooltip-top .tooltip-arrow::before {
+  border-top-color: white;
+}
+.bs-tooltip-right .tooltip-arrow::before {
+  border-right-color: white;
+}
+.bs-tooltip-bottom .tooltip-arrow::before {
+  border-bottom-color: white;
+}
+.bs-tooltip-left .tooltip-arrow::before {
+  border-left-color: white;
+}
