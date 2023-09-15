@@ -223,7 +223,7 @@
 }
 .sidebar .nav-links {
   height: 100%;
-  overflow: hidden;
+  overflow: auto;
 }
 .sidebar.close .nav-links {
   overflow: visible;
@@ -235,6 +235,7 @@
   position: relative;
   list-style: none;
   transition: all 0.4s ease;
+  margin-bottom: 0.5px;
 }
 
 .sidebar .nav-links li .icon-link {
@@ -281,7 +282,7 @@
 .sidebar .nav-links li a:hover {
   border-radius: 0px 30px 30px 0px;
   border-left: 5px solid #4d537f;
-  background: #a0a4c5;
+  background: #b8bbd1;
 }
 .sidebar.close .nav-links li a .link_name {
   opacity: 0;
@@ -333,7 +334,7 @@
   opacity: 1;
   display: block;
 }
-.nav-links .active-menu {
+.sidebar .nav-links li a.active-menu {
   border-radius: 0px 30px 30px 0px;
   border-left: 5px solid #4d537f !important;
   background: #a0a4c5;

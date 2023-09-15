@@ -2736,7 +2736,7 @@ p {
 
 .sidebar .nav-links {
   height: 100%;
-  overflow: hidden;
+  overflow: auto;
 }
 
 .sidebar.close .nav-links {
@@ -2751,6 +2751,7 @@ p {
   position: relative;
   list-style: none;
   transition: all 0.4s ease;
+  margin-bottom: 0.5px;
 }
 
 .sidebar .nav-links li .icon-link {
@@ -2804,7 +2805,7 @@ p {
 .sidebar .nav-links li a:hover {
   border-radius: 0px 30px 30px 0px;
   border-left: 5px solid #4d537f;
-  background: #a0a4c5;
+  background: #b8bbd1;
 }
 
 .sidebar.close .nav-links li a .link_name {
@@ -2866,7 +2867,7 @@ p {
   display: block;
 }
 
-.nav-links .active-menu {
+.sidebar .nav-links li a.active-menu {
   border-radius: 0px 30px 30px 0px;
   border-left: 5px solid #4d537f !important;
   background: #a0a4c5;
@@ -4512,7 +4513,9 @@ footer .footer__social__icon {
 }
 .earning .secondary-heading {
   padding-bottom: 12px;
-  border-bottom: 0.8px solid #c4c4c4;
+}
+.earning .border-bottom {
+  border-bottom: 0.8px solid #c4c4c4 !important;
 }
 
 .earning-note {
@@ -5050,7 +5053,7 @@ footer .footer__social__icon {
   width: 8px;
   border-radius: 50%;
 }
-.custom-badge::after {
+.custom-badge.closable::after {
   content: "\f00d";
   font-family: "Font Awesome 5 Pro";
   cursor: pointer;
@@ -5455,24 +5458,26 @@ footer .footer__social__icon {
   width: 97px;
 }
 
-.tooltip-inner {
-  background-color: white;
-  color: #141414;
+.custom-popover {
+  width: 224px;
+  background-color: #fff;
+  border-color: #fff;
   filter: drop-shadow(-2px 6px 16px rgba(0, 0, 0, 0.08));
+  border-radius: 0;
+  left: 95px !important;
 }
-
-.bs-tooltip-top .tooltip-arrow::before {
-  border-top-color: white;
+.custom-popover .popover-body {
+  color: #6b6b6b;
+  font-size: 12px;
+  line-height: 130%;
+  padding: 1rem 0.5rem;
 }
-
-.bs-tooltip-right .tooltip-arrow::before {
-  border-right-color: white;
+.custom-popover .popover-body a {
+  color: #0c5df3;
 }
-
-.bs-tooltip-bottom .tooltip-arrow::before {
-  border-bottom-color: white;
+.custom-popover .popover-arrow {
+  left: -100px !important;
 }
-
-.bs-tooltip-left .tooltip-arrow::before {
-  border-left-color: white;
+.custom-popover .popover-arrow::before {
+  border: none;
 }/*# sourceMappingURL=style.css.map */

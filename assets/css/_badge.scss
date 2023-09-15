@@ -16,7 +16,7 @@
     border-radius: 50%;
   }
 
-  &::after {
+  &.closable::after {
     content: '\f00d';
     font-family: 'Font Awesome 5 Pro';
     cursor: pointer;
