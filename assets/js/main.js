@@ -274,7 +274,11 @@
   let sidebar = document.querySelector('.sidebar')
   let sidebarBtn = document.querySelector('.sidebar__btn')
   sidebarBtn?.addEventListener('click', () => {
-    sidebar.classList.toggle('close')
+    if ($(window).width() < 576) {
+      sidebar.classList.toggle('mobile-open')
+    } else {
+      sidebar.classList.toggle('close')
+    }
   })
 
   $('.icon_bar').click(function () {
@@ -341,7 +345,7 @@
   /////////////////////////////////////////////////
   // dashboard sidebar
 
-  if ($(window).width() < 768) {
+  if ($(window).width() > 575 && $(window).width() < 768) {
     $('.sidebar').addClass('close')
   }
 
@@ -400,6 +404,24 @@
     $(this).parents('.with-save-btn').siblings('.helping-text').html('lorem ipsum dolor sit amet')
   })
 
+  /////////////////////////////////////////////////
+  // enable popover
   const popoverTriggerList = document.querySelectorAll('[data-bs-toggle="popover"]')
   const popoverList = [...popoverTriggerList].map((popoverTriggerEl) => new bootstrap.Popover(popoverTriggerEl))
+
+  /////////////////////////////////////////////////
+  // payment tab
+  $('.payment-option').click(function () {
+    $(this).addClass('active').siblings().removeClass('active')
+
+    const tabContentId = $(this).attr('data-target')
+    $('.tab-pane.active').removeClass('show active')
+    $('#' + tabContentId).addClass('show active')
+  })
+
+  /////////////////////////////////////////////////
+  // dashboard
+  $('.main-menu-open').click(function () {
+    $('.sidebar').addClass('mobile-open').removeClass('close')
+  })
 })(jQuery)

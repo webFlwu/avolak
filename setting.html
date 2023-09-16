@@ -60,7 +60,13 @@
               <img width="160" src="assets/img/logo/logo.svg" alt="logo" />
             </a>
           </div>
-          <div class="mobile-menu fix"></div>
+          <div class="mobile-menu fix">
+            <ul>
+              <li><a href="#">Home</a></li>
+              <li><a href="#">How To Order</a></li>
+              <li><a href="#">Messages</a></li>
+            </ul>
+          </div>
         </div>
       </div>
     </div>
@@ -160,6 +166,7 @@
               <li><a href="#">Messages</a></li>
             </ul>
             <ul class="header-right">
+              <button class="main-menu-open d-sm-none"><i class="far fa-angle-right"></i></button>
               <li>
                 <form>
                   <div class="searchExpand">
@@ -322,14 +329,16 @@
                   </div>
                   <div class="mb-30 profile-avatar">
                     <label>Choose Your Avatar</label>
-                    <label>
-                      <input type="radio" name="avatar" class="form-check-input" />
-                      <img src="./assets/img/icon/user.svg" alt="" />
-                    </label>
-                    <label>
-                      <input type="radio" name="avatar" class="form-check-input" />
-                      <img src="./assets/img/icon/user3.svg" alt="" />
-                    </label>
+                    <div class="d-flex align-items-center gap-30">
+                      <label>
+                        <input type="radio" name="avatar" class="form-check-input" />
+                        <img src="./assets/img/icon/user.svg" alt="" />
+                      </label>
+                      <label>
+                        <input type="radio" name="avatar" class="form-check-input" />
+                        <img src="./assets/img/icon/user3.svg" alt="" />
+                      </label>
+                    </div>
                   </div>
                   <div class="mb-45 profile-picture">
                     <label for="">Profile Picture</label>

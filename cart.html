@@ -60,7 +60,13 @@
               <img width="160" src="assets/img/logo/logo.svg" alt="logo" />
             </a>
           </div>
-          <div class="mobile-menu fix"></div>
+          <div class="mobile-menu fix">
+            <ul>
+              <li><a href="#">Home</a></li>
+              <li><a href="#">How To Order</a></li>
+              <li><a href="#">Messages</a></li>
+            </ul>
+          </div>
         </div>
       </div>
     </div>
@@ -154,12 +160,13 @@
       <div class="dashboard-header-section">
         <div class="block">
           <div class="dashboard-header gap-sm-5 d-flex justify-content-between align-items-center">
-            <ul class="header-left d-none d-md-flex">
+            <ul class="header-left d-none d-lg-flex">
               <li><a href="#">Home</a></li>
               <li><a href="#">How To Order</a></li>
               <li><a href="#">Messages</a></li>
             </ul>
             <ul class="header-right">
+              <button class="main-menu-open d-sm-none"><i class="far fa-angle-right"></i></button>
               <li>
                 <form>
                   <div class="searchExpand">
@@ -241,7 +248,7 @@
                 </div>
               </li>
             </ul>
-            <div class="d-md-none">
+            <div class="d-lg-none">
               <div class="sidebar-toggle-btn sidebar-toggle-btn-dark" id="sidebar-toggle">
                 <span class="line"></span>
                 <span class="line"></span>
@@ -344,9 +351,9 @@
                         </td>
                         <td>
                           <div class="product-quantity">
-                            <button><i class="fa fa-minus"></i></button>
+                            <button class="minus"><i class="fa fa-minus"></i></button>
                             <input type="text" value="1" />
-                            <button><i class="fa fa-plus"></i></button>
+                            <button class="plus"><i class="fa fa-plus"></i></button>
                           </div>
                         </td>
                         <td>
@@ -362,7 +369,7 @@
                             <span class="price-text">Break Down</span>
                           </div>
                         </td>
-                        <td><button class="btn btn-primary">Pay Now</button></td>
+                        <td><a href="/checkout-address.html" class="btn btn-primary">Pay Now</a></td>
                         <td>
                           <div class="dropdown">
                             <button
@@ -375,7 +382,7 @@
                             </button>
                             <ul class="dropdown-menu">
                               <li>
-                                <a class="dropdown-item" href="#">
+                                <a class="dropdown-item" href="/checkout-address.html">
                                   <img src="./assets/img/icon/pay_now.svg" alt="" />
                                   Pay Now
                                 </a>
@@ -413,9 +420,9 @@
                         </td>
                         <td>
                           <div class="product-quantity">
-                            <button><i class="fa fa-minus"></i></button>
+                            <button class="minus"><i class="fa fa-minus"></i></button>
                             <input type="text" value="1" />
-                            <button><i class="fa fa-plus"></i></button>
+                            <button class="plus"><i class="fa fa-plus"></i></button>
                           </div>
                         </td>
                         <td>
@@ -431,7 +438,7 @@
                             <span class="price-text">Break Down</span>
                           </div>
                         </td>
-                        <td><button class="btn btn-primary">Pay Now</button></td>
+                        <td><a href="/checkout-address.html" class="btn btn-primary">Pay Now</a></td>
                         <td>
                           <div class="dropdown">
                             <button
@@ -444,7 +451,7 @@
                             </button>
                             <ul class="dropdown-menu">
                               <li>
-                                <a class="dropdown-item" href="#">
+                                <a class="dropdown-item" href="/checkout-address.html">
                                   <img src="./assets/img/icon/pay_now.svg" alt="" />
                                   Pay Now
                                 </a>
@@ -482,9 +489,9 @@
                         </td>
                         <td>
                           <div class="product-quantity">
-                            <button><i class="fa fa-minus"></i></button>
+                            <button class="minus"><i class="fa fa-minus"></i></button>
                             <input type="text" value="1" />
-                            <button><i class="fa fa-plus"></i></button>
+                            <button class="plus"><i class="fa fa-plus"></i></button>
                           </div>
                         </td>
                         <td>
@@ -500,7 +507,7 @@
                             <span class="price-text">Break Down</span>
                           </div>
                         </td>
-                        <td><button class="btn btn-primary">Pay Now</button></td>
+                        <td><a href="/checkout-address.html" class="btn btn-primary">Pay Now</a></td>
                         <td>
                           <div class="dropdown">
                             <button
@@ -513,7 +520,7 @@
                             </button>
                             <ul class="dropdown-menu">
                               <li>
-                                <a class="dropdown-item" href="#">
+                                <a class="dropdown-item" href="/checkout-address.html">
                                   <img src="./assets/img/icon/pay_now.svg" alt="" />
                                   Pay Now
                                 </a>
@@ -543,7 +550,7 @@
             </div>
             <div class="block">
               <div class="table-summary-wrapper">
-                <div class="table-summary flex-column flex-sm-row d-flex d-sm-inline-flex">
+                <div class="table-summary d-inline-flex">
                   <div class="total-price pointer" data-bs-toggle="modal" data-bs-target="#priceBreakdownModal">
                     <span>Total</span>
                     <span>৳ 9,050</span>
@@ -649,7 +656,7 @@
                             </button>
                             <ul class="dropdown-menu">
                               <li>
-                                <a class="dropdown-item" href="#">
+                                <a class="dropdown-item" href="/checkout-address.html">
                                   <img src="./assets/img/icon/pay_now.svg" alt="" />
                                   Pay Now
                                 </a>
@@ -745,9 +752,9 @@
                         </td>
                         <td>
                           <div class="product-quantity">
-                            <button><i class="fa fa-minus"></i></button>
+                            <button class="minus"><i class="fa fa-minus"></i></button>
                             <input type="text" value="1" />
-                            <button><i class="fa fa-plus"></i></button>
+                            <button class="plus"><i class="fa fa-plus"></i></button>
                           </div>
                         </td>
                         <td>N/a</td>
@@ -760,7 +767,7 @@
                             <span class="price">৳ 2,350</span>
                           </div>
                         </td>
-                        <td><button class="btn btn-primary">Pay Now</button></td>
+                        <td><a href="/checkout-address.html" class="btn btn-primary">Pay Now</a></td>
                         <td>
                           <div class="dropdown">
                             <button
@@ -773,7 +780,7 @@
                             </button>
                             <ul class="dropdown-menu">
                               <li>
-                                <a class="dropdown-item" href="#">
+                                <a class="dropdown-item" href="/checkout-address.html">
                                   <img src="./assets/img/icon/pay_now.svg" alt="" />
                                   Pay Now
                                 </a>
@@ -896,7 +903,7 @@
                             </button>
                             <ul class="dropdown-menu">
                               <li>
-                                <a class="dropdown-item" href="#">
+                                <a class="dropdown-item" href="/checkout-address.html">
                                   <img src="./assets/img/icon/pay_now.svg" alt="" />
                                   Pay Now
                                 </a>

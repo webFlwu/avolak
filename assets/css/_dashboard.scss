@@ -1,3 +1,8 @@
+.header__btn__profile {
+  img {
+    min-width: 32px;
+  }
+}
 .dashboard {
   background-image: url('../img/bg/dashboard-bg.svg');
   background-size: cover;
@@ -16,14 +21,14 @@
     width: 100%;
   }
   .header__padding {
-    padding: 0%;
+    padding-top: 30px;
   }
   .hero__content {
     padding-top: 0px;
   }
   .hero__area {
     height: auto;
-    padding: 6.66% 0%;
+    padding-block: 30px 60px;
   }
   .hero__thumb-big img {
     height: 218px;
@@ -69,14 +74,15 @@
   }
 }
 .product__wrap {
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 24px;
+
   .product__card {
     border-radius: 16px;
     background: #262940;
-    padding: 2.88% 4.58%;
+    padding: 21px 22px;
     text-align: center;
-    width: 23.3%;
     position: relative;
     img {
       height: 133px;
@@ -417,9 +423,8 @@
   left: 280px;
   width: calc(100% - 280px);
   transition: all 0.5s ease;
-  padding: 0px 4.5%;
-  margin-top: 30px;
 }
+
 .sidebar.close ~ .home-section {
   left: 100px;
   width: calc(100% - 100px);
@@ -441,6 +446,11 @@
   .sidebar.close .nav-links li .sub-menu {
     display: none;
   }
+}
+
+.form-check-input {
+  min-width: 1rem;
+  min-height: 1rem;
 }
 
 .mySlides {
@@ -528,6 +538,8 @@
 .form-check-input[type='checkbox'] {
   height: 22px;
   width: 22px;
+  min-width: 22px;
+  min-height: 22px;
   border-radius: 6px;
   border: 2.7px solid #8086b2;
   &:checked {
@@ -645,4 +657,13 @@
 
 .rounded-full {
   border-radius: 35px;
+}
+
+.sidebar.close {
+  .logo-details {
+    padding: 35px 30px 70px 30px;
+  }
+  .icon_bar {
+    left: 30px;
+  }
 }

@@ -1,3 +1,15 @@
+.expandSearch {
+  height: 48px;
+  display: flex;
+  align-items: center;
+
+  a {
+    order: 1;
+  }
+  input {
+    order: 2;
+  }
+}
 .expandSearch,
 .expandSearch input,
 .expandSearch a {

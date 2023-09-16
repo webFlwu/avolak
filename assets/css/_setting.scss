@@ -155,7 +155,9 @@
     line-height: normal;
   }
 }
-
+.multi-select-title {
+  white-space: nowrap;
+}
 .light-mode {
   .multi-select-head {
     padding: 8px 16px;
