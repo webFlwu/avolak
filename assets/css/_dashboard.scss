@@ -75,7 +75,7 @@
 }
 .product__wrap {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
   gap: 24px;
 
   .product__card {
@@ -666,4 +666,12 @@
   .icon_bar {
     left: 30px;
   }
+}
+
+.btn-lg {
+  padding: 14px;
+  font-family: Roboto-Medium;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: normal;
 }

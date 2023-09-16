@@ -2613,7 +2613,7 @@ p {
 
 .product__wrap {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
   gap: 24px;
 }
 .product__wrap .product__card {
@@ -3236,6 +3236,14 @@ p {
 }
 .sidebar.close .icon_bar {
   left: 30px;
+}
+
+.btn-lg {
+  padding: 14px;
+  font-family: Roboto-Medium;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: normal;
 }
 
 .header__dashboard__icon {
@@ -5150,6 +5158,12 @@ footer .footer__social__icon {
   background: #610505;
 }
 
+.custom-modal .standard-p {
+  padding: 60px 30px !important;
+}
+.custom-modal .full-w-btns .btn {
+  flex: 1;
+}
 .custom-modal.track-modal {
   width: 380px;
 }
