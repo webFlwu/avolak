@@ -5,7 +5,10 @@
 
   .secondary-heading {
     padding-bottom: 12px;
-    border-bottom: 0.8px solid #c4c4c4;
+  }
+
+  .border-bottom {
+    border-bottom: 0.8px solid #c4c4c4 !important;
   }
 }
 
