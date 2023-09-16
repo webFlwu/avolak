@@ -362,8 +362,8 @@
                   </div>
                 </div>
 
-                <div class="product-insert-section">
-                  <div class="package-list-inputs mt-28">
+                <div class="product-insert-section d-none">
+                  <div class="package-list-inputs d-none mt-28">
                     <label class="mb-15">Input Packing List</label>
                     <div class="package-list-input">
                       <input type="text" class="form-control" readonly placeholder="Item Name" />
@@ -385,7 +385,7 @@
                     </div>
                   </div>
 
-                  <div class="package-file-upload mt-30">
+                  <div class="package-file-upload d-none mt-30">
                     <label class="mb-30">Upload Packing List</label>
                     <div>
                       <label>
@@ -418,7 +418,7 @@
                   </div>
 
                   <div class="page-navigation">
-                    <button class="btn back-btn">
+                    <button class="btn back-btn back-to-b2b">
                       <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none">
                         <path
                           d="M16.1665 25L7.1665 16L16.1665 7M8.4165 16H26.6665"
@@ -430,7 +430,9 @@
                       </svg>
                       Back
                     </button>
-                    <button class="btn btn-primary">Submit</button>
+                    <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#successModal">
+                      Submit
+                    </button>
                   </div>
                 </div>
               </div>
@@ -476,7 +478,12 @@
                                 </a>
                               </li>
                               <li>
-                                <a class="dropdown-item" href="#">
+                                <a
+                                  class="dropdown-item"
+                                  href="#"
+                                  data-bs-toggle="modal"
+                                  data-bs-target="#confirmationModal"
+                                >
                                   <img src="./assets/img/icon/trush.svg" alt="" />
                                   Delete Selected
                                 </a>
@@ -724,6 +731,100 @@ Florida - 33409, Phone- 1245879541</textarea
                 <button class="btn btn-primary">Submit</button>
               </div>
             </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- confirmation modal -->
+    <div
+      class="modal fade"
+      id="confirmationModal"
+      tabindex="-1"
+      aria-labelledby="confirmationModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content custom-modal">
+          <div class="modal-body standard-p d-flex flex-column align-items-center text-center">
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            <h4 class="modal-title text-center mb-30" id="confirmationModalLabel">Are You Sure</h4>
+            <svg width="91" height="90" viewBox="0 0 91 90" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M88.1 68.6885L53.8595 9.2244C53.0038 7.76756 51.7823 6.55962 50.316 5.7203C48.8497 4.88099 47.1895 4.43945 45.5 4.43945C43.8105 4.43945 42.1503 4.88099 40.684 5.7203C39.2177 6.55962 37.9962 7.76756 37.1405 9.2244L2.90002 68.6885C2.07675 70.0976 1.64288 71.7003 1.64288 73.3323C1.64288 74.9642 2.07675 76.5669 2.90002 77.976C3.7447 79.4416 4.96413 80.6562 6.43316 81.4949C7.9022 82.3337 9.56795 82.7665 11.2595 82.7489H79.7405C81.4307 82.7651 83.0949 82.3316 84.5624 81.4929C86.0299 80.6542 87.2481 79.4405 88.0922 77.976C88.9166 76.5676 89.3518 74.9653 89.3532 73.3333C89.3546 71.7013 88.9221 70.0983 88.1 68.6885ZM42.3677 35.7634C42.3677 34.9326 42.6977 34.1359 43.2851 33.5485C43.8725 32.961 44.6693 32.631 45.5 32.631C46.3308 32.631 47.1275 32.961 47.7149 33.5485C48.3023 34.1359 48.6324 34.9326 48.6324 35.7634V51.4252C48.6324 52.256 48.3023 53.0527 47.7149 53.6402C47.1275 54.2276 46.3308 54.5576 45.5 54.5576C44.6693 54.5576 43.8725 54.2276 43.2851 53.6402C42.6977 53.0527 42.3677 52.256 42.3677 51.4252V35.7634ZM45.5 70.2195C44.5707 70.2195 43.6623 69.9439 42.8896 69.4276C42.117 68.9113 41.5148 68.1775 41.1591 67.319C40.8035 66.4604 40.7105 65.5157 40.8918 64.6043C41.0731 63.6928 41.5205 62.8556 42.1776 62.1985C42.8347 61.5414 43.6719 61.0939 44.5834 60.9126C45.4948 60.7313 46.4395 60.8244 47.2981 61.18C48.1566 61.5356 48.8904 62.1379 49.4067 62.9105C49.923 63.6832 50.1985 64.5916 50.1985 65.5209C50.1985 66.767 49.7035 67.9621 48.8224 68.8433C47.9412 69.7244 46.7461 70.2195 45.5 70.2195Z"
+                fill="#C2850A"
+              />
+            </svg>
+            <p class="mt-30 mb-30">
+              If you Delete it, you will lose your Data. You can not undo the action if you press Delete.
+            </p>
+
+            <div class="d-flex gap-3 w-100 full-w-btns">
+              <button class="btn btn-primary btn-outline-primary" data-bs-dismiss="modal" aria-label="Close">
+                Cancel
+              </button>
+              <button class="btn btn-primary">Delete</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- confirmation modal -->
+    <div
+      class="modal fade"
+      id="confirmationModal"
+      tabindex="-1"
+      aria-labelledby="confirmationModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content custom-modal">
+          <div class="modal-body standard-p d-flex flex-column align-items-center text-center">
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            <h4 class="modal-title text-center mb-30" id="confirmationModalLabel">Are You Sure</h4>
+            <svg width="91" height="90" viewBox="0 0 91 90" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M88.1 68.6885L53.8595 9.2244C53.0038 7.76756 51.7823 6.55962 50.316 5.7203C48.8497 4.88099 47.1895 4.43945 45.5 4.43945C43.8105 4.43945 42.1503 4.88099 40.684 5.7203C39.2177 6.55962 37.9962 7.76756 37.1405 9.2244L2.90002 68.6885C2.07675 70.0976 1.64288 71.7003 1.64288 73.3323C1.64288 74.9642 2.07675 76.5669 2.90002 77.976C3.7447 79.4416 4.96413 80.6562 6.43316 81.4949C7.9022 82.3337 9.56795 82.7665 11.2595 82.7489H79.7405C81.4307 82.7651 83.0949 82.3316 84.5624 81.4929C86.0299 80.6542 87.2481 79.4405 88.0922 77.976C88.9166 76.5676 89.3518 74.9653 89.3532 73.3333C89.3546 71.7013 88.9221 70.0983 88.1 68.6885ZM42.3677 35.7634C42.3677 34.9326 42.6977 34.1359 43.2851 33.5485C43.8725 32.961 44.6693 32.631 45.5 32.631C46.3308 32.631 47.1275 32.961 47.7149 33.5485C48.3023 34.1359 48.6324 34.9326 48.6324 35.7634V51.4252C48.6324 52.256 48.3023 53.0527 47.7149 53.6402C47.1275 54.2276 46.3308 54.5576 45.5 54.5576C44.6693 54.5576 43.8725 54.2276 43.2851 53.6402C42.6977 53.0527 42.3677 52.256 42.3677 51.4252V35.7634ZM45.5 70.2195C44.5707 70.2195 43.6623 69.9439 42.8896 69.4276C42.117 68.9113 41.5148 68.1775 41.1591 67.319C40.8035 66.4604 40.7105 65.5157 40.8918 64.6043C41.0731 63.6928 41.5205 62.8556 42.1776 62.1985C42.8347 61.5414 43.6719 61.0939 44.5834 60.9126C45.4948 60.7313 46.4395 60.8244 47.2981 61.18C48.1566 61.5356 48.8904 62.1379 49.4067 62.9105C49.923 63.6832 50.1985 64.5916 50.1985 65.5209C50.1985 66.767 49.7035 67.9621 48.8224 68.8433C47.9412 69.7244 46.7461 70.2195 45.5 70.2195Z"
+                fill="#C2850A"
+              />
+            </svg>
+            <p class="mt-30 mb-30">
+              If you Delete it, you will lose your Data. You can not undo the action if you press Delete.
+            </p>
+
+            <div class="d-flex gap-3 w-100 full-w-btns">
+              <button class="btn btn-primary btn-lg btn-outline-primary" data-bs-dismiss="modal" aria-label="Close">
+                Cancel
+              </button>
+              <button class="btn btn-primary btn-lg">Delete</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- success modal -->
+    <div class="modal fade" id="successModal" tabindex="-1" aria-labelledby="successModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content custom-modal">
+          <div class="modal-body standard-p d-flex flex-column align-items-center text-center">
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            <h4 class="modal-title text-center mb-30" id="successModalLabel">Submitted Successfully</h4>
+            <svg width="90" height="90" viewBox="0 0 90 90" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="45" cy="45" r="45" fill="#00AD00" />
+              <path
+                d="M41.05 62.673C39.6576 64.171 37.778 65.0075 35.8217 64.9999C33.8654 64.9924 31.9912 64.1413 30.6087 62.6327L22.5 53.7945C20.4636 51.5749 20.5006 47.9832 22.6111 45.8443C24.6105 43.7457 27.7947 43.8264 29.7201 45.925L35.8293 52.5838L59.6369 26.6344C61.6363 24.4552 64.8576 24.4552 66.8569 26.6344L67.0051 26.7959C69.0044 28.9751 69.0044 32.5265 66.968 34.7058L41.05 62.673Z"
+                fill="#EFF0F5"
+              />
+            </svg>
+
+            <p class="mt-30 mb-30">
+              You have successfully submitted Your Packing list. We will notify you as soon as possible once we have
+              Calculated the shipment cost.
+            </p>
+
+            <button class="btn btn-primary btn-lg w-100">Check B2B Archive</button>
           </div>
         </div>
       </div>

@@ -1,4 +1,12 @@
 .custom-modal {
+  .standard-p {
+    padding: 60px 30px !important;
+  }
+  .full-w-btns {
+    .btn {
+      flex: 1;
+    }
+  }
   &.track-modal {
     width: 380px;
     hr {

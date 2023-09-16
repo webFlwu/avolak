@@ -424,4 +424,24 @@
   $('.main-menu-open').click(function () {
     $('.sidebar').addClass('mobile-open').removeClass('close')
   })
+
+  /////////////////////////////////////////////////
+  // b2b
+
+  $('.with-package').click(function () {
+    $('.package-lists').toggleClass('d-none')
+    $('.product-insert-section, .package-file-upload').removeClass('d-none')
+    $('.package-list-inputs').addClass('d-none')
+  })
+
+  $('.without-package').click(function () {
+    $('.package-lists').toggleClass('d-none')
+    $('.product-insert-section, .package-list-inputs').removeClass('d-none')
+    $('.package-file-upload').addClass('d-none')
+  })
+
+  $('.back-to-b2b').click(function () {
+    $('.package-lists').removeClass('d-none')
+    $('.product-insert-section').addClass('d-none')
+  })
 })(jQuery)
