@@ -1,6 +1,9 @@
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 767px) {
   .block {
     padding-inline: 64px;
+  }
+  .checkout-page .block {
+    padding-inline: 90px;
   }
   .main-content {
     left: 280px;
@@ -13,18 +16,107 @@
   .sidebar.close ~ .main-content .block {
     padding-inline: 100px;
   }
+  .bank-account-details {
+    width: 50%;
+  }
+  .w-md-50 {
+    width: 50%;
+  }
 }
 @media only screen and (max-width: 768px) {
   .dashboard-header .header-right {
     gap: 20px;
   }
+  .chat-message {
+    width: 220px;
+  }
 }
 @media only screen and (max-width: 575px) {
   .tab-section {
     gap: 6px 30px;
+    width: 100%;
   }
   .table-summary {
     margin-right: 0;
+  }
+  .total-price {
+    padding-inline: 0;
+  }
+  .content-body {
+    padding-top: 15px;
+  }
+  .dashboard-header {
+    height: 60px;
+  }
+  .main-heading {
+    font-size: 26px;
+  }
+  .mb-30 {
+    margin-bottom: 10px;
+  }
+  .mb-40 {
+    margin-bottom: 15px;
+  }
+  .sidebar {
+    transition: left 0.15s ease-in-out;
+    left: -280px;
+  }
+  .sidebar.mobile-open {
+    left: 0;
+  }
+  .main-content,
+  .home-section,
+  .sidebar.close ~ .home-section {
+    left: 0;
+    width: 100%;
+  }
+  .chat-message {
+    width: 220px;
+  }
+  .chat-box {
+    height: 100%;
+  }
+  .heading-with-badge {
+    gap: 5px 20px;
+  }
+  .tab-section-wrapper form {
+    order: 1;
+  }
+  .tab-section-wrapper .tab-section {
+    order: 2;
+  }
+  .sidebar {
+    overflow-y: auto;
+  }
+  .setting-tab .tab-pane {
+    min-width: 100%;
+    max-width: 100%;
+  }
+  #profile-tab .profile-avatar {
+    display: block;
+  }
+  #profile-tab .profile-avatar label {
+    margin-bottom: 10px;
+  }
+  #profile-tab .profile-picture {
+    gap: 20px;
+  }
+  .earning-box-outer h3 {
+    font-size: 20px;
+  }
+  .secondary-heading {
+    font-size: 20px;
+  }
+  .copy-link-section {
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+  }
+  .sidebar.close {
+    width: 280px;
+  }
+  .dashboard .hero__area {
+    padding-block: 30px;
   }
 }
 @media only screen and (min-width: 200px) and (max-width: 320px) {

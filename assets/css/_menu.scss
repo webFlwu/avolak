@@ -447,8 +447,6 @@
 
 .mean-container .mean-nav ul li a.mean-expand {
   margin-top: 0px;
-  height: 15px;
-  line-height: 14px;
   border-bottom: none;
   padding: 0;
   display: inline-block;
@@ -476,4 +474,35 @@
   -ms-transform: rotate(45deg);
   -o-transform: rotate(45deg);
   color: #0e1133;
+}
+
+.mobile-menu {
+  ul {
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    list-style-type: none;
+    display: block !important;
+
+    a {
+      width: 100%;
+      padding: 10px 0;
+      color: #0e1133;
+      border-top: 1px solid #bbbcbf;
+      font-size: 13px;
+      font-weight: 600;
+      display: block;
+      text-transform: uppercase;
+      &:hover {
+        color: #2b4eff;
+        letter-spacing: 2px;
+      }
+    }
+
+    li:first-child {
+      a {
+        border-top: 0;
+      }
+    }
+  }
 }
