@@ -312,9 +312,6 @@
     float: inherit !important;
     text-align: center;
   }
-  .form__box {
-    margin-top: 50px;
-  }
   .signup__right__content .form__box {
     padding: 0;
     margin-top: 0px;
