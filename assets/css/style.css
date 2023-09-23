@@ -2541,6 +2541,10 @@ p {
   min-width: 32px;
 }
 
+textarea {
+  resize: none;
+}
+
 .dashboard {
   background-image: url("../img/bg/dashboard-bg.svg");
   background-size: cover;
@@ -2548,6 +2552,7 @@ p {
   background-position: bottom right;
   height: 100vh;
   width: 100vw;
+  padding-bottom: 20px;
   overflow: hidden;
 }
 .dashboard .header__transparent {
@@ -2612,10 +2617,12 @@ p {
 
 .product__wrap {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-  gap: 24px;
+  justify-items: center;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 12px;
 }
 .product__wrap .product__card {
+  width: 250px;
   border-radius: 16px;
   background: #262940;
   padding: 21px 22px;
@@ -2636,6 +2643,7 @@ p {
   margin-bottom: 12px;
 }
 .product__wrap .product__card p {
+  width: 200px;
   color: #eff0f5;
   font-family: Roboto-Regular;
   font-size: 14px;
@@ -2677,9 +2685,10 @@ p {
   transform: translate(-50%, -50%);
 }
 .product__wrap .product__card .btn-primary {
+  width: 180px;
   color: #f5f5f5;
   font-family: Roboto-Medium;
-  font-size: 14px;
+  font-size: 18px;
   font-style: normal;
   font-weight: 500;
   line-height: normal;
@@ -2774,6 +2783,7 @@ p {
 
 .sidebar .nav-links {
   height: 100%;
+  padding-bottom: 100px;
   overflow: auto;
 }
 
@@ -2832,7 +2842,7 @@ p {
 .sidebar .nav-links li a .link_name {
   color: #1a1c2b;
   font-family: Roboto-Regular;
-  font-size: 1.25rem;
+  font-size: 1.075rem;
   font-style: normal;
   font-weight: 400;
   line-height: 200%;
@@ -2912,13 +2922,12 @@ p {
 }
 
 .sidebar .nav-links li img {
-  padding-left: 30px;
-  padding-right: 32px;
+  width: 20px;
+  margin: 0 30px;
 }
 
 .sidebar.close .nav-links li img {
-  padding-left: 30px;
-  padding-right: 32px;
+  margin: 0;
   height: 18px;
   padding: 0;
   position: absolute;
@@ -3067,6 +3076,12 @@ p {
     opacity: 1;
   }
 }
+.ds-block {
+  height: calc(100vh - 120px);
+  padding-bottom: 20px;
+  overflow-y: scroll;
+}
+
 .block {
   padding-inline: 15px;
   transition: padding-inline 0.5s ease;
@@ -4742,14 +4757,14 @@ footer .footer__social__icon {
 }
 .product-card .product-short-description {
   color: #eff0f5;
-  font-size: 12px;
+  font-size: 14px;
   line-height: normal;
   margin-bottom: 12px;
 }
 .product-card .btn-primary {
-  padding: 8.814px 34.455px;
-  font-size: 14px;
-  font-weight: 600;
+  width: 154px;
+  padding: 8px;
+  font-size: 16px;
   line-height: normal;
 }
 .product-card.see-all {
