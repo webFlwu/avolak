@@ -63,7 +63,6 @@
             <span>close</span>
           </button>
         </div>
-        
       </div>
     </div>
     <!-- sidebar area end -->
@@ -184,7 +183,7 @@
                         class="header__dashboard__icon d-flex align-items-center"
                       >
                         <button class="main-menu-open d-sm-none no-style-btn">
-                          <img src="./assets/img/icon/bar.svg" alt="">
+                          <img src="./assets/img/icon/bar.svg" alt="" />
                         </button>
                         <form>
                           <div class="expandSearch">
@@ -253,35 +252,42 @@
                           <i class="far fa-shopping-bag"></i>
                         </a>
                       </div>
-                  
-                        <div class="dropdown ml-35 me-xl-0 me-auto">
-                         
-                          <button class="no-style-btn" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            <img src="./assets/img/icon/user.svg" alt="user" />
-                          </button>
-                          <ul class="dropdown-menu dropdown-menu-start dropdown-menu-md-end profile-dropdown">
-                            <li>
-                              <a class="dropdown-item" href="#">
-                                <img src="./assets/img/icon/edit.svg" alt="" />
-                                Request Item
-                              </a>
-                            </li>
-                            <li>
-                              <a class="dropdown-item" href="#">
-                                <img src="./assets/img/icon/setting.svg" alt="" />
-                                Settings
-                              </a>
-                            </li>
-                            <li>
-                              <a class="dropdown-item" href="#">
-                                <img src="./assets/img/icon/sign-out.svg" alt="" />
-                                Log Out
-                              </a>
-                            </li>
-                          </ul>
+
+                      <div class="dropdown ml-35 me-xl-0 me-auto">
+                        <button
+                          class="no-style-btn"
+                          type="button"
+                          data-bs-toggle="dropdown"
+                          aria-expanded="false"
+                        >
+                          <img src="./assets/img/icon/user.svg" alt="user" />
+                        </button>
+                        <ul
+                          class="dropdown-menu dropdown-menu-start dropdown-menu-md-end profile-dropdown"
+                        >
+                          <li>
+                            <a class="dropdown-item" href="#">
+                              <img src="./assets/img/icon/edit.svg" alt="" />
+                              Request Item
+                            </a>
+                          </li>
+                          <li>
+                            <a class="dropdown-item" href="#">
+                              <img src="./assets/img/icon/setting.svg" alt="" />
+                              Settings
+                            </a>
+                          </li>
+                          <li>
+                            <a class="dropdown-item" href="#">
+                              <img
+                                src="./assets/img/icon/sign-out.svg"
+                                alt=""
+                              />
+                              Log Out
+                            </a>
+                          </li>
+                        </ul>
                       </div>
-                   
-                        
                     </div>
                   </div>
                 </div>
@@ -460,32 +466,22 @@
                 <div class="modal-body">
                   <div class="form__box sign__in">
                     <form action="#">
-                      <div class="d-flex align-items-center">
+                      <div class="d-lg-flex align-items-center flex-md-row">
                         <div class="col-lg-5">
                           <div class="gallery">
-                            <div class="mySlides example-3 image">
+                            <div
+                              id="img-container"
+                              class="mySlides example-3 image"
+                            >
                               <img
+                              style="position: relative; overflow: hidden;"
+                                id="displayImage"
                                 src="./assets/img/product-slider/p1.png"
                                 alt=""
+                                onmousemove="imageZoom(event)"
+                                onmouseleave="imageZoomOut()"
                               />
-                            </div>
-                            <div class="mySlides" style="display: none">
-                              <img
-                                src="./assets/img/product-slider/p2.png"
-                                alt=""
-                              />
-                            </div>
-                            <div class="mySlides" style="display: none">
-                              <img
-                                src="./assets/img/product-slider/p3.png"
-                                alt=""
-                              />
-                            </div>
-                            <div class="mySlides" style="display: none">
-                              <img
-                                src="./assets/img/product-slider/p4.png"
-                                alt=""
-                              />
+                              <div class="cursor-border"></div>
                             </div>
 
                             <div class="thumbnails">
@@ -493,30 +489,44 @@
                                 src="./assets/img/product-slider/p1.png"
                                 alt=""
                                 class="img-thumb"
-                                onmouseover="currentDiv(1)"
+                                onmouseover="currentDiv('./assets/img/product-slider/p1.png')"
                               />
                               <img
                                 src="./assets/img/product-slider/p2.png"
                                 alt=""
                                 class="img-thumb"
-                                onmouseover="currentDiv(2)"
+                                onmouseover="currentDiv('./assets/img/product-slider/p2.png')"
                               />
                               <img
                                 src="./assets/img/product-slider/p3.png"
                                 alt=""
                                 class="img-thumb"
-                                onmouseover="currentDiv(3)"
+                                onmouseover="currentDiv('./assets/img/product-slider/p3.png')"
                               />
                               <img
                                 src="./assets/img/product-slider/p4.png"
                                 alt=""
                                 class="img-thumb"
-                                onmouseover="currentDiv(4)"
+                                onmouseover="currentDiv('./assets/img/product-slider/p4.png')"
                               />
                             </div>
                           </div>
                         </div>
-                        <div class="col-lg-7">
+                        <div class="col-lg-7"  style="position: relative;overflow: hidden;">
+                          
+                          <img
+                            id="zoomImage"
+                            style="
+                              width: 100%;
+                              height: 100%;
+                              overflow: hidden;
+                              position: absolute;
+                              z-index: 1;
+                              display: none;
+                            "
+                            src=""
+                            alt=""
+                          />
                           <h3>
                             PreSonus Revelator USB Condenser Microphone for
                             podcasting
@@ -681,6 +691,7 @@
     <script src="assets/js/popper.min.js"></script>
     <script src="assets/js/main.js"></script>
     <script src="assets/js/zoom.js"></script>
+
     <script>
       let slideIndex = 1;
       showDivs(slideIndex);
@@ -690,7 +701,54 @@
       }
 
       function currentDiv(n) {
-        showDivs((slideIndex = n));
+        console.log('cccccc');
+        const elemnt = document.getElementById("img-container");
+        elemnt.getElementsByTagName('img')[0].src = n
+        elemnt.getElementsByTagName('img')[0].srcset= n
+
+        var options1 = {
+          width: 300,
+          zoomWidth: 500,
+          offset: { vertical: 0, horizontal: 10 },
+        };
+
+      }
+      function imageZoom(e){
+        const cursorBorder = document.querySelector('.cursor-border');
+        cursorBorder.style.display = 'block'
+        // Update the position of the zoomed image
+        const displayImage = document.getElementById("displayImage")
+        const displayImageSrc = document.getElementById("displayImage").src
+        const zoomImage = document.getElementById("zoomImage")
+        zoomImage.src= displayImageSrc
+        zoomImage.style.display = 'block'
+        const rect = displayImage.getBoundingClientRect();
+        console.log(rect);
+      const offsetX = event.clientX - rect.left;
+      const offsetY = event.clientY - rect.top;
+      
+      // Calculate the maximum movement within a 50x50 pixel window
+      const maxX = Math.min(rect.width , offsetX);
+      const maxY = Math.min(rect.height, offsetY);
+
+      // Update the position of the zoomed image
+      
+
+      zoomImage.style.transform = `translate(-${maxX}px, -${maxY}px) scale(1)`;
+      cursorBorder.style.left = `${event.clientX-100}px`;
+      cursorBorder.style.top = `${event.clientY-100}px`;
+
+      // zoomImage.style.transform = `translate(-${offsetX}px, -${offsetY}px) scale(1.5)`;
+
+      }
+      function imageZoomOut(){
+       const displayImage = document.getElementById("displayImage").src
+       const zoomImage = document.getElementById("zoomImage")
+       const cursorBorder = document.querySelector('.cursor-border');
+       zoomImage.src= ''
+       zoomImage.style.display = 'none'
+        cursorBorder.style.display = 'none'
+
       }
 
       function showDivs(n) {
