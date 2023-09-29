@@ -6,6 +6,17 @@
 textarea {
   resize: none;
 }
+.img-zoom-container {
+  position: relative;
+}
+
+.img-zoom-lens {
+position: absolute;
+background-color: #544a4a4a;
+/*set the size of the lens:*/
+width: 100px;
+height: 100px;
+}
 .dashboard {
   background-image: url('../img/bg/dashboard-bg.svg');
   background-size: cover;

@@ -471,17 +471,16 @@
                           <div class="gallery">
                             <div
                               id="img-container"
-                              class="mySlides example-3 image"
+                              class="mySlides image img-zoom-container"
+                              onmouseleave="zoomBoxShow('none')"
+                              onmouseenter="zoomBoxShow('block')"
                             >
                               <img
-                              style="position: relative; overflow: hidden;"
                                 id="displayImage"
                                 src="./assets/img/product-slider/p1.png"
                                 alt=""
-                                onmousemove="imageZoom(event)"
-                                onmouseleave="imageZoomOut()"
+                                onmousemove="imageZoomCall()"
                               />
-                              <div class="cursor-border"></div>
                             </div>
 
                             <div class="thumbnails">
@@ -512,9 +511,11 @@
                             </div>
                           </div>
                         </div>
-                        <div class="col-lg-7"  style="position: relative;overflow: hidden;">
-                          
-                          <img
+                        <div
+                          class="col-lg-7"
+                          style="position: relative; overflow: hidden"
+                        >
+                          <div
                             id="zoomImage"
                             style="
                               width: 100%;
@@ -522,11 +523,8 @@
                               overflow: hidden;
                               position: absolute;
                               z-index: 1;
-                              display: none;
                             "
-                            src=""
-                            alt=""
-                          />
+                          ></div>
                           <h3>
                             PreSonus Revelator USB Condenser Microphone for
                             podcasting
@@ -693,85 +691,105 @@
     <script src="assets/js/zoom.js"></script>
 
     <script>
-      let slideIndex = 1;
-      showDivs(slideIndex);
-
-      function plusDivs(n) {
-        showDivs((slideIndex += n));
-      }
-
       function currentDiv(n) {
-        console.log('cccccc');
-        const elemnt = document.getElementById("img-container");
-        elemnt.getElementsByTagName('img')[0].src = n
-        elemnt.getElementsByTagName('img')[0].srcset= n
+         document.getElementById("displayImage").src = n
+         document.getElementById("zoomImage").style.backgroundImage ="url('" + n + "')"
+      }
+    </script>
+    <script>
+      function imageZoom(imgID, resultID) {
+        const lensElement = document.getElementsByClassName("img-zoom-lens");
+        if (lensElement.length) {
+          lensElement[0] && lensElement[0].remove()
+        }
+        var img, lens, result, cx, cy;
+        img = document.getElementById(imgID);
+        result = document.getElementById(resultID);
+        /*create lens:*/
+        lens = document.createElement("DIV");
+        lens.setAttribute("class", "img-zoom-lens");
+        /*insert lens:*/
+        img.parentElement.insertBefore(lens, img);
+        /*calculate the ratio between result DIV and lens:*/
+        cx = result.offsetWidth / lens.offsetWidth;
+        cy = result.offsetHeight / lens.offsetHeight;
+        /*set background properties for the result DIV:*/
+        result.style.backgroundImage = "url('" + img.src + "')";
+        result.style.backgroundSize =
+          img.width * cx + "px " + img.height * cy + "px";
+        /*execute a function when someone moves the cursor over the image, or the lens:*/
+        lens.addEventListener("mousemove", moveLens);
+        img.addEventListener("mousemove", moveLens);
+        /*and also for touch screens:*/
+        lens.addEventListener("touchmove", moveLens);
+        img.addEventListener("touchmove", moveLens);
+        function moveLens(e) {
+          var pos, x, y;
+          /*prevent any other actions that may occur when moving over the image:*/
+          e.preventDefault();
+          /*get the cursor's x and y positions:*/
+          pos = getCursorPos(e);
+          /*calculate the position of the lens:*/
+          x = pos.x - lens.offsetWidth / 2;
+          y = pos.y - lens.offsetHeight / 2;
+          /*prevent the lens from being positioned outside the image:*/
+          if (x > img.width - lens.offsetWidth) {
+            x = img.width - lens.offsetWidth;
+          }
+          if (x < 0) {
+            x = 0;
+          }
+          if (y > img.height - lens.offsetHeight) {
+            y = img.height - lens.offsetHeight;
+          }
+          if (y < 0) {
+            y = 0;
+          }
+          /*set the position of the lens:*/
+          lens.style.left = x + "px";
+          lens.style.top = y + "px";
+          /*display what the lens "sees":*/
+          result.style.backgroundPosition =
+            "-" + x * cx + "px -" + y * cy + "px";
+        }
+        function getCursorPos(e) {
+          var a,
+            x = 0,
+            y = 0;
+          e = e || window.event;
+          /*get the x and y positions of the image:*/
+          a = img.getBoundingClientRect();
+          /*calculate the cursor's x and y coordinates, relative to the image:*/
+          x = e.pageX - a.left;
+          y = e.pageY - a.top;
+          /*consider any page scrolling:*/
+          x = x - window.pageXOffset;
+          y = y - window.pageYOffset;
+          return { x: x, y: y };
+        }
+      }
 
-        var options1 = {
-          width: 300,
-          zoomWidth: 500,
-          offset: { vertical: 0, horizontal: 10 },
-        };
+      function imageZoomCall() {
+        zoomBoxShow('block')
+        imageZoom("displayImage", "zoomImage");
+
 
       }
-      function imageZoom(e){
-        const cursorBorder = document.querySelector('.cursor-border');
-        cursorBorder.style.display = 'block'
-        // Update the position of the zoomed image
-        const displayImage = document.getElementById("displayImage")
-        const displayImageSrc = document.getElementById("displayImage").src
-        const zoomImage = document.getElementById("zoomImage")
-        zoomImage.src= displayImageSrc
-        zoomImage.style.display = 'block'
-        const rect = displayImage.getBoundingClientRect();
-        console.log(rect);
-      const offsetX = event.clientX - rect.left;
-      const offsetY = event.clientY - rect.top;
-      
-      // Calculate the maximum movement within a 50x50 pixel window
-      const maxX = Math.min(rect.width , offsetX);
-      const maxY = Math.min(rect.height, offsetY);
-
-      // Update the position of the zoomed image
-      
-
-      zoomImage.style.transform = `translate(-${maxX}px, -${maxY}px) scale(1)`;
-      cursorBorder.style.left = `${event.clientX-100}px`;
-      cursorBorder.style.top = `${event.clientY-100}px`;
-
-      // zoomImage.style.transform = `translate(-${offsetX}px, -${offsetY}px) scale(1.5)`;
-
-      }
-      function imageZoomOut(){
-       const displayImage = document.getElementById("displayImage").src
-       const zoomImage = document.getElementById("zoomImage")
-       const cursorBorder = document.querySelector('.cursor-border');
-       zoomImage.src= ''
-       zoomImage.style.display = 'none'
-        cursorBorder.style.display = 'none'
-
-      }
-
-      function showDivs(n) {
-        var i;
-        var x = document.getElementsByClassName("mySlides");
-        var items = document.getElementsByClassName("img-thumb");
-
-        if (n > x.length) {
-          slideIndex = 1;
+      function zoomBoxShow(action) {
+        if(action==='block'){
+          const zoomBox = document.getElementById("zoomImage");
+          const checkBox = window.getComputedStyle(zoomBox).display === "block";
+          if(!checkBox){
+            return zoomBox.style.display = 'block'
+          }
         }
-        if (n < 1) {
-          slideIndex = x.length;
+        if(action==='none'){
+          const zoomBox = document.getElementById("zoomImage");
+          const checkBox = window.getComputedStyle(zoomBox).display === "none";
+          if(!checkBox){
+            return zoomBox.style.display = 'none'
+          }
         }
-
-        for (i = 0; i < x.length; i++) {
-          x[i].style.display = "none";
-        }
-
-        for (i = 0; i < items.length; i++) {
-          items[i].className = items[i].className.replace(" solid", "");
-        }
-        x[slideIndex - 1].style.display = "block";
-        items[slideIndex - 1].className += " solid";
       }
     </script>
   </body>

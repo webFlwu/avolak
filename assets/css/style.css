@@ -2545,6 +2545,18 @@ textarea {
   resize: none;
 }
 
+.img-zoom-container {
+  position: relative;
+}
+
+.img-zoom-lens {
+  position: absolute;
+  background-color: rgba(84, 74, 74, 0.2901960784);
+  /*set the size of the lens:*/
+  width: 100px;
+  height: 100px;
+}
+
 .dashboard {
   background-image: url("../img/bg/dashboard-bg.svg");
   background-size: cover;
