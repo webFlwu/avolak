@@ -479,6 +479,7 @@
                                 id="displayImage"
                                 src="./assets/img/product-slider/p1.png"
                                 alt=""
+
                                 onmousemove="imageZoomCall()"
                               />
                             </div>
@@ -699,6 +700,7 @@
     <script>
       function imageZoom(imgID, resultID) {
         const lensElement = document.getElementsByClassName("img-zoom-lens");
+        
         if (lensElement.length) {
           lensElement[0] && lensElement[0].remove()
         }
@@ -729,6 +731,14 @@
           e.preventDefault();
           /*get the cursor's x and y positions:*/
           pos = getCursorPos(e);
+
+          const {x:left,y:top} =pos
+          const box = document.getElementsByClassName("img-zoom-lens")
+          if(box){
+            box[0].style.left = left+"px"
+          box[0].style.top = top+"px"
+          }
+       
           /*calculate the position of the lens:*/
           x = pos.x - lens.offsetWidth / 2;
           y = pos.y - lens.offsetHeight / 2;
@@ -784,6 +794,10 @@
           }
         }
         if(action==='none'){
+           const lensElement = document.getElementsByClassName("img-zoom-lens");
+        if (lensElement.length) {
+          lensElement[0] && lensElement[0].remove()
+        }
           const zoomBox = document.getElementById("zoomImage");
           const checkBox = window.getComputedStyle(zoomBox).display === "none";
           if(!checkBox){
@@ -791,6 +805,7 @@
           }
         }
       }
+
     </script>
   </body>
 </html>
